@@ -21,3 +21,6 @@ whitelist:
  - sensor.pws_visibility_km
  - sensor.pws_solarradiation
  - sensor.waqi_marszakowska_warszawa_mazowieckie
+ - sensor.speedtest_download	
+ - sensor.speedtest_upload
+ - sensor.speedtest_ping
