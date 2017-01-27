@@ -1,0 +1,2 @@
+gateways:
+ - device: '/dev/ttyUSB0'

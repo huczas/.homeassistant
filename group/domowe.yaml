@@ -1,0 +1,17 @@
+kuchnia:
+  name: Kuchnia
+  icon: mdi:silverware-fork
+  entities:
+   - sensor.lux
+   - sensor.cisnienie
+   - sensor.temp_w_kuchni
+   - sensor.wilgotnosc_kuchnia
+   - switch.kuchnia_tv
+sypialnia:
+  name: Sypialnia
+  icon: mdi:hotel
+  entities:
+    - sensor.pi_hat
+    - switch.ledy
+    - switch.kuchnia_test
+    - switch.halogeny

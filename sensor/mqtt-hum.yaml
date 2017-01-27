@@ -1,0 +1,7 @@
+platform: mqtt
+name: "Wilgotnosc_kuchnia"
+icon: mdi:water-percent
+state_topic: "Baza_Pogodowa/BME280/Humidity"
+qos: 1
+unit_of_measurement: "%H"
+value_template: '{{ value }}'

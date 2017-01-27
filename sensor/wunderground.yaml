@@ -1,0 +1,20 @@
+platform: wunderground
+api_key: !secret api_wunderground
+pws_id: IWARSAW82
+lang: "PL"
+monitored_conditions:
+  - weather
+  - UV
+  - relative_humidity
+  - wind_dir
+  - dewpoint_c
+  - temp_c
+  - feelslike_c
+  - wind_kph
+  - wind_gust_kph
+  - precip_today_metric
+  - visibility_km
+  - solarradiation
+  - elevation
+  - location
+  - station_id

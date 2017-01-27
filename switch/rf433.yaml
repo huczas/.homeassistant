@@ -1,0 +1,48 @@
+platform: rpi_rf
+gpio: 17
+switches:
+ Kuchnia TV:
+  protocol: 1
+  signal_repetitions: 25
+  code_on: 14013452
+  code_off: 14013443
+# A2:
+#  protocol: 1
+#  signal_repetitions: 25
+#  code_on: 13988876
+#  code_off: 13988867
+# A3:
+#  protocol: 1
+# signal_repetitions: 25
+#  code_on: 13982732
+#  code_off: 13982723
+# B1:
+#  protocol: 1
+#  signal_repetitions: 25
+#  code_on: 7721996
+#  code_off: 7721987
+# B2:
+#  protocol: 1
+#  signal_repetitions: 25
+#  code_on: 7697420
+#  code_off: 7697411
+# B3:
+#  protocol: 1
+#  signal_repetitions: 25
+#  code_on: 7691276
+#  code_off: 7691267
+# C1:
+#  protocol: 1
+#  signal_repetitions: 25
+#  code_on: 6149132
+ # code_off: 6149123
+# C2:
+ # protocol: 1
+#  signal_repetitions: 25
+#  code_on: 6124556
+#  code_off: 6124547
+# C3:
+#  protocol: 1
+#  signal_repetitions: 25
+#  code_on: 6118412
+#  code_off: 6118403

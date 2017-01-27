@@ -1,0 +1,11 @@
+platform: mqtt
+name: "Ledy"
+state_topic: "/Sonoff2/GPIO/12"
+command_topic: "/Sonoff2/GPIO/12"
+icon: mdi:lightbulb-outline
+payload_on: "1"
+payload_off: "0"
+optimistic: true
+qos: 0
+retain: true
+value_template: '{{ value.x }}'

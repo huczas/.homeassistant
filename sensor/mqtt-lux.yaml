@@ -1,0 +1,7 @@
+platform: mqtt
+name: "Lux"
+icon: mdi:theme-light-dark
+state_topic: "Baza_Pogodowa/Lux/Lux"
+qos: 1
+unit_of_measurement: "Lux"
+value_template: '{{ value }}'
