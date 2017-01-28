@@ -34,7 +34,7 @@ powietrze:
   name: powietrze
   view: no
   entities:
-    - sensor.waqi_marszałkowska_warszawa_mazowieckie
+    - sensor.waqi_marszakowska_warszawa_mazowieckie
 pogoda:
   name: Pogoda
   view: yes
@@ -42,3 +42,5 @@ pogoda:
   entities:
     - group.wunderground
     - group.powietrze
+    - camera.wunderground
+    - camera.polska

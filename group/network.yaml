@@ -13,6 +13,13 @@ WOL:
   entities:
     - switch.nas
     - switch.pc
+system:
+  name: System
+  view: no
+  entities:
+    - sensor.cpu_use
+    - sensor.disk_free_home
+    - sensor.ram_free
 network:
   name: Network
   view: yes
@@ -20,3 +27,4 @@ network:
   entities:
     - group.bandwidth
     - group.wol
+    - group.system
