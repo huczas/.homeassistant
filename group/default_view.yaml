@@ -1,0 +1,42 @@
+czas:
+  name: czas
+  view: no
+  entities:
+    - sensor.time
+    - sensor.time_utc
+    - sensor.internet_time
+    - sensor.date
+kuchnia:
+  name: Kuchnia
+  view: no
+  icon: mdi:silverware-fork
+  entities:
+    - sensor.lux
+    - sensor.temp_w_kuchni
+    - sensor.wilgotnosc_kuchnia
+    - switch.kuchnia_tv
+sypialnia:
+  name: Sypialnia
+  view: no
+  icon: mdi:hotel
+  entities:
+    - sensor.pi_hut
+    - sensor.outside
+    - switch.ledy
+    - switch.halogeny
+wunderground_s:
+  name: Wunderground
+  view: no
+  entities:
+   - sensor.pws_temp_c
+   - sensor.pws_feelslike_c
+   - sensor.cisnienie
+   - sensor.pws_wind_kph
+   - sensor.pws_wind_gust_kph
+default_view:
+  view: yes
+  entities:
+    - group.kuchnia
+    - group.sypialnia
+    - group.wunderground_s
+    - group.czas
