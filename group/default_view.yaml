@@ -1,5 +1,5 @@
 czas:
-  name: czas
+  name: Czas
   view: no
   entities:
     - sensor.time
