@@ -18,19 +18,7 @@ homeassistant:
 
 # Enables the frontend
   frontend:
-  panel_iframe:
-    router:
-      title: 'Router'
-      icon: 'mdi:router-wireless'
-      url: 'http://192.168.1.1'
-    staty:
-      title: 'Statystyki'
-      icon: 'mdi:chart-line'
-      url: 'http://192.168.1.1/graphs/iface/Orange-FFTH/'
-    nas:
-      title: 'NAS'
-      icon: 'mdi:harddisk'
-      url: 'http://192.168.1.2'
+  panel_iframe: !include panel_iframe/menu.yaml
 
   sensor: !include_dir_list sensor/
 
