@@ -42,5 +42,4 @@ pogoda:
   entities:
     - group.wunderground
     - group.powietrze
-    - camera.wunderground
     - camera.polska
