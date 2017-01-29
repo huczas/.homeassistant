@@ -4,3 +4,4 @@ iss:
   icon: mdi:rocket
   entities:
     - camera.iss
+    - binary_sensor.iss
