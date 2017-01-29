@@ -1,3 +1,3 @@
 # .homeassistant
 
-My Home-Assistant configuration files.
+My Home-Assistant configuration files...
