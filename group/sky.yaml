@@ -1,0 +1,6 @@
+iss:
+  name: ISS
+  view: yes
+  icon: mdi:rocket
+  entities:
+    - camera.iss
