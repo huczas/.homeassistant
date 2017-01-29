@@ -20,6 +20,15 @@ system:
     - sensor.cpu_use
     - sensor.disk_free_home
     - sensor.ram_free
+router:
+  name: Router
+  view: no
+  entities:
+    - sensor.system
+    - sensor.uptime
+    - sensor.wifissid
+    - sensor.wantx
+    - sensor.wanrx
 network:
   name: Network
   view: yes
@@ -28,3 +37,4 @@ network:
     - group.bandwidth
     - group.wol
     - group.system
+    - group.router
