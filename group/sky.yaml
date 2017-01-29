@@ -1,7 +1,12 @@
+station:
+  name: ISS station
+  view: no
+  entities:
+    - binary_sensor.iss
 iss:
   name: ISS
   view: yes
   icon: mdi:rocket
   entities:
     - camera.iss
-    - binary_sensor.iss
+    - group.station
