@@ -23,6 +23,8 @@ panel_iframe: !include panel_iframe/menu.yaml
 
 sensor: !include_dir_list sensor/
 
+binary_sensor: !include_dir_list binary_sensor/
+
 switch: !include_dir_list switch/
 
 influxdb: !include influx/influxdb.yaml
