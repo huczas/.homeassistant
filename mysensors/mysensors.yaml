@@ -1,2 +1,3 @@
 gateways:
- - device: '/dev/ttyUSB0'
+  device: '/dev/ttyUSB20'
+  baud_rate: 115200
