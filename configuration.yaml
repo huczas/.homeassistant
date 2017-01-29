@@ -37,7 +37,7 @@ notify: !include_dir_list notify/
 
 mqtt: !include mqtt/hass.yaml
 
-# mysensors: !include mysensors/mysensors.yaml
+mysensors: !include mysensors/mysensors.yaml
 
 zone: !include_dir_list zone/
 
