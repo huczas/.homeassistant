@@ -3,6 +3,6 @@ resources:
   - type: disk_free
     arg: /home
   - type: disk_free
-    arg: /
+    arg: /boot
   - type: memory_free
   - type: processor_use

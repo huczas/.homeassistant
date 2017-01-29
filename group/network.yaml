@@ -19,6 +19,7 @@ system:
   entities:
     - sensor.cpu_use
     - sensor.disk_free_home
+    - sensor.disk_free_boot
     - sensor.ram_free
 router:
   name: Router
