@@ -12,5 +12,5 @@ sypialnia:
   entities:
     - sensor.pi_hat
     - switch.ledy
-    - switch.kuchnia_test
+ #   - switch.kuchnia_test
     - switch.halogeny
