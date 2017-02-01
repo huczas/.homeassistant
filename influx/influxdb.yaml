@@ -24,3 +24,4 @@ whitelist:
  - sensor.speedtest_download
  - sensor.speedtest_upload
  - sensor.speedtest_ping
+ - sensor.plant_moisture_w_solar_2_0

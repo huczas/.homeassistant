@@ -22,6 +22,7 @@ sypialnia:
   entities:
     - sensor.pi_hut
     - sensor.outside
+    - sensor.plant_moisture_w_solar_2_0
     - switch.ledy
     - switch.halogeny
 wunderground_s:
