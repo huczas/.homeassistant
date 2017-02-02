@@ -1,4 +1,4 @@
 gateways:
-  device: '/dev/ttyUSB20'
+  device: '/dev/ttyAMA0'
   baud_rate: 115200
-  persistence_file: '/home/homeassistant/.homeassistant/mysensors.json'
+#  persistence_file: '/home/homeassistant/.homeassistant/mysensors.json'
