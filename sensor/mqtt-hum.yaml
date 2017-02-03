@@ -1,5 +1,5 @@
 platform: mqtt
-name: "Wilgotnosc_kuchnia"
+name: "Wilgotność w kuchni"
 icon: mdi:water-percent
 state_topic: "Baza_Pogodowa/BME280/Humidity"
 qos: 1

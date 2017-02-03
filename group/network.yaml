@@ -10,6 +10,7 @@ WOL:
   name: Wake On Lan
   view: no
   icon: mdi:ethernet
+  control: hidden
   entities:
     - switch.nas
     - switch.pc
@@ -26,8 +27,8 @@ router:
   entities:
     - sensor.system
     - sensor.uptime
-    - sensor.wantx
-    - sensor.wanrx
+    - sensor.wan_tx
+    - sensor.wan_rx
 network:
   name: Network
   view: yes
