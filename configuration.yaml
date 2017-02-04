@@ -10,41 +10,21 @@ homeassistant:
 http:
 # Uncomment this to add a password (recommended!)
 # api_password: PASSWORD
-# Uncomment this if you are using SSL or running in Docker etc
-# base_url: example.duckdns.org:8123
-
-# Show links to resources in log and frontend
-#introduction:
-
-# Enables the frontend
 frontend:
-
 panel_iframe: !include panel_iframe/menu.yaml
-
 sensor: !include_dir_list sensor/
-
 binary_sensor: !include_dir_list binary_sensor/
-
 switch: !include_dir_list switch/
-
 influxdb: !include influx/influxdb.yaml
-
 camera: !include_dir_list camera/
-
 # Text to speech
 # tts:
 #  platform: google
-
 notify: !include_dir_list notify/
-
 mqtt: !include mqtt/hass.yaml
-
 mysensors: !include mysensors/mysensors.yaml
-
 zone: !include_dir_list zone/
-
 group: !include_dir_merge_named group/
- 
 ## Enables
 updater:
 # Discover some devices automatically
