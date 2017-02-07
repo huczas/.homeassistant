@@ -26,6 +26,7 @@ whitelist:
  - sensor.speedtest_upload
  - sensor.speedtest_ping
  - sensor.plant_moisture_w_solar_2_0
+ - sensor.czujnik_wilgoci_gleby_2_0
  - sensor.cpu_temperature
  - sensor.wan_rx
  - sensor.wan_tx
