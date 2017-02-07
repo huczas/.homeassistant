@@ -1,4 +1,4 @@
-platform: pushover
 name: Pushover
+platform: pushover
 api_key: !secret api_pushover
 user_key: !secret user_pushover
