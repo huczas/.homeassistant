@@ -9,7 +9,7 @@ whitelist:
  - sensor.lux
  - sensor.cisnienie
  - sensor.temp_w_kuchni
- - sensor.wilgotnosc_kuchnia
+ - sensor.wilgotnosc_w_kuchni
  - sensor.pws_uv
  - sensor.pws_precip_today_metric
  - sensor.pws_temp_c

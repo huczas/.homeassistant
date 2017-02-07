@@ -25,6 +25,7 @@ mqtt: !include mqtt/hass.yaml
 mysensors: !include mysensors/mysensors.yaml
 zone: !include_dir_list zone/
 group: !include_dir_merge_named group/
+automation: !include_dir_list automation/
 ## Enables
 updater:
 # Discover some devices automatically

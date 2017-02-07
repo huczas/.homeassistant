@@ -13,7 +13,7 @@ kuchnia:
   entities:
     - sensor.lux
     - sensor.temp_w_kuchni
-    - sensor.wilgotnosc_kuchnia
+    - sensor.wilgotnosc_w_kuchni
     - switch.kuchnia_tv
 sypialnia:
   name: Sypialnia
