@@ -6,6 +6,7 @@ kuchnia:
    - sensor.temp_w_kuchni
    - sensor.wilgotnosc_w_kuchni
    - switch.kuchnia_tv
+   - switch.pokoj
 sypialnia:
   name: Sypialnia
   icon: mdi:hotel
