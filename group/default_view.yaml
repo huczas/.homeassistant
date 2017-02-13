@@ -2,13 +2,12 @@ czas:
   name: Czas
   view: no
   entities:
+    - sensor.sun
+    - sensor.moon
     - sensor.time
     - sensor.time_utc
     - sensor.internet_time
-    - sensor.date
-    # - sensor.sun
-    - sensor.moon
-    
+    - sensor.date   
 kuchnia:
   name: Kuchnia
   view: no
