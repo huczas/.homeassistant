@@ -6,6 +6,9 @@ czas:
     - sensor.time_utc
     - sensor.internet_time
     - sensor.date
+    # - sensor.sun
+    - sensor.moon
+    
 kuchnia:
   name: Kuchnia
   view: no
