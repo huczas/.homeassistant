@@ -1,6 +1,6 @@
-platform: systemmonitor
-resources:
-  - type: disk_free
-    arg: /home
-  - type: memory_free
-  - type: processor_use
+- platform: systemmonitor
+  resources:
+    - type: disk_free
+      arg: /home
+    - type: memory_free
+    - type: processor_use

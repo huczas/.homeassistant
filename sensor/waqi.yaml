@@ -1,4 +1,3 @@
-platform: waqi
-locations:
-# - Komunikacyjna
-  - Marszalkowska
+- platform: waqi
+  locations:
+    - Marszalkowska

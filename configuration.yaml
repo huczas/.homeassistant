@@ -12,20 +12,20 @@ http:
 # api_password: PASSWORD
 frontend:
 panel_iframe: !include panel_iframe/menu.yaml
-sensor: !include_dir_list sensor/
-binary_sensor: !include_dir_list binary_sensor/
-switch: !include_dir_list switch/
+sensor: !include_dir_merge_list sensor/
+binary_sensor: !include_dir_merge_list binary_sensor/
+switch: !include_dir_merge_list switch/
 influxdb: !include influx/influxdb.yaml
-camera: !include_dir_list camera/
+camera: !include_dir_merge_list camera/
 # Text to speech
 # tts:
 #  platform: google
-notify: !include_dir_list notify/
+notify: !include_dir_merge_list notify/
 mqtt: !include mqtt/hass.yaml
 mysensors: !include mysensors/mysensors.yaml
-zone: !include_dir_list zone/
+zone: !include_dir_merge_list zone/
 group: !include_dir_merge_named group/
-automation: !include_dir_list automation/
+automation: !include_dir_merge_list automation/
 ## Enables
 updater:
 # Discover some devices automatically

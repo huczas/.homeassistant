@@ -1,7 +1,0 @@
-platform: mqtt
-name: "Temp. w kuchni"
-icon: mdi:thermometer-lines
-state_topic: "Baza_Pogodowa/BME280/Temperature"
-qos: 1
-unit_of_measurement: "°C"
-value_template: '{{ value }}'

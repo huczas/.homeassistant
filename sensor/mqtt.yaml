@@ -1,0 +1,31 @@
+- platform: mqtt
+  name: "Temp. w kuchni"
+  icon: mdi:thermometer-lines
+  state_topic: "Baza_Pogodowa/BME280/Temperature"
+  qos: 1
+  unit_of_measurement: "°C"
+  value_template: '{{ value }}'
+
+- platform: mqtt
+  name: "Cisnienie"
+  icon: mdi:nest-thermostat
+  state_topic: "Baza_Pogodowa/BME280/Pressure"
+  qos: 1
+  unit_of_measurement: "hPa"
+  value_template: '{{ value }}' 
+
+- platform: mqtt
+  name: "Lux"
+  icon: mdi:theme-light-dark
+  state_topic: "Baza_Pogodowa/Lux/Lux"
+  qos: 1
+  unit_of_measurement: "Lux"
+  value_template: '{{ value }}'
+
+- platform: mqtt
+  name: "Wilgotność w kuchni"
+  icon: mdi:water-percent
+  state_topic: "Baza_Pogodowa/BME280/Humidity"
+  qos: 1
+  unit_of_measurement: "%H"
+  value_template: '{{ value }}'
