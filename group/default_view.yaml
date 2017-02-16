@@ -2,7 +2,7 @@ czas:
   name: Czas
   view: no
   entities:
-    - sensor.sun
+    - sun.sun
     - sensor.moon
     - sensor.time
     - sensor.time_utc
