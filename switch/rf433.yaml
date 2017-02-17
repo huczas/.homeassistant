@@ -1,11 +1,13 @@
 platform: rpi_rf
 gpio: 17
 switches:
+# A1:
  Kuchnia TV:
   protocol: 1
   signal_repetitions: 25
   code_on: 14013452
   code_off: 14013443
+# A2:
  Pokój:
   protocol: 1
   signal_repetitions: 25
