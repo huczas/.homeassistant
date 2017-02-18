@@ -1,3 +1,6 @@
 - platform: waqi
   locations:
+    - Warszawa
+  stations:
     - Marszalkowska
+    - Komunikacyjna
