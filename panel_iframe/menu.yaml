@@ -10,3 +10,7 @@ nas:
   title: 'NAS'
   icon: 'mdi:harddisk'
   url: 'http://192.168.1.2'
+configurator:
+  title: 'Configurator'
+  icon: 'mdi:wrench'
+  url: 'http://192.168.1.14:3218'
