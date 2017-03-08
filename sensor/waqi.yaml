@@ -1,4 +1,5 @@
 - platform: waqi
+  token: !secret waqi
   locations:
     - Warszawa
   stations:
