@@ -1,6 +1,6 @@
 - platform: wunderground
   api_key: !secret api_wunderground
-  pws_id: IWARSAW82
+  pws_id: IWARSAW104
   lang: "PL"
   monitored_conditions:
     - weather
@@ -18,3 +18,11 @@
     - elevation
     - location
     - station_id
+    - weather_1d_metric
+    - weather_1n_metric
+    - weather_2d_metric
+    - weather_2n_metric
+    - weather_3d_metric
+    - weather_3n_metric
+    - weather_4d_metric
+    - weather_4n_metric

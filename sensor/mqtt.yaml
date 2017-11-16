@@ -12,7 +12,7 @@
   state_topic: "Baza_Pogodowa/BME280/Pressure"
   qos: 1
   unit_of_measurement: "hPa"
-  value_template: '{{ value }}' 
+  value_template: '{{ value }}'
 
 - platform: mqtt
   name: "Lux"
