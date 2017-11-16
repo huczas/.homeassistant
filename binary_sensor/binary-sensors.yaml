@@ -3,5 +3,5 @@
   show_on_map: false
 #Workdays for automation
 - platform: workday
-  country: PL
+#  country: PL -Poland not supported for now check: https://pypi.python.org/pypi/holidays/0.8.1
 
