@@ -1,0 +1,188 @@
+sonoff:
+  name: Sonoff
+  icon: mdi:hotel
+  entities:
+  - switch.ledy
+  - switch.halogeny
+sypialnia:
+  name: Sypialnia
+  entities:
+  - sensor.pi_hat_temperature
+salon:
+  name: Salon
+  icon: mdi:silverware-fork
+  entities:
+  - sensor.lux
+  - sensor.temp_w_kuchni
+  - sensor.wilgotnosc_w_kuchni
+wunderground_s:
+  name: Prognoza jutro
+  view: false
+  entities:
+  - sensor.pws_temp_c
+  - sensor.pws_feelslike_c
+  - sensor.pws_weather_1d_metric
+  - sensor.pws_weather_1n_metric
+pojutrze:
+  name: Prognoza pojutrze
+  view: false
+  entities:
+  - sensor.pws_weather_2d_metric
+  - sensor.pws_weather_2n_metric
+AppleTV:
+  name: Apple TV
+  view: false
+  entities:
+  - media_player.apple_tv
+mobile_devices:
+  name: Telefon
+  view: false
+  entities:
+  - device_tracker.hubert
+  - sensor.pelagia_battery_level
+  - sensor.pelagia_battery_state
+czas:
+  name: Czas
+  view: false
+  entities:
+  - sun.sun
+  - sensor.moon
+  - sensor.time
+  - sensor.time_utc
+  - sensor.internet_time
+  - sensor.date
+bandwidth:
+  name: Bandwidth
+  view: false
+  entities:
+  - sensor.speedtest_ping
+  - sensor.speedtest_upload
+  - sensor.speedtest_download
+WOL:
+  name: Wake On Lan
+  view: false
+  icon: mdi:ethernet
+  control: hidden
+  entities:
+  - switch.nas
+  - switch.pc
+system:
+  name: System
+  view: false
+  entities:
+  - sensor.cpu_use
+  - sensor.disk_free_home
+  - sensor.ram_free
+router:
+  name: Router
+  view: false
+  entities:
+  - sensor.system
+  - sensor.uptime
+  - sensor.wan_tx
+  - sensor.wan_rx
+  - sensor.breaches_witkowski007gmailcom
+  - sensor.breaches_huczasicloudcom
+wunderground:
+  name: Wunderground
+  view: false
+  entities:
+  - sensor.pws_weather
+  - sensor.weather_underground_pws
+  - sensor.pws_station_id
+  - sensor.pws_observation_time
+  - sensor.pws_location
+  - sensor.pws_elevation
+  - sensor.pws_uv
+  - sensor.pws_relative_humidity
+  - sensor.pws_wind_degrees
+  - sensor.pws_wind_dir
+  - sensor.pws_wind_string
+  - sensor.pws_dewpoint_string
+  - sensor.pws_feelslike_string
+  - sensor.heat_index_string
+  - sensor.pws_precip_1hr_string
+  - sensor.pws_precip_today_string
+  - sensor.pws_dewpoint_c
+  - sensor.pws_temp_c
+  - sensor.pws_feelslike_c
+  - sensor.pws_heat_index_c
+  - sensor.pws_wind_kph
+  - sensor.pws_wind_gust_kph
+  - sensor.pws_precip_1hr_metric
+  - sensor.pws_precip_today_metric
+  - sensor.pws_pressure_mb
+  - sensor.pws_visibility_km
+Xrays:
+  name: "Promieniowanie S\u0142oneczne"
+  view: false
+  entities:
+  - camera.xrays
+Radar:
+  name: Radar
+  view: false
+  entities:
+  - camera.radar
+Burze:
+  name: Burze
+  view: false
+  entities:
+  - camera.burze
+ENWO:
+  name: Meteogram ENWO
+  view: false
+  entities:
+  - camera.enwo
+Polska:
+  name: Polska
+  view: false
+  entities:
+  - camera.polska
+station:
+  name: ISS station
+  view: false
+  entities:
+  - binary_sensor.iss
+cam_iss:
+  name: Pogoda
+  view: false
+  entities:
+  - camera.iss
+default_view:
+  name: default_view
+  view: true
+  entities:
+  - group.sonoff
+  - group.sypialnia
+  - group.salon
+  - group.appletv
+  - group.wunderground_s
+  - group.pojutrze
+  - group.czas
+network:
+  name: Network
+  view: true
+  icon: mdi:server-network
+  entities:
+  - group.bandwidth
+  - group.wol
+  - group.system
+  - group.router
+pogoda:
+  name: Pogoda
+  view: true
+  icon: mdi:weather-sunny
+  entities:
+  - group.wunderground
+  - group.radar
+  - group.burze
+  - group.polska
+  - group.xrays
+  - group.enwo
+iss:
+  name: ISS
+  view: true
+  icon: mdi:rocket
+  entities:
+  - group.station
+  - group.cam_iss

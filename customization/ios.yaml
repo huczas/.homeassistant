@@ -1,0 +1,7 @@
+#
+# Custom name for ios app gps notofications
+#
+sensor.pelagia_battery_level:
+  friendly_name: 'Hubert iPhone battery'
+sensor.pelagia_battery_state:
+  friendly_name: 'Hubert iPhone status'
