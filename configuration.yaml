@@ -8,8 +8,7 @@ homeassistant:
 #  customize: !include_dir_merge_named customization
   customize: !include customize.yaml
 
-logger:
-  default: warning #error
+logger: !include logger.yaml
 
 http:
   trusted_networks:
