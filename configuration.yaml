@@ -5,36 +5,70 @@ homeassistant:
   elevation: 78
   unit_system: metric
   time_zone: Europe/Warsaw
-  customize: !include_dir_merge_named customization
+#  customize: !include_dir_merge_named customization
+  customize: !include customize.yaml
+
+logger:
+  default: warning #error
 
 http:
+  trusted_networks:
+    - 127.0.0.1
+    - 192.168.1.0/24
+    - 192.168.2.0/24
+    - 192.168.4.0/24
 # Uncomment this to add a password (recommended!)
 # api_password: PASSWORD
 frontend:
+  themes: !include themes.yaml
+config:
 panel_iframe: !include panel_iframe/menu.yaml
 sensor: !include_dir_merge_list sensor/
-binary_sensor: !include_dir_merge_list binary_sensor/
+binary_sensor:
+  - platform: iss
+    show_on_map: false
+#binary_sensor1:
+#  - platform: workday
+#    country: PL
+
 switch: !include_dir_list switch/
 influxdb: !include influx/influxdb.yaml
-# camera: !include_dir_list camera/
-camera: !include camera/camera.yaml
-# Text to speech
-# tts:
-#  platform: google
+camera: !include_dir_merge_list camera/
 notify: !include_dir_list notify/
 mqtt: !include mqtt/hass.yaml
-mysensors: !include mysensors/mysensors.yaml
+#mysensors: !include mysensors/mysensors.yaml
 zone: !include_dir_merge_list zone/
-group: !include_dir_merge_named group/
-automation: !include_dir_merge_list automation/
-## Enables
+group: !include groups.yaml
+automation: !include automations.yaml
+#device_tracker:
+#  - platform: mikrotik
+#    host: 192.168.1.1
+#    username: !secret mikrotik-user
+#    password: !secret mikrotik-pass
+script:
+
+media_player:
+  - platform: apple_tv
+    host: 192.168.1.9
+    login_id: !secret apple_tv 
+
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_bot 
+    allowed_chat_ids:
+      - !secret telegram-1
+      - !secret telegram-2
+#Enable iOS app
+ios:
+
 updater:
+  reporting: true
 # Discover some devices automatically
 discovery:
+# Text to speech
+tts:
+  platform: google
 # Allows you to issue voice commands from the frontend in enabled browsers
-# conversation:
-# Enables support for tracking state changes over time.
-# history:
-# View all events in a logbook
-# logbook:
+conversation:
+#For sun automations
 sun:

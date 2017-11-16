@@ -1,0 +1,112 @@
+- action:
+  - data:
+      message: New version {{ states.updater.updater.state }} of Home Assistant is
+        available
+    service: notify.pushover
+  - data:
+      message: New version {{ states.updater.updater.state }} of Home Assistant is
+        available
+    service: notify.telegram_hubert
+  alias: Update
+  condition: []
+  id: '1505415052228'
+  trigger:
+  - entity_id: updater.updater
+    platform: state
+- action:
+  - data:
+      message: "Wilgotno\u015B\u0107 paprotki poni\u017Cej 25%"
+    service: notify.pushover
+  - data:
+      message: "Wilgotno\u015B\u0107 paprotki poni\u017Cej 25%"
+    service: notify.telegram_mysza
+  alias: Nawodnienie paprotki
+  condition: []
+  id: '1505497053088'
+  trigger:
+  - below: '25'
+    entity_id: sensor.paprotka_moisture
+    platform: numeric_state
+- action:
+  - data:
+      message: "Wilgotno\u015B\u0107 fio\u0142ka w salonie poni\u017Cej 25%"
+    service: notify.pushover
+  - data:
+      message: "Wilgotno\u015B\u0107 fio\u0142ka w salonie poni\u017Cej 25%"
+    service: notify.telegram_mysza
+  alias: "Nawodnienie fio\u0142ka w salonie"
+  condition: []
+  id: '1505497273631'
+  trigger:
+  - below: '25'
+    entity_id: sensor.fioek_1_moisture
+    platform: numeric_state
+- action:
+  - data:
+      message: "Wilgotno\u015B\u0107 fio\u0142ka w sypialni poni\u017Cej 15%"
+    service: notify.pushover
+  - data:
+      message: "Wilgotno\u015B\u0107 fio\u0142ka w sypialni poni\u017Cej 15%"
+    service: notify.telegram_mysza
+  alias: "Nawodnienie fio\u0142ka w sypialni"
+  condition: []
+  id: '1505497412825'
+  trigger:
+  - below: '15'
+    entity_id: sensor.fioek_2_moisture
+    platform: numeric_state
+- action:
+  - data:
+      message: Home Assistant Start at {{ states('sensor.time') }}
+    service: notify.pushover
+  alias: Hass start
+  condition: []
+  id: '1505499650244'
+  trigger:
+  - event: start
+    platform: homeassistant
+- action:
+  - data:
+      message: Home Assistant Stop at {{ states('sensor.time') }}
+    service: notify.pushover
+  alias: Hass stop
+  condition: []
+  id: '1505499713906'
+  trigger:
+  - event: shutdown
+    platform: homeassistant
+- action:
+  - data:
+      message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
+    service: notify.pushover
+  - data:
+      message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
+    service: notify.telegram_mysza
+  alias: Prognoza
+  condition: []
+  id: '1505501013398'
+  trigger:
+  - at: '19:00:00'
+    platform: time
+- action:
+  - data:
+      name: darkred
+    service: frontend.set_theme
+  alias: Set dark theme for night
+  condition: []
+  id: '1510777731207'
+  initial_state: true
+  trigger:
+  - at: '19:00'
+    platform: time
+- action:
+  - data:
+      name: stormy_hues
+    service: frontend.set_theme
+  alias: Set light theme for day
+  condition: []
+  id: '1510779620059'
+  initial_state: true
+  trigger:
+  - at: 08:00
+    platform: time
