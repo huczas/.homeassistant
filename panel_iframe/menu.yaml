@@ -1,16 +1,12 @@
 router:
-  title: 'Router'
+  title: 'Kwiatki'
   icon: 'mdi:router-wireless'
-  url: 'http://192.168.1.1'
-staty:
-  title: 'Statystyki'
-  icon: 'mdi:chart-line'
-  url: 'http://192.168.1.1/graphs/iface/Orange-FFTH/'
+  url: 'http://192.168.1.14:3000/dashboard/db/kwiatki'
 nas:
   title: 'NAS'
   icon: 'mdi:harddisk'
   url: 'http://192.168.1.2'
 configurator:
-  title: 'Configurator'
+  title: 'Edytor'
   icon: 'mdi:wrench'
   url: 'http://192.168.1.14:3218'
