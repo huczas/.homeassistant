@@ -1,3 +1,24 @@
 - platform: generic
   still_image_url: http://api.sat24.com/crop?type=infraPolair&lat=52.2297&lon=21.0122&width=300&height=300&zoom=0.70&continent=eu
   name: Polska
+
+- platform: generic
+  still_image_url: http://strony.toya.net.pl/~rybar/met/img/radar.png
+  name: Radar
+
+- platform: generic
+  still_image_url: http://images.blitzortung.org/Images/image_b_pl.png
+  name: Burze
+
+- platform: generic
+  name: ISS
+  still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.binary_sensor.iss.attributes.lat }},{{ states.binary_sensor.iss.attributes.long }}&zoom=5&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.binary_sensor.iss.attributes.lat }},{{ states.binary_sensor.iss.attributes.long }}
+  limit_refetch_to_url_change: true
+
+- platform: generic
+  still_image_url: http://www.n3kl.org/sun/images/noaa_xrays.gif
+  name: Xrays
+
+- platform: generic
+  still_image_url: http://150.254.126.252/meteorogram/21.00_52.25.png
+  name: ENWO
