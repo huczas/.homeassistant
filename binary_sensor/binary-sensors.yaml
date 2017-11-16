@@ -1,0 +1,7 @@
+#ISS space ship info
+- platform: iss
+  show_on_map: false
+#Workdays for automation
+- platform: workday
+  country: PL
+
