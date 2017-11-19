@@ -9,6 +9,8 @@ homeassistant:
   customize: !include customize.yaml
 
 logger: !include logger.yaml
+system_log:
+  max_entries: 20
 
 http:
   trusted_networks:
