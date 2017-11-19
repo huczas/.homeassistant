@@ -1,0 +1,32 @@
+# MQTT
+  - platform: mqtt
+    - name: "Halogeny"
+      state_topic: "/Sonoff1/GPIO/12"
+      command_topic: "/Sonoff1/GPIO/12"
+      icon: mdi:lightbulb-outline
+      payload_on: "1"
+      payload_off: "0"
+      optimistic: true
+      qos: 0
+      retain: true
+      value_template: '{{ value.x }}'
+    - name: "Ledy"
+      state_topic: "/Sonoff2/GPIO/12"
+      command_topic: "/Sonoff2/GPIO/12"
+      icon: mdi:lightbulb-outline
+      payload_on: "1"
+      payload_off: "0"
+      optimistic: true
+      qos: 0
+      retain: true
+      value_template: '{{ value.x }}'
+# Wake on lan devices:
+  - platform: wake_on_lan
+    -   name: 'NAS'
+        icon: mdi:ethernet
+        host: 192.168.1.2
+        mac_address: "00:10:75:37:8D:5C"
+    -   name: 'PC'
+        icon: mdi:ethernet
+        host: 192.168.2.1
+        mac_address: "74:D0:2B:93:1A:EB"
