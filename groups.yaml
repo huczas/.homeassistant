@@ -70,13 +70,23 @@ system:
   name: System
   view: false
   entities:
-  - sensor.cpu_use
+  - sensor.cpu_used
+  - sensor.cpu_temperature
   - sensor.disk_free_home
-  - sensor.ram_free
+  - sensor.disk_used_
+  - sensor.ram_available
+  - sensor.ram_used
+  - sensor.since_last_boot
   - switch.pihole
   - sensor.pihole_ads_blocked_today
   - sensor.pihole_ads_percentage_blocked_today
   - sensor.pihole_dns_unique_clients
+load:
+  name: Load
+  entities:
+    - sensor.average_load_1m
+    - sensor.average_load_5m
+    - sensor.average_load_15m
 router:
   name: Router
   view: false
