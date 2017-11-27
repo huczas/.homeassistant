@@ -1,5 +1,5 @@
 #Pi-Hole switch
-  - platform: command_line
+platform: command_line
     switches:
       pihole:
         command_on: "curl -X GET 'http://192.168.1.14/admin/api.php?enable&auth='"
