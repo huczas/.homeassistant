@@ -73,6 +73,10 @@ system:
   - sensor.cpu_use
   - sensor.disk_free_home
   - sensor.ram_free
+  - switch.pihole
+  - sensor.pihole_ads_blocked_today
+  - sensor.pihole_ads_percentage_blocked_today
+  - sensor.pihole_dns_unique_clients
 router:
   name: Router
   view: false
