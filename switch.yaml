@@ -30,3 +30,11 @@
         icon: mdi:ethernet
         host: 192.168.2.1
         mac_address: "74:D0:2B:93:1A:EB"
+#Pi-Hole switch
+  - platform: command_line
+    switches:
+      pihole:
+        command_on: "curl -X GET 'http://192.168.1.14/admin/api.php?enable&auth='"
+        command_off: "curl -X GET 'http://192.168.1.14/admin/api.php?disable=3600&auth='"
+        command_state: "curl -X GET 'http://192.168.1.14/admin/api.php?status'"
+        value_template: "{{ value_json.status == 'enabled' }}"

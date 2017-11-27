@@ -4,3 +4,16 @@
       arg: /home
     - type: memory_free
     - type: processor_use
+    - type: disk_use_percent
+      arg: /
+    - type: memory_use_percent
+    - type: since_last_boot
+    - type: load_1m
+    - type: load_5m
+    - type: load_15m
+    - type: process
+      arg: grafana-server
+    - type: process
+      arg: influxdb
+    - type: process
+      arg: pihole
