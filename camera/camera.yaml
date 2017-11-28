@@ -22,3 +22,7 @@
 - platform: generic
   still_image_url: http://150.254.126.252/meteorogram/21.00_52.25.png
   name: ENWO
+
+- platform: generic
+  still_image_url: http://meteo.org.pl/img/um/warszawa.png
+  name: UM
