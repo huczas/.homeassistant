@@ -81,9 +81,32 @@ sensor.pws_wind_gust_kph:
   friendly_name: "Porywy wiatru"
   icon: mdi:speedometer
 group.system:
-  order: 1
+  order: 21
 group.pihole:
-  order: 2
+  order: 22
 #Aktywacja ukrytej domyślnej grupy dla automatyki
 group.all_automations:
   hidden: false
+group.warunki_sypialnia:
+  order: 11
+group.salon: {}
+group.sonoff:
+  order: 1
+group.appletv:
+  order: 3
+group.wunderground_s:
+  order: 4
+group.pojutrze:
+  order: 5
+group.sypialnia:
+  order: 10
+group.network:
+  order: 20
+group.wol:
+  order: 23
+group.bandwidth:
+  order: 24
+group.router:
+  order: 25
+group.czas:
+  order: 26
