@@ -3,13 +3,13 @@ sonoff:
   icon: mdi:hotel
   entities:
   - switch.ledy
-  - switch.halogeny
-sypialnia:
-  name: Sypialnia
+ # - switch.halogeny
+warunki_sypialnia:
+  name: Warunki Sypialnia
   entities:
   - sensor.pi_hat_temperature
-salon:
-  name: Salon
+warunki_salon:
+  name: Warunki salon
   icon: mdi:silverware-fork
   entities:
   - sensor.lux
@@ -79,7 +79,7 @@ system:
   - sensor.since_last_boot
 pihole:
   name: Pi-hole
-  view: true
+  view: false
   entities:
   - switch.pihole
   - sensor.pihole_ads_blocked_today
@@ -157,27 +157,26 @@ Polska:
   view: false
   entities:
   - camera.polska
-station:
-  name: ISS station
-  view: false
-  entities:
-  - binary_sensor.iss
 cam_iss:
   name: Pogoda
   view: false
   entities:
   - camera.iss
-default_view:
-  name: default_view
+#Początek kart z grupami  
+Salon:
+  name: Salon
   view: true
   entities:
   - group.sonoff
-  - group.sypialnia
-  - group.salon
+  - group.warunki_salon
   - group.appletv
   - group.wunderground_s
   - group.pojutrze
-  - group.czas
+Sypialnia:
+  name: Sypialnia
+  view: true
+  entities:
+  - group.warunki_sypialnia
 network:
   name: Network
   view: true
@@ -187,6 +186,7 @@ network:
   - group.system
   - group.router
   - group.pihole
+  - group.czas
 pogoda:
   name: Pogoda
   view: true
@@ -201,5 +201,5 @@ iss:
   name: ISS
   view: true
   entities:
-  - group.station
+  - binary_sensor.iss
   - group.cam_iss
