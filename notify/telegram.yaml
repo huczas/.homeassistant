@@ -1,3 +1,0 @@
-platform: telegram
-name: telegram_hubert
-chat_id: !secret telegram-1

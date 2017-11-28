@@ -1,0 +1,12 @@
+- platform: pushover
+  name: Pushover
+  api_key: !secret api_pushover
+  user_key: !secret user_pushover
+
+- platform: telegram
+  name: telegram_mysza
+  chat_id: !secret telegram-2
+
+- platform: telegram
+  name: telegram_hubert
+  chat_id: !secret telegram-1

@@ -22,44 +22,32 @@ http:
 frontend:
   themes: !include themes.yaml
 config:
-panel_iframe: !include panel_iframe/menu.yaml
-sensor: !include_dir_merge_list sensor/
-binary_sensor: !include binary_sensor/binary-sensors.yaml
-switch: !include_dir_list switch/
-influxdb: !include influx/influxdb.yaml
-camera: !include cameras.yaml
-notify: !include_dir_list notify/
-mqtt: !include mqtt/hass.yaml
-#mysensors: !include mysensors/mysensors.yaml
-zone: !include_dir_merge_list zone/
-group: !include groups.yaml
 automation: !include automations.yaml
 #Script is similar to automation
 script:
+
+panel_iframe: !include panel_iframe.yaml
+binary_sensor: !include binary_sensors.yaml
+sensor: !include_dir_merge_list sensor/
+switch: !include_dir_list switch/
+influxdb: !include influxdb.yaml
+camera: !include cameras.yaml
+notify: !include notify.yaml
+mqtt: !include mqtt.yaml
+zone: !include zone.yaml
+group: !include groups.yaml
+weblink: !include weblink.yaml
+media_player: !include media_player.yaml
+telegram_bot: !include telegram_bot.yaml
+#mysensors: !include mysensors.yaml
 
 #device_tracker:
 #  - platform: mikrotik
 #    host: 192.168.1.1
 #    username: !secret mikrotik-user
 #    password: !secret mikrotik-pass
-weblink:
-  entities:
-    - name: Router
-      url: http://192.168.1.1/
-    - name: Home Assistant
-      url: https://home-assistant.io
 
-media_player:
-  - platform: apple_tv
-    host: 192.168.1.9
-    login_id: !secret apple_tv 
 
-telegram_bot:
-  - platform: polling
-    api_key: !secret telegram_bot 
-    allowed_chat_ids:
-      - !secret telegram-1
-      - !secret telegram-2
 #Enable iOS app
 ios:
 
