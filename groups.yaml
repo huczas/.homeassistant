@@ -163,6 +163,9 @@ cam_iss:
   entities:
   - camera.iss
 #Początek kart z grupami  
+default_view:
+  view: no
+  
 Salon:
   name: Salon
   view: true
