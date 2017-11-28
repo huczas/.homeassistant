@@ -181,16 +181,15 @@ default_view:
 network:
   name: Network
   view: true
-  icon: mdi:server-network
   entities:
   - group.bandwidth
   - group.wol
   - group.system
   - group.router
+  - group.pihole
 pogoda:
   name: Pogoda
   view: true
-  icon: mdi:weather-sunny
   entities:
   - group.wunderground
   - group.radar
@@ -201,7 +200,6 @@ pogoda:
 iss:
   name: ISS
   view: true
-  icon: mdi:rocket
   entities:
   - group.station
   - group.cam_iss
