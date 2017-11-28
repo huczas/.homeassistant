@@ -137,11 +137,11 @@ Xrays:
   view: false
   entities:
   - camera.xrays
-Radar:
-  name: Radar
-  view: false
-  entities:
-  - camera.radar
+#Radar:
+#  name: Radar
+#  view: false
+#  entities:
+#  - camera.radar
 Burze:
   name: Burze
   view: false
@@ -164,12 +164,14 @@ cam_iss:
   - camera.iss
 #Początek kart z grupami  
 default_view:
-  view: no
-  
+  view: yes
+  entities:
+  - group.appletv
+
 Salon:
   name: Salon
   view: true
-  entities:
+  entities: 
   - group.sonoff
   - group.warunki_salon
   - group.appletv
@@ -195,7 +197,7 @@ pogoda:
   view: true
   entities:
   - group.wunderground
-  - group.radar
+ # - group.radar
   - group.burze
   - group.polska
   - group.xrays
