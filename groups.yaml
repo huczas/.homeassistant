@@ -77,9 +77,14 @@ system:
   - sensor.ram_available
   - sensor.ram_used
   - sensor.since_last_boot
+pihole:
+  name: Pi-hole
+  view: true
+  entities:
   - switch.pihole
   - sensor.pihole_ads_blocked_today
   - sensor.pihole_ads_percentage_blocked_today
+  - sensor.pihole_dns_queries_today
   - sensor.pihole_dns_unique_clients
 load:
   name: Load
