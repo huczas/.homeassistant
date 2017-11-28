@@ -1,5 +1,5 @@
 - platform: pi_hole
   monitored_conditions:
     - ads_blocked_today
-    - sensor.pihole_ads_percentage_blocked_today
-    - sensor.pihole_dns_unique_clients
+    - ads_percentage_blocked_today
+    - dns_unique_clients
