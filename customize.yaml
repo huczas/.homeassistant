@@ -84,3 +84,6 @@ group.system:
   order: 1
 group.pihole:
   order: 2
+customize:
+  group.all_automations:
+    hidden: false

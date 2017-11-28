@@ -166,7 +166,7 @@ cam_iss:
 default_view:
   view: yes
   entities:
-  - group.appletv
+  - group.all_automations
 
 Salon:
   name: Salon
