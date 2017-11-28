@@ -84,5 +84,6 @@ group.system:
   order: 1
 group.pihole:
   order: 2
+#Aktywacja ukrytej domyślnej grupy dla automatyki
 group.all_automations:
   hidden: false
