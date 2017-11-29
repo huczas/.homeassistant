@@ -84,7 +84,9 @@ group.system:
   order: 21
 group.pihole:
   order: 22
-#Aktywacja ukrytej domyślnej grupy dla automatyki
+#
+# Aktywacja ukrytej domyślnej grupy dla automatyki
+#
 group.all_automations:
   hidden: false
 group.warunki_sypialnia:
