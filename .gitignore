@@ -42,6 +42,7 @@ __pycache__
 
 # Other
 *.uuid
+*.json
 *.conf
 *.db
 *.db-journal
