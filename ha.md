@@ -1,19 +1,22 @@
-# HASS operations
-1. To check realtime logs `sudo journalctl -f -u home-assistant.service`
-2. To restart HA `sudo systemctl restart home-assistant.service`
-3. To check logs `sudo systemctl status -l home-assistant.service`
-4. To stop HA `sudo systemctl stop home-assistant.service`
-5. To start HA `sudo systemctl start home-assistant.service`
-# To upgrade HASS manually:
+## HASS operations
 
-*  Login to system. HASS configuration files are saved in `/home/homeassistant/.homeassistant` and the code files are saved in `/srv/homeassistant/lib/python3.5/site-packages/homeassistant/`.
-*  Change to homeassistant user `sudo su -s /bin/bash homeassistant`
-*  Change to virtual enviroment `source /srv/homeassistant/homeassistant_venv/bin/activate`
-*  Update HA `pip3 install --upgrade homeassistant`. To update to a different branch, use the complete git URL, `pip3 install --upgrade git+git://github.com/home-assistant/home-assistant.git@dev`
-*  Type `exit` to logout the hass user and return to the `pi` user.
-*  Restart the Home-Assistant Service `sudo systemctl restart home-assistant@homeassistant`
+* To check realtime logs `sudo journalctl -f -u home-assistant.service`
+* To restart HA `sudo systemctl restart home-assistant.service`
+* To check logs `sudo systemctl status -l home-assistant.service`
+* To stop HA `sudo systemctl stop home-assistant.service`
+* To start HA `sudo systemctl start home-assistant.service`
 
-# If RPi is not syncing the time
+## To upgrade HASS manually:
+
+1. Login to system. HASS configuration files are saved in `/home/homeassistant/.homeassistant` and the code files are saved in `/srv/homeassistant/homeassistant_venv/lib/python3.6/site-packages/homeassistant`.
+2. Change to homeassistant user `sudo su -s /bin/bash homeassistant`
+3. Change to virtual enviroment `source /srv/homeassistant/homeassistant_venv/bin/activate`
+4. Update HA `pip3 install --upgrade homeassistant`. To update to a different branch, use the complete git URL, `pip3 install --upgrade git+git://github.com/home-assistant/home-assistant.git@dev`
+5. Type `exit` to logout the hass user and return to the `pi` user.
+6. Restart the Home-Assistant Service `sudo systemctl restart hhome-assistant.service`
+
+## If RPi is not syncing the time
+
 Use the `systemd-timesyncd` service as explained [here](https://wiki.archlinux.org/index.php/systemd-timesyncd)
 Here are the [time servers](https://wiki.archlinux.org/index.php/Network_Time_Protocol_daemon#Connection_to_NTP_servers) that I used.
 ```
@@ -21,24 +24,27 @@ NTP=0.pl.pool.ntp.org 1.pl.pool.ntp.org 2.pl.pool.ntp.org 3.pl.pool.ntp.org
 FallbackNTP=0.arch.pool.ntp.org 1.arch.pool.ntp.org 2.arch.pool.ntp.org 3.arch.pool.ntp.org
 ```
 
-# Configuring WinSCP to edit HASS files
+## Configuring WinSCP to edit HASS files
+
 Default AIO installation does not allow editing the configuration files in WinSCP. To enable the same, you will need to change the SFTP server (in Advanced settings -> Environment -> SFTP).
 
 1. Obtain the SFTP by running `grep sftp /etc/ssh/sshd_config` at the `pi` shell. You will get something like, `Subsystem sftp /usr/lib/openssh/sftp-server`.
 2. Now, set the sftp server to: `sudo su -c /usr/lib/openssh/sftp-server` (note that the `/usr/lib/openssh/sftp-server` is the same path obtained from the previous step) and set Shell to `sudo -s`.
 
-# Install Homebridge on a Pi
+## Install Homebridge on a Pi
+
 You can install Homebridge on a Pi using the following commands:
+
 1. Make sure your Pi is updated.
 2. Install all the dependencies
-  ```
+  ```bash
   sudo apt-get install git make
   curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
   sudo apt-get install -y nodejs
   sudo apt-get install libavahi-compat-libdnssd-dev
   ```
 3. Install both Homebridge and Homebridge-Homeassistant plugin using:
-  ```
+  ```bash
   sudo npm install -g --unsafe-perm homebridge
   sudo npm install -g homebridge-homeassistant
   ```
@@ -76,7 +82,8 @@ You can install Homebridge on a Pi using the following commands:
 7. For remote access to Homebridge devices, you will need to enable 2FA on your iOS devices. If you are not able to [remotely access](https://github.com/nfarina/homebridge/issues/1212) your Homebridge
 devices, you may have to sign out, restart, and sign back in to your Apple TV.
 
-# Mosquitto operations
+## Mosquitto operations
+
 I am using the default AIO username/password, replace them with yours
 
 1. You can remove a topic from Mosquitto using `mosquitto_pub -r -n -u 'pi' -P 'raspberry' -t 'owntracks/arsaboo/mqttrpi'`
@@ -84,7 +91,8 @@ I am using the default AIO username/password, replace them with yours
 3. To publish use `mosquitto_pub -u 'pi' -P 'raspberry' -t 'smartthings/Driveway/switch'  -m 'on'` (use the relevant topic).
 4. You can find the path to mosquitto_pub using `which mosquitto_pub`; restart Mosquitto using `sudo systemctl restart mosquitto`.
 
-# Backing up Configurations on Github
+## Backing up Configurations on Github
+
 Thanks to @dale3h for assistance with these instructions.
 
 1. Install `git` using `sudo apt-get install git`
@@ -110,7 +118,7 @@ Thanks to @dale3h for assistance with these instructions.
     * If you get an error about `*** Please tell me who you are.`, run `git config --global user.email "your@email.here"` and `git config --global user.name "Your Name"`
     * After that commit succeeds, run: `git remote add origin git@github.com:yourusername/.homeassistant.git` (make sure you enter the correct repo URL here)
     * Just to confirm everything is right, run `git remote -v` and you should see:
-      ```
+      ```bash
       hass@raspberrypi:~/.homeassistant$ git remote -v
       origin  git@github.com:huczas/homeassistant-config.git (fetch)
       origin  git@github.com:huczas/homeassistant-config.git (push)
@@ -129,7 +137,9 @@ Thanks to @dale3h for assistance with these instructions.
     cd /home/homeassistant
     git clone git@github.com:huczas/.homeassistant.git .homeassistant
     ```
-# Integrating HASS (AIO) with Smartthings using Mosquitto
+
+## Integrating HASS (AIO) with Smartthings using Mosquitto
+
 If you are using AIO (which has Mosquitto pre-installed), you can use the following to integrate SmartThings and HA.
 
 1. Install node.js, and pm2
@@ -142,10 +152,10 @@ If you are using AIO (which has Mosquitto pre-installed), you can use the follow
     ```
 2. Install the [SmartThings MQTT Bridge](https://github.com/stjohnjohnson/smartthings-mqtt-bridge)
     ```bash
-    $ sudo npm install -g smartthings-mqtt-bridge
+    sudo npm install -g smartthings-mqtt-bridge
     ```
 3. Add details of your Mosquitto to `config.yml`. For the default AIO username password, your file should look something like:
-    ```
+    ```text
     mqtt:
         # Specify your MQTT Broker's hostname or IP address here
         host: mqtt://192.168.2.199
@@ -169,9 +179,10 @@ If you are using AIO (which has Mosquitto pre-installed), you can use the follow
 6. Once `pm2` runs the program, you can then run `pm2 save` to save the running programs into a configuration file.
 7. You can then run `pm2` as a systemd or service by running the command that you get after running `pm2 startup systemd` (run this without `sudo`).
 
-# Miscellaneous Tips/Tricks
+## Miscellaneous Tips/Tricks
+
 * You can test the Read Speed of your SD card using (note, this command takes some time to run):
-  ```
+  ```bash
   sudo dd if=/dev/mmcblk0 of=/dev/null bs=8M count=100
   sudo hdparm -t /dev/mmcblk0
   ```
