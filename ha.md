@@ -70,11 +70,11 @@ I am using the default AIO username/password, replace them with yours
 4. You can find the path to mosquitto_pub using `which mosquitto_pub`; restart Mosquitto using `sudo systemctl restart mosquitto`.
 
 # HASS operations
-1. To check realtime logs `sudo journalctl -f -u home-assistant@homeassistant`
-2. To restart HA `sudo systemctl restart home-assistant@homeassistant`
-3. To check logs `sudo systemctl status -l home-assistant@homeassistant`
-4. To stop HA `sudo systemctl stop home-assistant@homeassistant`
-5. To start HA `sudo systemctl start home-assistant@homeassistant`
+1. To check realtime logs `sudo journalctl -f -u home-assistant.service`
+2. To restart HA `sudo systemctl restart home-assistant.service`
+3. To check logs `sudo systemctl status -l home-assistant.service`
+4. To stop HA `sudo systemctl stop home-assistant.service`
+5. To start HA `sudo systemctl start home-assistant.service`
 
 # Backing up Configurations on Github
 Thanks to @dale3h for assistance with these instructions.
