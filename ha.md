@@ -1,3 +1,18 @@
+# HASS operations
+1. To check realtime logs `sudo journalctl -f -u home-assistant.service`
+2. To restart HA `sudo systemctl restart home-assistant.service`
+3. To check logs `sudo systemctl status -l home-assistant.service`
+4. To stop HA `sudo systemctl stop home-assistant.service`
+5. To start HA `sudo systemctl start home-assistant.service`
+# To upgrade HASS manually:
+
+*  Login to system. HASS configuration files are saved in `/home/homeassistant/.homeassistant` and the code files are saved in `/srv/homeassistant/lib/python3.5/site-packages/homeassistant/`.
+*  Change to homeassistant user `sudo su -s /bin/bash homeassistant`
+*  Change to virtual enviroment `source /srv/homeassistant/homeassistant_venv/bin/activate`
+*  Update HA `pip3 install --upgrade homeassistant`. To update to a different branch, use the complete git URL, `pip3 install --upgrade git+git://github.com/home-assistant/home-assistant.git@dev`
+*  Type `exit` to logout the hass user and return to the `pi` user.
+*  Restart the Home-Assistant Service `sudo systemctl restart home-assistant@homeassistant`
+
 # If RPi is not syncing the time
 Use the `systemd-timesyncd` service as explained [here](https://wiki.archlinux.org/index.php/systemd-timesyncd)
 Here are the [time servers](https://wiki.archlinux.org/index.php/Network_Time_Protocol_daemon#Connection_to_NTP_servers) that I used.
@@ -68,13 +83,6 @@ I am using the default AIO username/password, replace them with yours
 2. To subscribe to all the topics use `mosquitto_sub -h 192.168.2.212 -u 'pi' -P 'raspberry' -v -t '#'` (replace the IP address)
 3. To publish use `mosquitto_pub -u 'pi' -P 'raspberry' -t 'smartthings/Driveway/switch'  -m 'on'` (use the relevant topic).
 4. You can find the path to mosquitto_pub using `which mosquitto_pub`; restart Mosquitto using `sudo systemctl restart mosquitto`.
-
-# HASS operations
-1. To check realtime logs `sudo journalctl -f -u home-assistant.service`
-2. To restart HA `sudo systemctl restart home-assistant.service`
-3. To check logs `sudo systemctl status -l home-assistant.service`
-4. To stop HA `sudo systemctl stop home-assistant.service`
-5. To start HA `sudo systemctl start home-assistant.service`
 
 # Backing up Configurations on Github
 Thanks to @dale3h for assistance with these instructions.
@@ -160,15 +168,6 @@ If you are using AIO (which has Mosquitto pre-installed), you can use the follow
 5. Follow the rest of the instructions (from step 2) listed [here](https://github.com/stjohnjohnson/smartthings-mqtt-bridge#usage).
 6. Once `pm2` runs the program, you can then run `pm2 save` to save the running programs into a configuration file.
 7. You can then run `pm2` as a systemd or service by running the command that you get after running `pm2 startup systemd` (run this without `sudo`).
-
-# To upgrade HASS manually:
-
-*  Login to system. HASS configuration files are saved in `/home/homeassistant/.homeassistant` and the code files are saved in `/srv/homeassistant/lib/python3.5/site-packages/homeassistant/`.
-*  Change to homeassistant user `sudo su -s /bin/bash homeassistant`
-*  Change to virtual enviroment `source /srv/homeassistant/homeassistant_venv/bin/activate`
-*  Update HA `pip3 install --upgrade homeassistant`. To update to a different branch, use the complete git URL, `pip3 install --upgrade git+git://github.com/home-assistant/home-assistant.git@dev`
-*  Type `exit` to logout the hass user and return to the `pi` user.
-*  Restart the Home-Assistant Service `sudo systemctl restart home-assistant@homeassistant`
 
 # Miscellaneous Tips/Tricks
 * You can test the Read Speed of your SD card using (note, this command takes some time to run):
