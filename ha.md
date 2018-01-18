@@ -2,7 +2,7 @@
 Use the `systemd-timesyncd` service as explained [here](https://wiki.archlinux.org/index.php/systemd-timesyncd)
 Here are the [time servers](https://wiki.archlinux.org/index.php/Network_Time_Protocol_daemon#Connection_to_NTP_servers) that I used.
 ```
-NTP=0.north-america.pool.ntp.org 1.north-america.pool.ntp.org 2.north-america.pool.ntp.org 3.north-america.pool.ntp.org
+NTP=0.pl.pool.ntp.org 1.pl.pool.ntp.org 2.pl.pool.ntp.org 3.pl.pool.ntp.org
 FallbackNTP=0.arch.pool.ntp.org 1.arch.pool.ntp.org 2.arch.pool.ntp.org 3.arch.pool.ntp.org
 ```
 
@@ -81,31 +81,31 @@ Thanks to @dale3h for assistance with these instructions.
 
 1. Install `git` using `sudo apt-get install git`
 2. Go to https://github.com/new and create a new repository. I named mine `homeassistant-config`. Initialize with `readme: no` and `.gitignore: none`.
-3. Navigate to your `.homeassistant` directory. For AIO, it should be `/home/hass/.homeassistant`, and for HASSbian, it is `/home/homeassistant/.homeassistant`.
-4. Run `sudo su -s /bin/bash hass` for AIO and `sudo su -s /bin/bash homeassistant` for HASSbian.
+3. Navigate to your `.homeassistant` directory. For AIO, it should be `/home/homeassistant/.homeassistant`, and for HASSbian, it is `/home/hass/.homeassistant`.
+4. Run `sudo su -s /bin/bash homeassistant` for AIO and `sudo su -s /bin/bash hass` for HASSbian.
 5. Run `wget https://raw.githubusercontent.com/arsaboo/homeassistant-config/master/.gitignore` to get the `.gitignore` file from your repo (replace the link to match your repository). You can add things to your `.gitignore` file that you do not want to be uploaded.
 6. Next, we need to add SSH keys to your Github account.
-    * Navigate to `cd /home/hass/.ssh` (for AIO). If you don't have `.ssh` directory, create one and change the permission `chmod 700 ~/.ssh`.
+    * Navigate to `cd /home/homeassistant/.ssh` (for AIO). If you don't have `.ssh` directory, create one and change the permission `chmod 700 ~/.ssh`.
     * Run `ssh-keygen -t rsa -b 4096 -C "homeassistant@pi"`. If you want to enter a passphrase, that's up to you. If you do, you'll have to enter that passphrase any time you want to update your changes to github. If you do not want a passphrase, leave it blank and just hit `Enter`.
     * Save the key in the default location (press `Enter` when it prompts for location).
     * When you're finished, run `ls -al ~/.ssh` to confirm that you have both `id_rsa` and `id_rsa.pub` files.
     * Go to https://github.com/settings/keys and click `New SSH key` button at top right. Title: `homeassistant@pi` (or whatever you want, really...it's just for you to know which key it is)
     * Run `cat id_rsa.pub` in the SSH session and copy/paste the output to that github page.
-    * Then click `Add SSH key` button.
-7. Go back to your repo page on GitHub. It'll be something like https://github.com/yourusernamehere/homeassistant-config. Click the green `Clone or download` button, and then click `Use SSH`.
-8. You should see something like this in the textbox: `git@github.com:yourusername/homeassistant-config.git`. Copy that to your clipboard.
+    * Then click `Add SSH key` button and provide your github password.
+7. Go back to your repo page on GitHub. It'll be something like https://github.com/yourusernamehere/.homeassistant. Click the green `Clone or download` button, and then click `Use SSH`.
+8. You should see something like this in the textbox: `git@github.com:yourusername/.homeassistant.git`. Copy that to your clipboard.
 9. Now you are ready to upload the files to GitHub.
     * Navigate to `cd ~/.homeassistant`
     * `git init`
     * `git add .`
     * `git commit -m 'initial commit'`
     * If you get an error about `*** Please tell me who you are.`, run `git config --global user.email "your@email.here"` and `git config --global user.name "Your Name"`
-    * After that commit succeeds, run: `git remote add origin git@github.com:yourusername/homeassistant-config.git` (make sure you enter the correct repo URL here)
+    * After that commit succeeds, run: `git remote add origin git@github.com:yourusername/.homeassistant.git` (make sure you enter the correct repo URL here)
     * Just to confirm everything is right, run `git remote -v` and you should see:
       ```
       hass@raspberrypi:~/.homeassistant$ git remote -v
-      origin  git@github.com:arsaboo/homeassistant-config.git (fetch)
-      origin  git@github.com:arsaboo/homeassistant-config.git (push)
+      origin  git@github.com:huczas/homeassistant-config.git (fetch)
+      origin  git@github.com:huczas/homeassistant-config.git (push)
       ```
     * Finally, run `git push origin master`.
 
@@ -119,7 +119,7 @@ Thanks to @dale3h for assistance with these instructions.
     ```bash
     sudo su -s /bin/bash homeassistant
     cd /home/homeassistant
-    git clone git@github.com:arsaboo/homeassistant-config.git .homeassistant
+    git clone git@github.com:huczas/.homeassistant.git .homeassistant
     ```
 # Integrating HASS (AIO) with Smartthings using Mosquitto
 If you are using AIO (which has Mosquitto pre-installed), you can use the following to integrate SmartThings and HA.
@@ -165,56 +165,10 @@ If you are using AIO (which has Mosquitto pre-installed), you can use the follow
 
 *  Login to system. HASS configuration files are saved in `/home/homeassistant/.homeassistant` and the code files are saved in `/srv/homeassistant/lib/python3.5/site-packages/homeassistant/`.
 *  Change to homeassistant user `sudo su -s /bin/bash homeassistant`
-*  Change to virtual enviroment `source /srv/homeassistant/bin/activate`
+*  Change to virtual enviroment `source /srv/homeassistant/homeassistant_venv/bin/activate`
 *  Update HA `pip3 install --upgrade homeassistant`. To update to a different branch, use the complete git URL, `pip3 install --upgrade git+git://github.com/home-assistant/home-assistant.git@dev`
 *  Type `exit` to logout the hass user and return to the `pi` user.
 *  Restart the Home-Assistant Service `sudo systemctl restart home-assistant@homeassistant`
-
-# Setting up MySQL
-Follow the instructions [here](https://community.home-assistant.io/t/large-homeassistant-database-files/4201/124) to set-up MySQL.
-```bash
-sudo apt-get update && sudo apt-get upgrade -y
-sudo apt-get install mysql-server && sudo apt-get install mysql-client
-sudo apt-get install libmysqlclient-dev
-sudo apt-get install python-dev python3-dev
-sudo pip3 install --upgrade mysql-connector
-sudo pip3 install mysqlclient
-```
-Create homeassistant database and grant privileges:
-```bash
-mysql -u root -p
-CREATE DATABASE homeassistant;
-CREATE USER 'hass'@'localhost' IDENTIFIED BY 'PASSWORD';
-GRANT ALL PRIVILEGES ON homeassistant.* TO 'hass'@'localhost';
-FLUSH PRIVILEGES;
-exit;
-```
-Test if user works:
-```bash
-mysql -u hass homeassistant -p
-exit;
-```
-Switch to homeassistant user:
-```bash
-sudo su -s /bin/bash homeassistant
-source /srv/homeassistant/bin/activate
-pip3 install --upgrade mysqlclient
-exit
-```
-Add to configuration.yaml and restart HA.
-```
-recorder:
-  db_url: mysql://hass:********@127.0.0.1/homeassistant?charset=utf8
-```  
-Some useful commands:
-* Use `mysqlshow -h localhost -u hass -p homeassistant` to show the tables that are created.
-* To delete all tables and start from scratch, run `DROP DATABASE homeassistant;` and recreate homeassistant database and grant privileges.
-* Use `sudo apt-get remove --purge mysql\*` to delete anything related to packages named mysql.
-* `show tables` to list all the tables.
-* `desc states` to describe table `states`.
-* `(SELECT event_id, time_fired FROM events ORDER BY event_id ASC LIMIT 1) UNION ALL (SELECT event_id, time_fired FROM events ORDER BY event_id DESC LIMIT 1);` to list the first and last record of `events` table.
-* `SELECT table_schema homeassistant, sum( data_length + index_length ) / (1024 * 1024) "Data Base Size in MB" FROM information_schema.TABLES GROUP BY table_schema;` to list disk space used by each database.
-* `select entity_id, count(*), sum(length(state)), sum(length(attributes))/ (1024 * 1024) siz  from states group by entity_id order by siz;` to obtain the space (in MB) occupied by each entity in the `states` table.
 
 # Miscellaneous Tips/Tricks
 * You can test the Read Speed of your SD card using (note, this command takes some time to run):
