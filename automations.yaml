@@ -15,10 +15,10 @@
     platform: state
 - action:
   - data:
-      message: "Wilgotno\u015B\u0107 paprotki poni\u017Cej 25%"
+      message: Wilgotność paprotki poniżej 25%
     service: notify.pushover
   - data:
-      message: "Wilgotno\u015B\u0107 paprotki poni\u017Cej 25%"
+      message: Wilgotność paprotki poniżej 25%
     service: notify.telegram_mysza
   alias: Nawodnienie paprotki
   condition: []
@@ -29,12 +29,12 @@
     platform: numeric_state
 - action:
   - data:
-      message: "Wilgotno\u015B\u0107 fio\u0142ka w salonie poni\u017Cej 25%"
+      message: Wilgotność fiołka w niebieskiej doniczce poniżej 25%
     service: notify.pushover
   - data:
-      message: "Wilgotno\u015B\u0107 fio\u0142ka w salonie poni\u017Cej 25%"
+      message: Wilgotność fiołka w niebieskiej doniczce poniżej 25%
     service: notify.telegram_mysza
-  alias: "Nawodnienie fio\u0142ka w salonie"
+  alias: Nawodnienie fiołka w niebieskiej doniczce
   condition: []
   id: '1505497273631'
   trigger:
@@ -43,12 +43,12 @@
     platform: numeric_state
 - action:
   - data:
-      message: "Wilgotno\u015B\u0107 fio\u0142ka w sypialni poni\u017Cej 15%"
+      message: Wilgotność fiołka w czerwonej doniczce poniżej 15%
     service: notify.pushover
   - data:
-      message: "Wilgotno\u015B\u0107 fio\u0142ka w sypialni poni\u017Cej 15%"
+      message: Wilgotność fiołka w czerwonej doniczce poniżej 15%
     service: notify.telegram_mysza
-  alias: "Nawodnienie fio\u0142ka w sypialni"
+  alias: Nawodnienie fiołka w czerwonej doniczce
   condition: []
   id: '1505497412825'
   trigger:
@@ -78,8 +78,20 @@
 - action:
   - data:
       message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
-    service: notify.pushover
+    service: notify.telegram_hubert
   - data:
+      data:
+        photo:
+          url: http://meteo.org.pl/img/um/warszawa.png
+      message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
+    service: notify.telegram_hubert
+  - data:
+      message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
+    service: notify.telegram_mysza
+  - data:
+      data:
+        photo:
+          url: http://meteo.org.pl/img/um/warszawa.png
       message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
     service: notify.telegram_mysza
   alias: Prognoza

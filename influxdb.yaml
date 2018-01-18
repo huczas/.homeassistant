@@ -45,6 +45,9 @@ include:
    - sensor.paprotka_moisture
    - sensor.paprotka_temperature
    - sensor.pihole_ads_blocked_today
+   - sensor.mieszkanie_pm_10
+   - sensor.mieszkanie_pm_25
+   - sensor.mieszkanie_pm_10_2
 tags:
   instance: prod
   source: hass

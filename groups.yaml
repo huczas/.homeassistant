@@ -177,7 +177,6 @@ Salon:
   name: Salon
   view: true
   entities: 
-  - group.sonoff
   - group.warunki_salon
   - group.appletv
   - group.wunderground_s
@@ -186,6 +185,7 @@ Sypialnia:
   name: Sypialnia
   view: true
   entities:
+  - group.sonoff
   - group.warunki_sypialnia
 network:
   name: Network

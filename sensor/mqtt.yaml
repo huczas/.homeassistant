@@ -29,3 +29,25 @@
   qos: 1
   unit_of_measurement: "%H"
   value_template: '{{ value }}'
+
+- platform: mqtt
+  name: "Mieszkanie PM 1.0"
+  state_topic: "NodeMCU/Dust/pm1.0"
+  qos: 1
+  unit_of_measurement: "µg/m3"
+  value_template: '{{ value }}'
+
+- platform: mqtt
+  name: "Mieszkanie PM 2.5"
+  state_topic: "NodeMCU/Dust/pm2.5"
+  qos: 1
+  unit_of_measurement: "µg/m3"
+  value_template: '{{ value }}'
+
+- platform: mqtt
+  name: "Mieszkanie PM 10"
+  state_topic: "NodeMCU/Dust/pm10"
+  qos: 1
+  unit_of_measurement: "µg/m3"
+  value_template: '{{ value }}'
+
