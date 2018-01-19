@@ -171,6 +171,7 @@ cam_iss:
 default_view:
   view: yes
   entities:
+  - device_tracker.iphone
   - group.all_automations
 
 Salon:
