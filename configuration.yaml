@@ -44,9 +44,9 @@ telegram_bot: !include telegram_bot.yaml
 device_tracker:
  - platform: nmap_tracker
    hosts: 
-    - 192.168.1.1-192.168.2.255
-   home_interval: 10
-   consider_home: 180
+    - 192.168.0.0/22
+   interval_seconds: 30
+   consider_home: 1200
    exclude:
     - 192.168.1.1
     - 192.168.1.13
