@@ -122,3 +122,14 @@
   trigger:
   - at: 08:00
     platform: time
+- action:
+  - data:
+      message: Daria w domu!
+    service: notify.telegram_hubert
+  alias: Daria w domu
+  condition: []
+  id: '1516379923357'
+  trigger:
+  - entity_id: device_tracker.myszowyiphone
+    platform: state
+    to: home
