@@ -133,3 +133,8 @@
   - entity_id: device_tracker.myszowyiphone
     platform: state
     to: home
+- action: []
+  alias: Hubert w domu
+  condition: []
+  id: '1516380844092'
+  trigger: []
