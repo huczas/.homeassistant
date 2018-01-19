@@ -41,7 +41,16 @@ media_player: !include media_player.yaml
 telegram_bot: !include telegram_bot.yaml
 #mysensors: !include mysensors.yaml
 
-#device_tracker:
+device_tracker:
+ - platform: nmap_tracker
+   hosts: 
+    - 192.168.1.1-192.168.2.255
+   home_interval: 10
+   consider_home: 180
+   exclude:
+    - 192.168.1.1
+    - 192.168.1.13
+    - 192.168.1.14
 #  - platform: mikrotik
 #    host: 192.168.1.1
 #    username: !secret mikrotik-user
