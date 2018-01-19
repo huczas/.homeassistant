@@ -172,6 +172,7 @@ default_view:
   view: yes
   entities:
   - device_tracker.iphone
+  - device_tracker.myszowyiphone
   - group.all_automations
 
 Salon:
@@ -192,6 +193,9 @@ network:
   name: Network
   view: true
   entities:
+  - sensor.average_load_1m
+  - sensor.average_load_5m
+  - sensor.average_load_15m
   - group.bandwidth
   - group.wol
   - group.system
