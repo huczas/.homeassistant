@@ -46,7 +46,7 @@ device_tracker:
    hosts: 
     - 192.168.0.0/22
    interval_seconds: 30
-   consider_home: 300
+   consider_home: 1200
    exclude:
     - 192.168.1.1
     - 192.168.1.13
