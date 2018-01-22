@@ -133,8 +133,25 @@
   - entity_id: device_tracker.myszowyiphone
     platform: state
     to: home
-- action: []
+- action:
+  - data:
+      message: Hubert w domu!
+    service: notify.telegram_mysza
   alias: Hubert w domu
   condition: []
   id: '1516380844092'
-  trigger: []
+  trigger:
+  - entity_id: device_tracker.iphone
+    platform: state
+    to: home
+- action:
+  - data:
+      message: Daria wyszła z domu.
+    service: notify.telegram_hubert
+  alias: Daria wyszła
+  condition: []
+  id: '1516607782012'
+  trigger:
+  - entity_id: device_tracker.myszowyiphone
+    platform: state
+    to: not_home
