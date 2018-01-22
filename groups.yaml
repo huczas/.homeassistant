@@ -34,13 +34,6 @@ AppleTV:
   view: false
   entities:
   - media_player.apple_tv
-mobile_devices:
-  name: Telefon
-  view: false
-  entities:
-  - device_tracker.hubert
-  - sensor.pelagia_battery_level
-  - sensor.pelagia_battery_state
 czas:
   name: Czas
   view: false
@@ -92,16 +85,6 @@ load:
     - sensor.average_load_1m
     - sensor.average_load_5m
     - sensor.average_load_15m
-router:
-  name: Router
-  view: false
-  entities:
-  - sensor.system
-  - sensor.uptime
-  - sensor.wan_tx
-  - sensor.wan_rx
-  - sensor.breaches_witkowski007gmailcom
-  - sensor.breaches_huczasicloudcom
 wunderground:
   name: Wunderground
   view: false
@@ -199,7 +182,6 @@ network:
   - group.bandwidth
   - group.wol
   - group.system
-  - group.router
   - group.pihole
   - group.czas
 pogoda:
