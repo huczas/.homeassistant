@@ -145,13 +145,9 @@ UM:
   view: false
   entities:
   - camera.um
-cam_iss:
-  name: Pogoda
-  view: false
-  entities:
-  - camera.iss
 #Początek kart z grupami  
 default_view:
+  name: Home
   view: yes
   entities:
   - device_tracker.iphone
