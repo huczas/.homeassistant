@@ -136,7 +136,7 @@
 - action:
   - data:
       message: Hubert w domu!
-    service: notify.telegram_mysza
+    service: notify.telegram_hubert
   alias: Hubert w domu
   condition: []
   id: '1516380844092'
