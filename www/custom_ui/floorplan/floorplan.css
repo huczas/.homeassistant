@@ -92,13 +92,13 @@ svg, svg * {
   
   /* Light */
   
-  .ledy-off {
+  .light-off {
     fill: #C3B7F4 !important;
     fill-opacity: 1 !important;
   }
   
-  .ledy-on {
-    fill: #F8D2B9 !important;
+  .light-on {
+    fill: #fcde8e !important;
     fill-opacity: 1 !important;
   }
   
