@@ -8,14 +8,10 @@ stylesheet: /local/custom_ui/floorplan/floorplan.css
 # hide_app_toolbar:          # hide the application toolbar (when used as a custom panel)
 # date_format: DD-MMM-YYYY   # Date format to use in hover-over text
 
-last_motion_entity: sensor.template_last_motion
-last_motion_class: last-motion
-
 groups:
-
   - name: Sensors
     entities:
-       -  sensor.dark_sky_temperature
+       -  sensor.pws_temp_c
     #text_template: '${entity.state ? entity.state : "unknown"}'
     # An example of rounding up a number, i.e. a temperature of 90.1 becomes 91
     text_template: '${entity.state ? Math.ceil(entity.state) : "undefined"}'  
@@ -32,10 +28,6 @@ groups:
   - name: Lights
     entities:
        - switch.ledy
-       - light.living_room
-       - light.patio
-       - group.kitchen_lights
-       - group.living_room_lights
     states:
       - state: 'on'
         class: 'light-on'
@@ -45,15 +37,6 @@ groups:
       domain: homeassistant   # This optional parameter allows you to use other services such as homeassistant.toggle like here.
       service: toggle
 
-  - name: Switches
-    entities:
-       - switch.doorbell
-    states:
-      - state: 'on'
-        class: 'doorbell-on'
-      - state: 'off'
-        class: 'doorbell-off'
-  
 #        - name: thermostat_temp
 #          entities:
 #            - climate.downstairs
