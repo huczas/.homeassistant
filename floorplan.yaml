@@ -24,17 +24,16 @@ groups:
       else
         return "temp-high";
       '
-
   - name: Lights
     entities:
        - switch.ledy
     states:
       - state: 'on'
-        class: 'light-on'
+        class: 'blinking'
       - state: 'off'
         class: 'light-off'
     action:
-      domain: homeassistant   # This optional parameter allows you to use other services such as homeassistant.toggle like here.
+      domain: homeassistant # This optional parameter allows you to use other services such as homeassistant.toggle like here.
       service: toggle
 
 #        - name: thermostat_temp
