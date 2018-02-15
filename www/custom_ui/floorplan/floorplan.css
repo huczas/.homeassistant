@@ -67,12 +67,12 @@ svg, svg * {
   
   /* Light */
   
-  .light-off {
+  .payload-off {
     fill: #C3B7F4 !important;
     fill-opacity: 1 !important;
   }
   
-  .light-on {
+  .payload-on {
     fill: #fcde8e !important;
     fill-opacity: 1 !important;
   }
