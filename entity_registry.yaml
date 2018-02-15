@@ -1,0 +1,6 @@
+sensor.hubert_battery_level:
+  platform: ios
+  unique_id: level_Hubert
+sensor.hubert_battery_state:
+  platform: ios
+  unique_id: state_Hubert
