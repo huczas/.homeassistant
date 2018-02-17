@@ -64,13 +64,17 @@
 <script>
   Polymer({
     is: 'ha-floorplan',
+
     ready() {
     },
+
     attached() {
       this.onAttached();
     },
+
     detached() {
     },
+
     properties: {
       hass: {
         type: Object,
@@ -108,49 +112,60 @@
         value: () => { return []; },
       },
     },
+
     stopPropagation(e) {
       e.stopPropagation();
     },
+
     hassChanged: function (newHass, oldHass) {
       this.handleEntities(newHass.states);
     },
+
     onAttached() {
       window.onerror = this.handleWindowError.bind(this);
+
       if (!this.config.groups) {
         this.isLoading = false;
         this.warn(`Cannot find 'groups' in floorplan configuration`);
         return;
       }
+
       let invalidGroups = this.config.groups.filter(x => x.entities && x.elements);
       if (invalidGroups.length) {
         this.isLoading = false;
         this.warn(`A group cannot contain both 'entities' and 'elements' in floorplan configuration`);
         return;
       }
+
       invalidGroups = this.config.groups.filter(x => !x.entities && !x.elements);
       if (invalidGroups.length) {
         this.isLoading = false;
         this.warn(`A group must contain either 'entities' or 'elements' in floorplan configuration`);
         return;
       }
+
       this.hass.connection.socket.addEventListener('message', event => {
         let data = JSON.parse(event.data);
+
         // Store the time difference between the local web browser and the Home Assistant server
         if (data.event && data.event.time_fired) {
           let lastEventFiredTime = moment(data.event.time_fired).toDate();
           this.timeDifference = moment().diff(moment(lastEventFiredTime), 'milliseconds');
         }
       });
+
       this.addExternalCss(() => {
         this.loadFloorPlan(() => {
           this.isLoading = false;
           this.handleEntities(this.hass.states);
         });
       });
+
       if (this.config.groups.find(entityGroup => entityGroup.state_transitions)) {
         setInterval(this.updateStateTransitions.bind(this), 100);
       }
     },
+
     handleWindowError(msg, url, lineNo, columnNo, error) {
       if (msg.toLowerCase().indexOf("script error") >= 0) {
         this.error('Script error: See browser console for detail');
@@ -162,14 +177,18 @@
           'Line: ' + lineNo + ', column: ' + columnNo,
           'Error: ' + JSON.stringify(error)
         ].join('<br>');
+
         this.error(message);
       }
+
       return false;
     },
+
     addExternalCss(callback) {
       if (!this.config.stylesheet) {
         callback();
       }
+
       this.loadStyleSheet(this.config.stylesheet + '?cacheBuster=' + (new Date().getTime()), function (success, link) {
         if (success) {
           Polymer.dom(this.instance.root).appendChild(link);
@@ -182,29 +201,39 @@
         }
       }.bind({ instance: this, callback: callback }));
     },
+
     loadFloorPlan(callback) {
       jQuery.ajax({
         url: this.config.image + '?cacheBuster=' + (new Date().getTime()),
         success: function (result) {
           let svg = $(result).find('svg')[0];
+
           $(svg).height('100%');
           $(svg).width('100%');
           $(svg).css('position', this.instance.isPanel ? 'absolute' : 'relative');
           $(svg).css('cursor', 'default');
+
           Polymer.dom(this.instance.$.floorplan).node.appendChild(svg);
+
           let uniqueId = (new Date()).getTime();
+
           let svgElements = $(svg).find('*').toArray();
+
           let elementGroups = this.instance.config.groups.filter(x => x.elements);
           for (let elementGroup of elementGroups) {
             for (let elementId of elementGroup.elements) {
               let svgElement = $(svg).find(`[id="${elementId}"]`);
+
               if (svgElement.length) {
                 $(svgElement).on('click', this.instance.onElementClick.bind({ instance: this.instance, elementId: elementId }));
                 $(svgElement).css('cursor', 'pointer');
+
                 let elementConfig = {
                   group: elementGroup,
                 };
+
                 this.instance.elementConfigs[elementId] = elementConfig;
+
                 if (elementGroup.action.data.elements) {
                   for (let otherElementId of elementGroup.action.data.elements) {
                     let otherSvgElement = $(svg).find(`[id="${otherElementId}"]`);
@@ -217,9 +246,11 @@
               }
             }
           }
+
           let entityGroups = this.instance.config.groups.filter(x => x.entities);
           for (let entityGroup of entityGroups) {
             let targetEntityIds = [];
+
             // Split out HA entity groups into separate entities
             if (entityGroup.groups) {
               for (let entityId of entityGroup.groups) {
@@ -234,6 +265,7 @@
                 }
               }
             }
+
             // HA entities treated as is
             if (entityGroup.entities) {
               for (let entityId of entityGroup.entities) {
@@ -246,6 +278,7 @@
                 }
               }
             }
+
             for (let entityId of targetEntityIds) {
               let entityConfig = {
                 group: entityGroup,
@@ -254,23 +287,28 @@
                 svgElementConfigs: {},
                 imageUrl: undefined
               };
+
               this.instance.entityConfigs[entityId] = entityConfig;
+
               let svgElement = svgElements.find(svgElement => svgElement.id === entityId);
               if (!svgElement) {
                 this.instance.warn(`Cannot find element '${entityId}' in SVG file`);
                 continue;
               }
+
               entityConfig.svgElementConfigs[svgElement.id] = {
                 svgElementId: svgElement.id,
                 svgElement: svgElement,
                 clonedsvgElement: svgElement.cloneNode(true),
                 entityId: entityId
               };
+
               $(svgElement).find('*').each((i, svgNestedElement) => {
                 // Ensure that all child elements have an Id.
                 if (!svgNestedElement.id) {
                   svgNestedElement.id = uniqueId++;
                 }
+
                 entityConfig.svgElementConfigs[svgNestedElement.id] = {
                   svgElementId: svgNestedElement.id,
                   svgElement: svgNestedElement,
@@ -278,16 +316,22 @@
                   entityId: entityId
                 };
               });
+
               for (svgElementId in entityConfig.svgElementConfigs) {
                 let svgElementConfig = entityConfig.svgElementConfigs[svgElementId];
+
                 let svgElement = $(svgElementConfig.svgElement);
+
                 // Create a title element (to support hover over text)
                 svgElement.append(document.createElementNS('http://www.w3.org/2000/svg', 'title'));
+
                 if (svgElement.length) {
                   svgElementConfig.svgElement = svgElement[0];
+
                   $(svgElement).on('click', this.instance.onEntityClick.bind({ instance: this.instance, entityId: entityId }));
                   $(svgElement).css('cursor', 'pointer');
                   $(svgElement).addClass('ha-entity');
+
                   if ((svgElement[0].nodeName === 'text') && (svgElement[0].id === entityId)) {
                     let boundingBox = svgElement[0].getBBox();
                     let rect = $(document.createElementNS("http://www.w3.org/2000/svg", 'rect'))
@@ -299,12 +343,14 @@
                       .attr('x', boundingBox.x - 1)
                       .attr('y', boundingBox.y - 0.5)
                       .css('fill-opacity', 0);
+
                     $(rect).insertBefore($(svgElement));
                   }
                 }
               }
             }
           }
+
           // Enable pan / zoom if enabled in config
           if ((this.instance.config.pan_zoom === null) || (this.instance.config.pan_zoom !== undefined)) {
             svgPanZoom($(svg)[0], {
@@ -314,27 +360,38 @@
               center: true,
             });
           }
+
           this.callback();
+
         }.bind({ instance: this, callback: callback })
       });
     },
+
     handleEntities(entities) {
       let svg = Polymer.dom(this.$.floorplan).querySelector('svg');
+
       for (let entityId in entities) {
         let entityState = entities[entityId];
+
         let entityConfig = this.entityConfigs[entityId];
         if (!entityConfig)
           continue;
+
         entityConfig.lastState = entityState.state;
+
         for (let svgElementId in entityConfig.svgElementConfigs) {
           let svgElementConfig = entityConfig.svgElementConfigs[svgElementId];
           let svgElement = svgElementConfig.svgElement;
+
           if (!svgElement)
             continue;
+
           this.setHoverOverText(svgElement, entityState);
+
           if (svgElement.nodeName === 'text') {
             let text = entityConfig.group.text_template ?
               this.assemble(entityConfig.group.text_template, entityState, entities) : entityState.state;
+
             let tspan = $(svgElement).find('tspan');
             if (tspan.length) {
               $(tspan).text(text);
@@ -346,6 +403,7 @@
                 $(svgElement).append(title);
               }
             }
+
             let rect = $(svgElement).parent().find(`[id="${entityId}.background"]`);
             if (rect.length) {
               let boundingBox = svgElement.getBBox();
@@ -358,9 +416,12 @@
                 .width(boundingBox.width + 2);
             }
           }
+
           if (!this.cssRules || !this.cssRules.length)
             return;
+
           let wasTransitionHandled = false;
+
           if (entityConfig.group.states && entityConfig.group.state_transitions) {
             let transitionConfig = entityConfig.group.state_transitions.find(transitionConfig => (transitionConfig.to_state === entityState.state));
             if (transitionConfig && transitionConfig.from_state && transitionConfig.to_state && transitionConfig.duration) {
@@ -369,6 +430,7 @@
               let lastChangedMoment = moment(entityState.last_changed);
               let elapsed = Math.max(serverMoment.diff(lastChangedMoment, 'milliseconds'), 0);
               let remaining = (transitionConfig.duration * 1000) - elapsed;
+
               if (remaining > 0) {
                 entityConfig.lastChangedTime = lastChangedMoment.toDate();
               }
@@ -378,6 +440,7 @@
               wasTransitionHandled = true;
             }
           }
+
           if (entityConfig.group.image_template) {
             imageUrl = this.assemble(entityConfig.group.image_template, entityState, entities);
             if (entityConfig.imageUrl !== imageUrl) {
@@ -386,21 +449,27 @@
                 this.setHoverOverText(embeddedSvg, entityState);
               });
             }
+
             let embeddedSvg = $(svg).find(`[id="image.${entityId}"]`)[0];
             this.setHoverOverText(embeddedSvg, entityState);
           }
+
           let targetClass = undefined;
           let obsoleteClasses = [];
+
           if (entityConfig.group.class_template) {
             targetClass = this.assemble(entityConfig.group.class_template, entityState, entities);
           }
+
           let originalClasses = this.getArray(svgElementConfig.clonedsvgElement.classList);
+
           // Get the config for the current state
           if (entityConfig.group.states) {
             let stateConfig = entityConfig.group.states.find(stateConfig => (stateConfig.state === entityState.state));
             if (stateConfig && stateConfig.class && !wasTransitionHandled) {
               targetClass = stateConfig.class;
             }
+
             // Remove any other previously-added state classes
             for (let otherStateConfig of entityConfig.group.states) {
               if (!stateConfig || (otherStateConfig.state != stateConfig.state)) {
@@ -421,12 +490,15 @@
               }
             }
           }
+
           // Remove any obsolete classes from the entity
           this.removeClasses(entityId, svgElement, obsoleteClasses);
+
           // Add the target class to the entity
           if (targetClass) {
             this.addClass(entityId, svgElement, targetClass);
           }
+
           if (this.config.last_motion_entity && this.config.last_motion_class && entities[this.config.last_motion_entity] &&
             (entityState.attributes.friendly_name === entities[this.config.last_motion_entity].state)) {
             if (!$(svgElement).hasClass(this.config.last_motion_class)) {
@@ -441,6 +513,7 @@
         }
       }
     },
+
     setHoverOverText(element, entityState) {
       let title = $(element).find('title');
       if (title.length) {
@@ -449,9 +522,11 @@
           'State: ' + entityState.state + '\n' +
           'Last changed date: ' + moment(entityState.last_changed).format(dateFormat) + '\n' +
           'Last changed time: ' + moment(entityState.last_changed).format('HH:mm:ss');
+
         $(title).html(titleText);
       }
     },
+
     loadImage(imageUrl, entityId, entityState, callback) {
       let svg = Polymer.dom(this.$.floorplan).querySelector('svg');
       jQuery.ajax({
@@ -460,7 +535,9 @@
           let svgElement = $(svg).find(`[id="${entityId}"]`);
           let bbox = svgElement[0].getBBox();
           let clientRect = svgElement[0].getBoundingClientRect();
+
           let embeddedSvg = $(result).find('svg');
+
           embeddedSvg.attr('id', `image.${entityId}`);
           embeddedSvg.attr('preserveAspectRatio', 'xMinYMin meet')
           embeddedSvg
@@ -468,27 +545,35 @@
             .attr('width', bbox.width)
             .attr('x', bbox.x)
             .attr('y', bbox.y);
+
           $(embeddedSvg).find('*').append(document.createElementNS('http://www.w3.org/2000/svg', 'title'))
             .on('click', this.onEntityClick.bind({ instance: this, entityId: entityId }))
             .css('cursor', 'pointer')
             .addClass('ha-entity');
+
           // Remove previous SVG
           let previousEmbeddedSvg = $(svg).find(`[id="${embeddedSvg.attr('id')}"]`);
           $(previousEmbeddedSvg).find('*')
             .off('click')
             .remove();
+
           $(svg).append(embeddedSvg);
+
           callback(embeddedSvg, entityState);
+
         }.bind(this)
       });
     },
+
     addClass(entityId, svgElement, className) {
       if ($(svgElement).hasClass('ha-leave-me-alone')) {
         return;
       }
+
       if (!$(svgElement).hasClass(className)) {
         //console.log(`${entityId}: adding class "${className}" for current state "${entityState.state}" (${svgElement.id})`);
         $(svgElement).addClass(className);
+
         if ((svgElement.nodeName === 'text')) {
           let rect = $(svgElement).parent().find(`[id="${entityId}.background"]`);
           if (rect.length) {
@@ -499,11 +584,13 @@
         }
       }
     },
+
     removeClasses(entityId, svgElement, classes) {
       for (className of classes) {
         //console.log(`${entityId}: removing class "${className}" (${svgElement.id})`);
         if ($(svgElement).hasClass(className)) {
           $(svgElement).removeClass(className);
+
           if ((svgElement.nodeName === 'text')) {
             let rect = $(svgElement).parent().find(`[id="${entityId}.background"]`);
             if (rect.length) {
@@ -515,28 +602,38 @@
         }
       }
     },
+
     updateStateTransitions() {
       if (!this.cssRules || !this.cssRules.length)
         return;
+
       let svg = Polymer.dom(this.$.floorplan).querySelector('svg');
+
       for (let entityId in this.entityConfigs) {
         let entityConfig = this.entityConfigs[entityId];
+
         if (!entityConfig || !entityConfig.group.states || !entityConfig.group.state_transitions || (entityConfig.lastChangedTime === undefined))
           continue;
+
         for (let svgElementId in entityConfig.svgElementConfigs) {
           let svgElementConfig = entityConfig.svgElementConfigs[svgElementId];
           let svgElement = svgElementConfig.svgElement;
+
           if (!svgElement)
             continue;
+
           let wasTransitionHandled = false;
+
           let transitionConfig = entityConfig.group.state_transitions.find(transitionConfig => (transitionConfig.to_state === entityConfig.lastState));
           if (transitionConfig && transitionConfig.from_state && transitionConfig.to_state && transitionConfig.duration) {
             let serverMoment = this.getServerMoment();
             let fromStateConfig = entityConfig.group.states.find(stateConfig => (stateConfig.state === transitionConfig.from_state));
             let toStateConfig = entityConfig.group.states.find(stateConfig => (stateConfig.state === transitionConfig.to_state));
+
             if (fromStateConfig && toStateConfig) {
               let fromFill = this.getFill(fromStateConfig);
               let toFill = this.getFill(toStateConfig);
+
               if (fromFill && toFill) {
                 let elapsed = serverMoment.diff(moment(entityConfig.lastChangedTime), 'milliseconds');
                 if (elapsed < 0) {
@@ -551,16 +648,19 @@
                     entityConfig.lastChangedTime = undefined;
                   }
                 }
+
                 wasTransitionHandled = true;
               }
             }
           }
+
           if (!wasTransitionHandled) {
             this.setEntityStyle(svgElementConfig, svgElement, entityConfig);
           }
         }
       }
     },
+
     setEntityStyle(svgElementConfig, svgElement, entityConfig, state) {
       let stateConfig = entityConfig.group.states.find(stateConfig => (stateConfig.state === entityConfig.lastState));
       if (stateConfig) {
@@ -576,6 +676,7 @@
             // ???
           }
         }
+
         let fill = this.getFill(stateConfig);
         if (fill) {
           svgElement.style.fill = fill;
@@ -590,20 +691,25 @@
         }
       }
     },
+
     onElementClick(e) {
       let svgElement = e.target;
+
       let elementConfig = this.instance.elementConfigs[this.elementId];
       if (elementConfig.group.action) {
         let action = elementConfig.group.action;
         if (action.service) {
           switch (action.domain) {
             case 'class':
+
               switch (action.service) {
                 case 'toggle':
                   let svg = Polymer.dom(this.instance.$.floorplan).querySelector('svg');
                   let classes = action.data.classes;
+
                   for (let otherElementId of action.data.elements) {
                     let otherSvgElement = $(svg).find(`[id="${otherElementId}"]`);
+
                     if ($(otherSvgElement).hasClass(classes[0])) {
                       $(otherSvgElement).removeClass(classes[0]);
                       $(otherSvgElement).addClass(classes[1]);
@@ -619,6 +725,7 @@
                   break;
               }
               break;
+
             default:
               domain = action.domain
               let data = action.data ? action.data : {};
@@ -634,14 +741,17 @@
         }
       }
     },
+
     onEntityClick(e) {
       let entityId = this.entityId;
+
       let entityConfig = this.instance.entityConfigs[entityId];
       if (entityConfig.group.action) {
         let action = entityConfig.group.action;
         if (action.service) {
           let domain = action.domain ? action.domain : window.HAWS.extractDomain(entityId);
           domain = (domain == 'group') ? 'homeassistant' : domain;
+
           let data = {};
           if (action.data) {
             data = action.data;
@@ -649,12 +759,15 @@
           if (action.data_template) {
             let entities = this.instance.hass.states;
             let entityState = entities[entityId];
+
             let result = this.instance.assemble(action.data_template, entityState, entities);
             data = JSON.parse(result);
           }
+
           if (!data.entity_id) {
             data['entity_id'] = entityId;
           }
+
           this.instance.hass.callService(domain, action.service, data);
         }
         else {
@@ -665,8 +778,10 @@
         this.instance.fire('hass-more-info', { entityId: entityId });
       }
     },
+
     getFill(stateConfig) {
       let fill = undefined;
+
       for (let cssRule of this.cssRules) {
         if (cssRule.selectorText && cssRule.selectorText.indexOf(`.${stateConfig.class}`) >= 0) {
           if (cssRule.style && cssRule.style.fill) {
@@ -680,10 +795,13 @@
           }
         }
       }
+
       return fill;
     },
+
     getStroke(stateConfig) {
       let stroke = undefined;
+
       for (let cssRule of this.cssRules) {
         if (cssRule.selectorText && cssRule.selectorText.indexOf(`.${stateConfig.class}`) >= 0) {
           if (cssRule.style && cssRule.style.stroke) {
@@ -697,8 +815,10 @@
           }
         }
       }
+
       return stroke;
     },
+
     setTransitionFill(svgElement, fromFill, toFill, value) {
       if (value >= 1) {
         svgElement.style.fill = fromFill;
@@ -711,6 +831,7 @@
         svgElement.style.fill = color;
       }
     },
+
     getServerMoment() {
       let serverMoment = moment();
       if (this.timeDifference >= 0)
@@ -719,19 +840,23 @@
         serverMoment.add(Math.abs(this.timeDifference), 'milliseconds');
       return serverMoment;
     },
+
     getArray(list) {
       return Array.isArray(list) ? list : Object.keys(list).map(key => list[key]);
     },
+
     assemble(code, entity, entities) {
       let functionBody = (code.indexOf('return') >= 0) ? code : `return \`${code}\`;`;
       let func = new Function('entity', 'entities', 'hass', 'config', functionBody);
       return func(entity, entities, this.hass, this.config);
     },
+
     error(message) {
       let errors = Polymer.dom(this.$.errors).node;
       $(errors).find('ul').append(`<li>${message}</li>`)
       $(errors).css('display', 'block');
     },
+
     warn(message) {
       if ((this.config.warnings === null) || (this.config.warnings !== undefined)) {
         let warnings = Polymer.dom(this.$.warnings).node;
@@ -739,17 +864,20 @@
         $(warnings).css('display', 'block');
       }
     },
+
     debug(message) {
       let debug = Polymer.dom(this.$.debug).node;
       $(debug).find('ul').append(`<li>${message}</li>`)
       $(debug).css('display', 'block');
     },
+
     loadStyleSheet(path, fn, scope) {
       let head = document.getElementsByTagName('head')[0]; // reference to document.head for appending/ removing link nodes
       let link = document.createElement('link');           // create the link node
       link.setAttribute('href', path);
       link.setAttribute('rel', 'stylesheet');
       link.setAttribute('type', 'text/css');
+
       let sheet, cssRules;
       // get the correct properties to check for depending on the browser
       if ('sheet' in link) {
@@ -758,6 +886,7 @@
       else {
         sheet = 'styleSheet'; cssRules = 'rules';
       }
+
       let interval_id = setInterval(function () {                     // start checking whether the style sheet has successfully loaded
         try {
           if (link[sheet] && link[sheet][cssRules].length) { // SUCCESS! our style sheet has loaded
@@ -773,18 +902,23 @@
           head.removeChild(link);                // since the style sheet didn't load, remove the link node from the DOM
           fn.call(scope || window, false, link); // fire the callback with success == false
         }, 15000);                                 // how long to wait before failing
+
       head.appendChild(link);  // insert the link node into the DOM and start loading the style sheet
+
       return link; // return the link node;
     },
+
     rgbToHex(rgb) {
       return "#" + ((1 << 24) + (rgb[0] << 16) + (rgb[1] << 8) + rgb[2]).toString(16).slice(1);
     },
+
     hexToRgb(hex) {
       // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
       let shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
       hex = hex.replace(shorthandRegex, (m, r, g, b) => {
         return r + r + g + g + b + b;
       });
+
       let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
       return result ? {
         r: parseInt(result[1], 16),
@@ -792,6 +926,7 @@
         b: parseInt(result[3], 16)
       } : null;
     },
+
     mix(color1, color2, weight) {
       let p = weight;
       let w = p * 2 - 1;
@@ -805,4 +940,5 @@
       return rgb;
     }
   });
+
 </script>
