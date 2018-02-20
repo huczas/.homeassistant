@@ -1,3 +1,27 @@
+dark_theme:
+  # Main colors
+  primary-color: '#5294E2'                                                        # Header
+  accent-color: '#E45E65'                                                         # Accent color
+  dark-primary-color: 'var(--accent-color)'                                       # Hyperlinks
+  light-primary-color: 'var(--accent-color)'                                      # Horizontal line in about
+  # Text colors
+  primary-text-color: '#FFFFFF'                                                   # Primary text colour, here is referencing dark-primary-color
+  text-primary-color: 'var(--primary-text-color)'                                 # Primary text colour
+  secondary-text-color: '#5294E2'                                                 # For secondary titles in more info boxes etc.
+  disabled-text-color: '#7F848E'                                                  # Disabled text colour
+  label-badge-border-color: 'green'                                               # Label badge border, just a reference value
+  # Background colors
+  primary-background-color: '#383C45'                                             # Settings background
+  secondary-background-color: '#383C45'                                           # Main card UI background
+  divider-color: 'rgba(0, 0, 0, .12)'                                             # Divider
+  # Table rows
+  table-row-background-color: '#353840'                                           # Table row
+  table-row-alternative-background-color: '#3E424B'                               # Table row alternative
+  # Nav Menu
+  paper-listbox-color: '#5294E2'                                                  # Navigation menu selection hoover
+  paper-listbox-background-color: '#2E333A'                                       # Navigation menu background
+  paper-grey-50: 'var(--primary-text-color)'
+  paper-grey-200: '#414A59'                                                       # Navigation menu selection
 darkblue:
   primary-color: "#396FB6"
   light-primary-color: "#77a0d4"
@@ -196,4 +220,3 @@ vintage:
   paper-slider-knob-start-color: "#cda34f"
   paper-slider-pin-color: "#cda34f"
   paper-slider-active-color: "#cda34f"
-

@@ -102,7 +102,7 @@
     platform: time
 - action:
   - data:
-      name: darkred
+      name: screenshots
     service: frontend.set_theme
   alias: Set dark theme for night
   condition: []
@@ -113,7 +113,7 @@
     platform: time
 - action:
   - data:
-      name: stormy_hues
+      name: screenshots
     service: frontend.set_theme
   alias: Set light theme for day
   condition: []
