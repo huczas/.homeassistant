@@ -145,14 +145,17 @@ UM:
   view: false
   entities:
   - camera.um
-#Początek kart z grupami  
+#
+#Początek kart z grupami
+#
 default_view:
-  name: Home
+  name: Sypialnia
   view: yes
   entities:
   - device_tracker.iphone
   - device_tracker.myszowyiphone
-  - group.all_automations
+  - group.sonoff
+  - group.warunki_sypialnia
 
 Salon:
   name: Salon
@@ -162,14 +165,8 @@ Salon:
   - group.appletv
   - group.wunderground_s
   - group.pojutrze
-Sypialnia:
-  name: Sypialnia
-  view: true
-  entities:
-  - group.sonoff
-  - group.warunki_sypialnia
-network:
-  name: Network
+Ustawienia:
+  name: Ustawienia
   view: true
   entities:
   - sensor.average_load_1m
@@ -181,6 +178,7 @@ network:
   - group.pihole
   - group.czas
   - group.scripts
+  - group.all_automations
 pogoda:
   name: Pogoda
   view: true
@@ -193,7 +191,7 @@ pogoda:
   - group.xrays
   - group.enwo
 scripts:
-  name: Skrypty i ustawienia
+  name: Skrypty
   control: hidden
   entities:
     - input_select.log_level
