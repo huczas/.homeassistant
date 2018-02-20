@@ -180,6 +180,7 @@ network:
   - group.system
   - group.pihole
   - group.czas
+  - group.scripts
 pogoda:
   name: Pogoda
   view: true
