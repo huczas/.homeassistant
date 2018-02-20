@@ -21,4 +21,4 @@ groups:
         class: 'light-off'
     action:
       - service: toggle
-        domain: homeassistant # This optional parameter allows you to use other services such as homeassistant.toggle like here.
+      - domain: homeassistant # This optional parameter allows you to use other services such as homeassistant.toggle like here.
