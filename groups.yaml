@@ -151,38 +151,21 @@ UM:
 default_view:
   name: Sypialnia
   view: yes
+  icon: mdi:home
   entities:
   - device_tracker.iphone
   - device_tracker.myszowyiphone
   - group.sonoff
   - group.warunki_sypialnia
-
-Salon:
-  name: Salon
-  view: true
-  entities: 
   - group.warunki_salon
   - group.appletv
-  - group.wunderground_s
-  - group.pojutrze
-Ustawienia:
-  name: Ustawienia
-  view: true
-  entities:
-  - sensor.average_load_1m
-  - sensor.average_load_5m
-  - sensor.average_load_15m
-  - group.bandwidth
-  - group.wol
-  - group.system
-  - group.pihole
-  - group.czas
-  - group.scripts
-  - group.all_automations
 pogoda:
   name: Pogoda
   view: true
+  icon: mdi:cloud
   entities:
+  - group.wunderground_s
+  - group.pojutrze
   - group.wunderground
  # - group.radar
   - group.burze
@@ -195,3 +178,18 @@ scripts:
   control: hidden
   entities:
     - input_select.log_level
+Ustawienia:
+  name: Ustawienia
+  view: true
+  icon: mdi:settings
+  entities:
+  - sensor.average_load_1m
+  - sensor.average_load_5m
+  - sensor.average_load_15m
+  - group.bandwidth
+  - group.wol
+  - group.system
+  - group.pihole
+  - group.czas
+  - group.scripts
+  - group.all_automations
