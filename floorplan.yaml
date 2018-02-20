@@ -21,4 +21,4 @@ groups:
         class: 'light-off'
     action:
       #- domain: homeassistant
-      - service: toggle
+      service: toggle
