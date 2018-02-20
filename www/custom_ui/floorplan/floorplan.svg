@@ -65,10 +65,11 @@
        width="2202.8572" />
     <ellipse
        id="switch.ledy"
-       cx="850"
-       cy="493.24463"
-       rx="34.285713"
-       ry="37.142857"
-       inkscape:label="Ledy" />
+       cx="847.14282"
+       cy="469.67322"
+       rx="27.142857"
+       ry="25"
+       inkscape:label="Ledy"
+       style="stroke-width:0.72996747" />
   </g>
 </svg>
