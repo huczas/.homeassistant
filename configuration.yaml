@@ -31,7 +31,9 @@ panel_custom: !include panel_custom.yaml
 binary_sensor: !include binary_sensors.yaml
 sensor: !include_dir_merge_list sensor/
 switch: !include_dir_list switch/
+script: !include scripts.yaml
 influxdb: !include influxdb.yaml
+input_select: !include input_select.yaml
 camera: !include cameras.yaml
 notify: !include notify.yaml
 mqtt: !include mqtt.yaml
@@ -41,22 +43,7 @@ weblink: !include weblink.yaml
 media_player: !include media_player.yaml
 telegram_bot: !include telegram_bot.yaml
 #mysensors: !include mysensors.yaml
-
-device_tracker:
- - platform: nmap_tracker
-   hosts: 
-    - 192.168.0.0/22
-   interval_seconds: 30
-   consider_home: 1200
-   exclude:
-    - 192.168.1.1
-    - 192.168.1.13
-    - 192.168.1.14
-#  - platform: mikrotik
-#    host: 192.168.1.1
-#    username: !secret mikrotik-user
-#    password: !secret mikrotik-pass
-
+device_tracker: !include device_tracker.yaml
 
 #Enable iOS app
 ios:

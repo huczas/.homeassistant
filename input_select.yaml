@@ -1,0 +1,12 @@
+log_level:
+  name: HA poziom informacji loga
+  icon: mdi:format-list-bulleted
+  options:
+    - 'critical'
+    - 'fatal'
+    - 'error'
+    - 'warning'
+    - 'warn'
+    - 'info'
+    - 'debug'
+  initial: 'warning'

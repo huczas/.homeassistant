@@ -191,3 +191,8 @@ pogoda:
   - group.um
   - group.xrays
   - group.enwo
+scripts:
+  name: Skrypty i ustawienia
+  control: hidden
+  entities:
+    - input_select.log_level
