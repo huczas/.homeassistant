@@ -145,14 +145,6 @@ UM:
   view: false
   entities:
   - camera.um
-Services:
-  name: Services
-  view: false
-  entities:
-  #- sensor.process_grafanaserver	
-  - sensor.process_influxd	
-  - sensor.process_piholeftl	
-  - sensor.processor_use
 #
 #Początek kart z grupami
 #
@@ -194,7 +186,6 @@ Ustawienia:
   - sensor.average_load_1m
   - sensor.average_load_5m
   - sensor.average_load_15m
-  - group.services
   - group.bandwidth
   - group.wol
   - group.system

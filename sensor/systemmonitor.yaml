@@ -11,9 +11,3 @@
     - type: load_1m
     - type: load_5m
     - type: load_15m
-    - type: process
-      arg: grafana-server
-    - type: process
-      arg: influxd
-    - type: process
-      arg: pihole-FTL
