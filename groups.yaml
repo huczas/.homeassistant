@@ -149,7 +149,7 @@ Services:
   name: Services
   view: false
   entities:
-  - sensor.process_grafanaserver	
+  #- sensor.process_grafanaserver	
   - sensor.process_influxd	
   - sensor.process_piholeftl	
   - sensor.processor_use
