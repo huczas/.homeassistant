@@ -186,6 +186,10 @@ Ustawienia:
   - sensor.average_load_1m
   - sensor.average_load_5m
   - sensor.average_load_15m
+  - sensor.process_grafanaserver	
+  - sensor.process_influxd	
+  - sensor.process_piholeftl	
+  - sensor.processor_use
   - group.bandwidth
   - group.wol
   - group.system
