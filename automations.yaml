@@ -129,6 +129,7 @@
   alias: Daria w domu
   condition: []
   id: '1516379923357'
+  initial_state: 'off'
   trigger:
   - entity_id: device_tracker.myszowyiphone
     platform: state
@@ -140,6 +141,7 @@
   alias: Hubert w domu
   condition: []
   id: '1516380844092'
+  initial_state: 'off'
   trigger:
   - entity_id: device_tracker.iphone
     platform: state
@@ -151,6 +153,7 @@
   alias: Daria wyszła
   condition: []
   id: '1516607782012'
+  initial_state: 'off'
   trigger:
   - entity_id: device_tracker.myszowyiphone
     platform: state
