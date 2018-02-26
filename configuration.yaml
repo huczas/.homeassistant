@@ -46,7 +46,8 @@ device_tracker: !include device_tracker.yaml
 
 #Enable iOS app
 ios:
-homekit: !secret homekit
+homekit: 
+  pincode: !secret homekit
 updater:
   reporting: true
 # Discover some devices automatically
