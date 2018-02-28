@@ -9,4 +9,4 @@ log_level:
     - 'warn'
     - 'info'
     - 'debug'
-  initial: 'warning'
+  initial: 'fatal'
