@@ -161,6 +161,7 @@ default_view:
   entities:
   - device_tracker.iphone
   - device_tracker.myszowyiphone
+  - device_tracker.pc
   - group.sonoff
   - group.warunki_sypialnia
   - group.warunki_salon
