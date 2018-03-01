@@ -12,7 +12,7 @@ warunki_salon:
   name: Warunki salon
   icon: mdi:silverware-fork
   entities:
-  - vacuum.xiaomi_vacuum_cleaner
+  - vacuum.xiaomi_vacuum
   - sensor.lux
   - sensor.temp_w_kuchni
   - sensor.wilgotnosc_w_kuchni
@@ -156,7 +156,7 @@ default_view:
   entities:
   - device_tracker.iphone
   - device_tracker.myszowyiphone
-  - vacuum.xiaomi_vacuum_cleaner
+  - vacuum.xiaomi_vacuum
   - group.sonoff
   - group.warunki_sypialnia
   - group.warunki_salon
