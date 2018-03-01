@@ -156,7 +156,6 @@ default_view:
   entities:
   - device_tracker.iphone
   - device_tracker.myszowyiphone
-  - vacuum.xiaomi_vacuum_cleaner
   - group.sonoff
   - group.warunki_sypialnia
   - group.warunki_salon
