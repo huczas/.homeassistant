@@ -48,6 +48,8 @@ include:
    - sensor.mieszkanie_pm_10
    - sensor.mieszkanie_pm_25
    - sensor.mieszkanie_pm_10_2
+   - sensor.bme680_sensor_air_quality
+   - sensor.bme680_sensor_gas_resistance
 tags:
   instance: prod
   source: hass
