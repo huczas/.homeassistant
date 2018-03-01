@@ -12,6 +12,7 @@ warunki_salon:
   name: Warunki salon
   icon: mdi:silverware-fork
   entities:
+  - vacuum.xiaomi_vacuum_cleaner
   - sensor.lux
   - sensor.temp_w_kuchni
   - sensor.wilgotnosc_w_kuchni
