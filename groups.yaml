@@ -8,11 +8,16 @@ warunki_sypialnia:
   name: Warunki Sypialnia
   entities:
   - sensor.pi_hat_temperature
+  - sensor.bme680_sensor_air_quality
+  - sensor.bme680_sensor_gas_resistance
+Odkurzacz:
+  name: Odkurzacz
+  entities:
+  - vacuum.xiaomi_vacuum
 warunki_salon:
   name: Warunki salon
   icon: mdi:silverware-fork
   entities:
-  - vacuum.xiaomi_vacuum
   - sensor.lux
   - sensor.temp_w_kuchni
   - sensor.wilgotnosc_w_kuchni
@@ -156,11 +161,11 @@ default_view:
   entities:
   - device_tracker.iphone
   - device_tracker.myszowyiphone
-  - vacuum.xiaomi_vacuum
   - group.sonoff
   - group.warunki_sypialnia
   - group.warunki_salon
   - group.appletv
+  - group.odkurzacz
 pogoda:
   name: Pogoda
   view: true
