@@ -44,6 +44,11 @@ telegram_bot: !include telegram_bot.yaml
 #mysensors: !include mysensors.yaml
 device_tracker: !include device_tracker.yaml
 
+vacuum:
+  - platform: xiaomi_miio
+    host: 192.168.1.17
+    token: !secret vacuum
+
 #Enable iOS app
 ios:
 homekit: 
