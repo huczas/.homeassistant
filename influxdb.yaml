@@ -50,6 +50,7 @@ include:
    - sensor.mieszkanie_pm_10_2
    - sensor.bme680_sensor_air_quality
    - sensor.bme680_sensor_gas_resistance
+   - vacuum.xiaomi_vacuum
 tags:
   instance: prod
   source: hass
