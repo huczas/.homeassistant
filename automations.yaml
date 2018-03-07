@@ -158,3 +158,22 @@
   - entity_id: device_tracker.myszowyiphone
     platform: state
     to: not_home
+- action:
+  - condition: state
+    entity_id: vacuum.xiaomi_vacuum
+    state: turn_on
+  alias: Odkurzanie
+  condition:
+  - condition: state
+    entity_id: device_tracker.iphone
+    state: not home
+  - condition: state
+    entity_id: device_tracker.myszowyiphone
+    state: not home
+  id: '1520459740295'
+  trigger:
+  - entity_id: binary_sensor.workday_sensor
+    platform: state
+    to: 'on'
+  - at: '10:00'
+    platform: time
