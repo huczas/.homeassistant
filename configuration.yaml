@@ -41,7 +41,6 @@ group: !include groups.yaml
 weblink: !include weblink.yaml
 media_player: !include media_player.yaml
 telegram_bot: !include telegram_bot.yaml
-#mysensors: !include mysensors.yaml
 device_tracker: !include device_tracker.yaml
 
 vacuum:
