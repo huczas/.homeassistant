@@ -1,0 +1,16 @@
+- platform: google_travel_time
+  name: Busem do pracy
+  api_key: !secret google_maps
+  origin: zone.home
+  destination: zone.work
+  options:
+    mode: transit
+    units: metric
+- platform: google_travel_time
+  name: Busem do domu
+  api_key: !secret google_maps
+  origin: zone.work
+  destination: zone.home
+  options:
+    mode: transit
+    units: metric
