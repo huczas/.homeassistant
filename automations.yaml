@@ -79,13 +79,15 @@
   - event: shutdown
     platform: homeassistant
 - action:
-  - data:
-      message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
-    service: notify.ios_hubert
+#  - data:
+#      message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
+#    service: notify.ios_hubert
   - data:
       data:
-        photo:
+        attachment:
           url: http://meteo.org.pl/img/um/warszawa.png
+          content-type: png
+          hide-thumbnail: false
       message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
     service: notify.ios_hubert
   - data:
