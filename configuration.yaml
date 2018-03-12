@@ -8,6 +8,7 @@ homeassistant:
   customize: !include customize.yaml
 
 logger: !include logger.yaml
+
 system_log:
   max_entries: 20
 
@@ -17,12 +18,18 @@ http:
     - 192.168.1.0/24
     - 192.168.2.0/24
     - 192.168.4.0/24
+  server_port: 8123
+  ip_ban_enabled: True
 # Uncomment this to add a password (recommended!)
 # api_password: PASSWORD
+
+# This offers the official frontend to control Home Assistant.
 frontend:
   themes: !include themes.yaml
+
 config:
 automation: !include automations.yaml
+
 #Script is similar to automation
 script:
 
@@ -49,20 +56,21 @@ vacuum:
     host: 192.168.1.17
     token: !secret vacuum
 
-#Enable iOS app
+# Enable iOS app
 ios:
 homekit: 
   pincode: !secret homekit
+
 updater:
   reporting: true
+
 # Discover some devices automatically
 discovery:
   ignore:
     - apple_tv
-# Text to speech - currently not using
-#tts:
-#  platform: google
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-#For sun automations
+
+# For sun automations
 sun:
+
+# This offers a map on the frontend
+map:
