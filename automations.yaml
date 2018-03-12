@@ -6,23 +6,23 @@
   - data:
       message: New version {{ states.updater.updater.state }} of Home Assistant is
         available
-    service: notify.telegram_hubert
+    service: notify.ios_hubert
   alias: Update
   condition: []
-  id: '1505415052228'
+  id: '1'
   trigger:
   - entity_id: updater.updater
     platform: state
 - action:
   - data:
       message: Wilgotność paprotki poniżej 25%
-    service: notify.pushover
+    service: notify.ios_hubert
   - data:
       message: Wilgotność paprotki poniżej 25%
     service: notify.telegram_mysza
   alias: Nawodnienie paprotki
   condition: []
-  id: '1505497053088'
+  id: '2'
   trigger:
   - below: '25'
     entity_id: sensor.paprotka_moisture
@@ -30,13 +30,16 @@
 - action:
   - data:
       message: Wilgotność fiołka w niebieskiej doniczce poniżej 25%
-    service: notify.pushover
+      data:
+        push:
+          badge: 5
+    service: notify.ios_hubert
   - data:
       message: Wilgotność fiołka w niebieskiej doniczce poniżej 25%
     service: notify.telegram_mysza
   alias: Nawodnienie fiołka w niebieskiej doniczce
   condition: []
-  id: '1505497273631'
+  id: '3'
   trigger:
   - below: '25'
     entity_id: sensor.fioek_1_moisture
@@ -50,7 +53,7 @@
     service: notify.telegram_mysza
   alias: Nawodnienie fiołka w czerwonej doniczce
   condition: []
-  id: '1505497412825'
+  id: '4'
   trigger:
   - below: '15'
     entity_id: sensor.fioek_2_moisture
@@ -61,7 +64,7 @@
     service: notify.pushover
   alias: Hass start
   condition: []
-  id: '1505499650244'
+  id: '5'
   trigger:
   - event: start
     platform: homeassistant
@@ -71,7 +74,7 @@
     service: notify.pushover
   alias: Hass stop
   condition: []
-  id: '1505499713906'
+  id: '6'
   trigger:
   - event: shutdown
     platform: homeassistant
@@ -96,7 +99,7 @@
     service: notify.telegram_myszaa
   alias: Prognoza
   condition: []
-  id: '1505501013398'
+  id: '7'
   trigger:
   - at: '19:00:00'
     platform: time
@@ -106,7 +109,7 @@
     service: frontend.set_theme
   alias: Set dark theme for night
   condition: []
-  id: '1510777731207'
+  id: '8'
   initial_state: true
   trigger:
   - at: '19:00'
@@ -117,7 +120,7 @@
     service: frontend.set_theme
   alias: Set light theme for day
   condition: []
-  id: '1510779620059'
+  id: '9'
   initial_state: true
   trigger:
   - at: 08:00
@@ -128,7 +131,7 @@
     service: notify.telegram_hubert
   alias: Daria w domu
   condition: []
-  id: '1516379923357'
+  id: '10'
   initial_state: 'off'
   trigger:
   - entity_id: device_tracker.myszowyiphone
@@ -137,10 +140,14 @@
 - action:
   - data:
       message: Hubert w domu!
+      data:
+        push:
+          sound: "US-EN-Morgan-Freeman-Welcome-Home.wav"
+          badge: 5
     service: notify.telegram_hubert
   alias: Hubert w domu
   condition: []
-  id: '1516380844092'
+  id: '11'
   initial_state: 'off'
   trigger:
   - entity_id: device_tracker.iphone
@@ -152,7 +159,7 @@
     service: notify.telegram_hubert
   alias: Daria wyszła
   condition: []
-  id: '1516607782012'
+  id: '12'
   initial_state: 'off'
   trigger:
   - entity_id: device_tracker.myszowyiphone
@@ -170,7 +177,7 @@
   - condition: state
     entity_id: device_tracker.myszowyiphone
     state: not home
-  id: '1520459740295'
+  id: '13'
   trigger:
   - entity_id: binary_sensor.workday_sensor
     platform: state
@@ -183,7 +190,7 @@
     service: notify.ios_hubert
   alias: New Automation
   condition: []
-  id: '1520851156574'
+  id: '1'
   trigger:
   - entity_id: device_tracker.iphone
     platform: state
