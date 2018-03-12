@@ -78,22 +78,22 @@
 - action:
   - data:
       message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
-    service: notify.telegram_hubert
+    service: notify.ios_hubert
   - data:
       data:
         photo:
           url: http://meteo.org.pl/img/um/warszawa.png
       message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
-    service: notify.telegram_hubert
+    service: notify.ios_hubert
   - data:
       message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
-    service: notify.telegram_mysza
+    service: notify.telegram_myszaa
   - data:
       data:
         photo:
           url: http://meteo.org.pl/img/um/warszawa.png
       message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
-    service: notify.telegram_mysza
+    service: notify.telegram_myszaa
   alias: Prognoza
   condition: []
   id: '1505501013398'
@@ -177,3 +177,14 @@
     to: 'on'
   - at: '10:00'
     platform: time
+- action:
+  - data:
+      message: Hubert w pracy!
+    service: notify.ios_hubert
+  alias: New Automation
+  condition: []
+  id: '1520851156574'
+  trigger:
+  - entity_id: device_tracker.iphone
+    platform: state
+    to: Work
