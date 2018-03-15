@@ -1,6 +1,6 @@
 # Instalacja Grafany
 
-![Operacje z HA](../master/info/screenshots/grafana.png)
+![Operacje z HA](../info/screenshots/grafana.png)
 
 ## Dodanie kluczy publicznych repozytorium
 
