@@ -32,7 +32,7 @@
 
 [Instalacja Grafany]:(../master/info/Grafana.md)
 
-[InfluxDB]:(../master/info/InfluxDB.md)
+[InfluxDB]:../master/info/InfluxDB.md
 
 ## Screenshots
 
