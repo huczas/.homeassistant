@@ -5,12 +5,12 @@
 ## Devices - Hardware
 
 * Raspberry Pi 3B
-  - BMP680 - gas, pressure, hummidity, temperature
-* Esp8266-01 
-  - BMP280 - hummidity, pressure, temperature
-  - BH1750 - Light intensity sensor
+  * BMP680 - gas, pressure, hummidity, temperature
+* Esp8266-01
+  * BMP280 - hummidity, pressure, temperature
+  * BH1750 - Light intensity sensor
 * Esp8266-NodeMCU
-  - PMS7003 - dust sensor
+  * PMS7003 - dust sensor
 * Sonoff relay-switch witch ESPEasy software
 * Xiaomi Roborock 2 - vacuum
 * Xiaomi Mi Flora - Flower health
@@ -18,13 +18,13 @@
 ## Devices - Software
 
 * Raspberry Pi 3B
-  - Raspbian Stretch
-  - [Home-assistant] in Python venv
-  - [InfluxDB]
-  - [Grafana]
-  - PiHole - [automated install]
+  * Raspbian Stretch
+  * [Home-assistant] in Python venv
+  * [InfluxDB]
+  * [Grafana]
+  * PiHole - [automated install]
 * Esp8266:
-  - EspEasy
+  * EspEasy
 
 [Home-assistant]:(../master/info/Help.md)
 [Grafana]:(../master/info/Grafana.md)

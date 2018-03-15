@@ -1,4 +1,3 @@
-
 # Instalacja InfluxDB
 
 Dla poprawienia: Tym razem możemy dodać źródło pakietów:
@@ -6,7 +5,6 @@ Dla poprawienia: Tym razem możemy dodać źródło pakietów:
 ```bash
 echo "deb https://repos.influxdata.com/debian stretch stable" | sudo tee -a /etc/apt/sources.list.d/influxdb.list
 ```
-
 
 Do tego trzeba jeszcze doinstalować: sudo apt-get install apt-transport-https -y (pakiet pozwala na https w sources.list)
 następnie trzeba dodać klucz GPG bo przy próbie update wywali jego brak:
