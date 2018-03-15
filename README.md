@@ -19,20 +19,17 @@
 
 * Raspberry Pi 3B
   - Raspbian Stretch
-  - Home-assistant in Python venv
+  - [Home-assistant] in Python venv
   - [InfluxDB]
-  - Grafana 
-  - PiHole
+  - [Grafana]
+  - PiHole - [automated install]
 * Esp8266:
   - EspEasy
 
-## Instrukcje
-
-[Operacje z HA]:(../master/info/Help.md)
-
-[Instalacja Grafany]:(../master/info/Grafana.md)
-
+[Home-assistant]:(../master/info/Help.md)
+[Grafana]:(../master/info/Grafana.md)
 [InfluxDB]:../master/info/InfluxDB.md
+[automated install]:https://github.com/pi-hole/pi-hole#one-step-automated-install
 
 ## Screenshots
 
