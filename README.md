@@ -2,9 +2,9 @@
 
 <p align="center"><img src="https://github.com/home-assistant/home-assistant-assets/raw/master/loading-screen.gif" width="200"></p>
 
-## Devices
+## Devices - Hardware
 
-* Raspberry Pi 3B [Raspbian Stretch with Python venv]
+* Raspberry Pi 3B
   - BMP680 - gas, pressure, hummidity, temperature
 * Esp8266-01 
   - BMP280 - hummidity, pressure, temperature
@@ -15,6 +15,16 @@
 * Xiaomi Roborock 2 - vacuum
 * Xiaomi Mi Flora - Flower health
 
+## Devices - Software
+
+* Raspberry Pi 3B
+  - Raspbian Stretch
+  - Homea-ssistant in Python venv
+  - InfluxDB
+  - Grafana
+  - PiHole
+* Esp8266:
+  - EspEasy
 
 ## Instrukcje
 
