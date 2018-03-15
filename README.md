@@ -4,16 +4,17 @@
 
 ## Devices
 
-* Raspberry Pi 3 [Raspbian Stretch with Python venv]
+* Raspberry Pi 3B [Raspbian Stretch with Python venv]
   - BMP680 - gas, pressure, hummidity, temperature
-* Sonoff switch witch ESPEasy software
-* Xiaomi Roborock 2 - vacuum
-* Xiaomi Mi Flora - Flower health
 * Esp8266-01 
   - BMP280 - hummidity, pressure, temperature
   - BH1750 - Light intensity sensor
 * Esp8266-NodeMCU
   - PMS7003 - dust sensor
+* Sonoff relay-switch witch ESPEasy software
+* Xiaomi Roborock 2 - vacuum
+* Xiaomi Mi Flora - Flower health
+
 
 ## Instrukcje
 
