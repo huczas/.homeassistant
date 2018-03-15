@@ -10,6 +10,6 @@
 
 ## Instrukcje
 
-![Operacje z HA](https://github.com/huczas/.homeassistant/blob/master/info/Help.md)
-![Instalacja Grafany](https://github.com/huczas/.homeassistant/blob/master/info/Grafana.md)
-![Instalacja InfluxDB](https://github.com/huczas/.homeassistant/blob/master/info/InfluxDB.md)
+[Operacje z HA](../blob/master/info/Help.md)
+[Instalacja Grafany](../blob/master/info/Grafana.md)
+[Instalacja InfluxDB](../blob/master/info/InfluxDB.md)
