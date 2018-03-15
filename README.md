@@ -1,4 +1,4 @@
-# Home-Assistant
+<h1 align="center"> Home-Assistant </h1>
 
 <p align="center"><img src="https://github.com/home-assistant/home-assistant-assets/raw/master/loading-screen.gif" width="200"></p>
 
