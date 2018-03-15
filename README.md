@@ -10,6 +10,8 @@
 
 ## Instrukcje
 
-[Operacje z HA](../blob/master/info/Help.md)
-[Instalacja Grafany](../blob/master/info/Grafana.md)
-[Instalacja InfluxDB](../blob/master/info/InfluxDB.md)
+[Operacje z HA](../master/info/Help.md)
+
+[Instalacja Grafany](../master/info/Grafana.md)
+
+[Instalacja InfluxDB](../master/info/InfluxDB.md)
