@@ -26,3 +26,5 @@
 ## Screenshots
 
 ![Home](../master/info/screenshots/ha_home.png)
+![Pogoda](../master/info/screenshots/ha_pogoda.png)
+![Settings](../master/info/screenshots/ha_settings.png)
