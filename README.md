@@ -19,20 +19,20 @@
 
 * Raspberry Pi 3B
   - Raspbian Stretch
-  - Homea-ssistant in Python venv
-  - InfluxDB
-  - Grafana
+  - Home-assistant in Python venv
+  - [InfluxDB]
+  - Grafana 
   - PiHole
 * Esp8266:
   - EspEasy
 
 ## Instrukcje
 
-[Operacje z HA](../master/info/Help.md)
+[Operacje z HA]:(../master/info/Help.md)
 
-[Instalacja Grafany](../master/info/Grafana.md)
+[Instalacja Grafany]:(../master/info/Grafana.md)
 
-[Instalacja InfluxDB](../master/info/InfluxDB.md)
+[InfluxDB]:(../master/info/InfluxDB.md)
 
 ## Screenshots
 
