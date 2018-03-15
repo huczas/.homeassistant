@@ -25,4 +25,4 @@
 
 ## Screenshots
 
-![Home](../info/screenshots/ha_home.png)
+![Home](../master/info/screenshots/ha_home.png)
