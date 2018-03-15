@@ -6,7 +6,10 @@
 
 * Raspberry Pi 3 [Raspbian Stretch with Python venv]
 * Sonoff switch witch ESPEasy software
+* Xiaomi Roborock 2
 
-## Screenshots
+## Instrukcje
 
-![HA Overview](https://)
+![Operacje z HA](https://github.com/huczas/.homeassistant/blob/master/info/Help.md)
+![Instalacja Grafany](https://github.com/huczas/.homeassistant/blob/master/info/Grafana.md)
+![Instalacja InfluxDB](https://github.com/huczas/.homeassistant/blob/master/info/InfluxDB.md)
