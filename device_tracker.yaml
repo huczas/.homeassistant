@@ -7,11 +7,11 @@
    - 192.168.1.1
    - 192.168.1.13
    - 192.168.1.14
-#  - platform: mikrotik
-#    host: 192.168.1.1
-#    username: !secret mikrotik-user
-#    password: !secret mikrotik-pass
-- platform: icloud
-  username: !secret icloud_u
-  password: !secret icloud_p
-  account_name: !secret icloud_a
+- platform: mikrotik
+  host: 192.168.1.1
+  username: !secret mikrotik-user
+  password: !secret mikrotik-pass
+#- platform: icloud
+#  username: !secret icloud_u
+#  password: !secret icloud_p
+#  account_name: !secret icloud_a
