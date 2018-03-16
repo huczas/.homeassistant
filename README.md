@@ -26,8 +26,8 @@
 * Esp8266:
   * EspEasy
 
-[Home-assistant]:(../master/info/Help.md)
-[Grafana]:(../master/info/Grafana.md)
+[Home-assistant]:../master/info/Help.md
+[Grafana]:../master/info/Grafana.md
 [InfluxDB]:../master/info/InfluxDB.md
 [automated install]:https://github.com/pi-hole/pi-hole#one-step-automated-install
 
