@@ -84,13 +84,6 @@ pihole:
   - sensor.pihole_ads_percentage_blocked_today
   - sensor.pihole_dns_queries_today
   - sensor.pihole_dns_unique_clients
-load:
-  name: Load
-  view: false
-  entities:
-    - sensor.average_load_1m
-    - sensor.average_load_5m
-    - sensor.average_load_15m
 scripts:
   name: Skrypty
   control: hidden
