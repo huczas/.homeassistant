@@ -3,7 +3,6 @@ sonoff:
   icon: mdi:hotel
   entities:
   - switch.ledy
- # - switch.halogeny
 warunki_sypialnia:
   name: Warunki Sypialnia
   entities:
@@ -87,10 +86,16 @@ pihole:
   - sensor.pihole_dns_unique_clients
 load:
   name: Load
+  view: false
   entities:
     - sensor.average_load_1m
     - sensor.average_load_5m
     - sensor.average_load_15m
+scripts:
+  name: Skrypty
+  control: hidden
+  entities:
+    - input_select.log_level
 wunderground:
   name: Wunderground
   view: false
@@ -126,11 +131,6 @@ Xrays:
   view: false
   entities:
   - camera.xrays
-#Radar:
-#  name: Radar
-#  view: false
-#  entities:
-#  - camera.radar
 Burze:
   name: Burze
   view: false
@@ -151,9 +151,9 @@ UM:
   view: false
   entities:
   - camera.um
-#
-#Początek kart z grupami
-#
+###############################
+##  Początek kart z grupami  ##
+###############################
 default_view:
   name: Sypialnia
   view: yes
@@ -161,7 +161,6 @@ default_view:
   entities:
   - device_tracker.iphone
   - device_tracker.myszowyiphone
-  - device_tracker.pc
   - group.sonoff
   - group.warunki_sypialnia
   - group.warunki_salon
@@ -175,17 +174,11 @@ pogoda:
   - group.wunderground_s
   - group.pojutrze
   - group.wunderground
- # - group.radar
   - group.burze
   - group.polska
   - group.um
   - group.xrays
   - group.enwo
-scripts:
-  name: Skrypty
-  control: hidden
-  entities:
-    - input_select.log_level
 Ustawienia:
   name: Ustawienia
   view: true
