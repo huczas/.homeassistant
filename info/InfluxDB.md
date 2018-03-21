@@ -33,5 +33,10 @@ gpg: key 2582E0C5: public key "InfluxDB Packaging Service <support@influxdb.com>
 gpg: Total number processed: 1
 gpg:               imported: 1  (RSA: 1)
 ```
+Tworzymy konto systemowe:
+`$ sudo useradd -rm influxdb`
 
+oraz instalujemy:
 `sudo apt-get install telegraf influxdb`
+
+
