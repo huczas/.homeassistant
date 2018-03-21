@@ -22,15 +22,15 @@
   * [Home-assistant] in Python venv
   * [InfluxDB]
   * [Grafana]
-  * PiHole - [automated install]
-  * SSMTP - sending emails from RPi
+  * [PiHole] - automated install
+  * [SSMTP] - sending emails from RPi
 * Esp8266:
   * EspEasy
 
 [Home-assistant]:../master/info/Help.md
 [Grafana]:../master/info/Grafana.md
 [InfluxDB]:../master/info/InfluxDB.md
-[automated install]:https://github.com/pi-hole/pi-hole#one-step-automated-install
+[PiHole]:https://github.com/pi-hole/pi-hole#one-step-automated-install
 [SSMTP]:../master/info/email.md
 
 ## Screenshots
