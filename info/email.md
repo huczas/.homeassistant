@@ -1,6 +1,6 @@
 # Setup RaspberryPi to send email notifications
 
-ssmtp is a nice and simple solution for sending emails from the command line etc.
+SSMTP is a nice and simple solution for sending emails from the command line etc.
 
 ## Installing
 
@@ -44,3 +44,5 @@ TIP, send email every reboot with new IP address:
 ```BASH
 echo -e "Restart o `date '+%H:%M %d/%m/%Y'`. \n\nAktualne IP: `hostname -I`"| mail -s "Restart Raspberry Pi 3B" myemail@gmail.com
 ```
+
+Source:<http://www.raspberry-projects.com/pi/software_utilities/email/ssmtp-to-send-emails>
