@@ -18,20 +18,22 @@
 ## Devices - Software
 
 * Raspberry Pi 3B
-  * Raspbian Stretch
+  * [Raspbian] - Stretch
   * [Home-assistant] in Python venv
   * [InfluxDB]
   * [Grafana]
   * [PiHole] - automated install
   * [SSMTP] - sending emails from RPi
 * Esp8266:
-  * EspEasy
+  * [EspEasy]
 
+[Raspbian]:https://www.raspberrypi.org/downloads/raspbian/
 [Home-assistant]:../master/info/Help.md
 [Grafana]:../master/info/Grafana.md
 [InfluxDB]:../master/info/InfluxDB.md
 [PiHole]:https://github.com/pi-hole/pi-hole#one-step-automated-install
 [SSMTP]:../master/info/email.md
+[EspEasy]:https://github.com/letscontrolit/ESPEasy
 
 ## Screenshots
 
