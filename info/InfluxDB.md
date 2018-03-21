@@ -1,5 +1,7 @@
 # Instalacja InfluxDB
 
+![InfluxDB](../info/screenshots/influxdb.png)
+
 Dla poprawienia: Tym razem możemy dodać źródło pakietów:
 
 ```bash
