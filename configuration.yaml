@@ -57,9 +57,9 @@ vacuum:
     token: !secret vacuum
 
 #IKEA Trådfri setup preparation
-#tradfri:
-#  host: 192.168.1.8
-#  allow_tradfri_groups: true
+tradfri:
+  host: 192.168.1.8
+  allow_tradfri_groups: true
 
 # Enable iOS app
 ios:

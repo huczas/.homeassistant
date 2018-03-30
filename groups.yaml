@@ -144,6 +144,16 @@ UM:
   view: false
   entities:
   - camera.um
+Light:
+  name: Oświetlenie
+  view: false
+  entities:
+  - light.garderoba
+  - light.salon
+  - light.salon_2
+  - light.salon_3
+  - light.zarowka_garderoba
+  - light.zarowka_garderoba_2
 ###############################
 ##  Początek kart z grupami  ##
 ###############################
@@ -159,6 +169,11 @@ default_view:
   - group.warunki_salon
   - group.appletv
   - group.odkurzacz
+oswietlenie:
+  name: Światło
+  view: true
+  entities:
+  - group.oswietlenie
 pogoda:
   name: Pogoda
   view: true
