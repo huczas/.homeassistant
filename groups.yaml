@@ -173,7 +173,6 @@ oswietlenie:
   entities:
   - light.garderoba
   - light.salon
-  - sensor.tradfri_motion_sensor
 pogoda:
   name: Pogoda
   view: true
