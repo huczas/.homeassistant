@@ -144,12 +144,16 @@ UM:
   view: false
   entities:
   - camera.um
-Light:
+oswietlenie:
   name: Oświetlenie
   view: false
   entities:
   - light.garderoba
+  - light.zarowka_garderoba
+  - light.zarowka_garderoba_2
   - light.salon
+  - light.salon_2
+  - light.salon_3
 ###############################
 ##  Początek kart z grupami  ##
 ###############################
@@ -169,7 +173,8 @@ oswietlenie:
   name: Światło
   view: true
   entities:
-  - group.light
+  - group.oswietlenie
+  - group.all_lights
 pogoda:
   name: Pogoda
   view: true
