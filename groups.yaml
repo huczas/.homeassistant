@@ -144,14 +144,12 @@ UM:
   view: false
   entities:
   - camera.um
-oswietlenie:
-  name: Oświetlenie
-  view: true
+zarowki:
+  name: Żarówki
+  view: false
   entities:
-  - light.garderoba
   - light.zarowka_garderoba
   - light.zarowka_garderoba_2
-  - light.salon
   - light.salon_2
   - light.salon_3
 ###############################
@@ -169,12 +167,13 @@ default_view:
   - group.warunki_salon
   - group.appletv
   - group.odkurzacz
-swiatlo:
-  name: Światło
+oswietlenie:
+  name: Oświetlenie
   view: true
   entities:
-  - group.oswietlenie
-  - group.all_lights
+  - light.garderoba
+  - light.salon
+  - group.zarowki
 pogoda:
   name: Pogoda
   view: true
