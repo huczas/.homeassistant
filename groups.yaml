@@ -169,7 +169,7 @@ default_view:
   - group.warunki_salon
   - group.appletv
   - group.odkurzacz
-oswietlenie:
+swiatlo:
   name: Światło
   view: true
   entities:
