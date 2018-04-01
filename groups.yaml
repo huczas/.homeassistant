@@ -148,10 +148,10 @@ zarowki:
   name: Żarówki
   view: false
   entities:
-  - light.zarowka_garderoba
+  - light.zarowka_garderoba_1
   - light.zarowka_garderoba_2
-  - light.salon_2
-  - light.salon_3
+  - light.zarowka_salon_1
+  - light.zarowka_salon_2
 ###############################
 ##  Początek kart z grupami  ##
 ###############################
@@ -201,3 +201,4 @@ Ustawienia:
   - group.czas
   - group.scripts
   - group.all_automations
+  - group.all_lights
