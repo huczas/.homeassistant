@@ -146,7 +146,7 @@ UM:
   - camera.um
 oswietlenie:
   name: Oświetlenie
-  view: false
+  view: true
   entities:
   - light.garderoba
   - light.zarowka_garderoba
@@ -159,7 +159,7 @@ oswietlenie:
 ###############################
 default_view:
   name: Sypialnia
-  view: yes
+  view: true
   icon: mdi:home
   entities:
   - device_tracker.iphone
