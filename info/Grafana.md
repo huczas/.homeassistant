@@ -23,4 +23,11 @@ zmieniamy main na testing jeśli interesują nas wersje beta
 
 Możemy też sprawdzić sobie dostępne wersje sudo apt-cache madison grafana
 
+## Aktualizowanie pluginów w grafanie:
+
+```bash
+sudo su -s /bin/bash grafana
+grafana-cli plugins update-all
+```
+
 [Źródło:] <https://github.com/fg2it/grafana-on-raspberry/wiki#with-apt-from-bintray-debian-repository>
