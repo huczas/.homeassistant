@@ -101,33 +101,32 @@ wunderground:
   name: Wunderground
   view: false
   entities:
-  - sensor.pws_alerts
-  - sensor.pws_dewpoint_c
-  - sensor.pws_feelslike_c
   - sensor.pws_location
   - sensor.pws_observation_time
-  - sensor.pws_precip_1d
-  - sensor.pws_precip_1d_mm
-  - sensor.pws_precip_today_metric
   - sensor.pws_pressure_mb
-  - sensor.pws_pressure_trend
-  - sensor.pws_relative_humidity
-  - sensor.pws_solarradiation
   - sensor.pws_temp_c
   - sensor.pws_temp_high_1d_c
   - sensor.pws_temp_high_avg_c
   - sensor.pws_temp_high_record_c
   - sensor.pws_temp_low_1d_c
   - sensor.pws_temp_low_avg_c
-  - sensor.pws_temp_low_record_c
+  - sensor.pws_temp_low_record_c 
   - sensor.pws_uv
+  - sensor.pws_solarradiation  
+  - sensor.pws_alerts
   - sensor.pws_weather
-  - sensor.pws_weather_1d_metric
-  - sensor.pws_weather_1h
+  - sensor.pws_dewpoint_c
+  - sensor.pws_feelslike_c
+  - sensor.pws_precip_1d
+  - sensor.pws_precip_1d_mm
+  - sensor.pws_precip_today_metric
+  - sensor.pws_pressure_trend
+  - sensor.pws_relative_humidity
   - sensor.pws_wind_degrees
   - sensor.pws_wind_dir
   - sensor.pws_wind_gust_kph
   - sensor.pws_wind_kph
+  - sensor.pws_weather_1d_metric
 Xrays:
   name: "Promieniowanie S\u0142oneczne"
   view: false
