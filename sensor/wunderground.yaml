@@ -7,13 +7,8 @@
     - alerts
 # Temperature in Celsius below which water droplets begin to condense and dew can form:
     - dewpoint_c
-    - dewpoint_string
 # Feels like (or apparent) temperature in Celsius:
     - feelslike_c
-    - feelslike_string
-# Heat index (combined effects of the temperature and humidity of the air) in Celsius:
-    - heat_index_c
-    - heat_index_string
 # Elevation in feet:
     - elevation
 # City and state:
@@ -22,7 +17,6 @@
     - observation_time
 # Total precipitation in metric units:
     - precip_today_metric
-    - precip_today_string
 # Atmospheric air pressure in millibars:
     - pressure_mb
 # Atmospheric air pressure trend signal (+/-):
@@ -43,16 +37,12 @@
     - temp_low_avg_c
 # Current levels of UV radiation. See https://www.wunderground.com/resources/health/uvindex.asp for explanation:
     - UV
-# Average visibility in km:
-    - visibility_km
 # A human-readable text summary with picture from Wunderground:
     - weather
     - wind_degrees
     - wind_dir
     - wind_gust_kph
     - wind_kph
-# Text summary of current wind conditions:
-    - wind_string
     #Hour:
     - weather_1h
     #1 day:
