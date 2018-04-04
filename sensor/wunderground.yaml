@@ -3,26 +3,79 @@
   pws_id: IWARSAW104
   lang: "PL"
   monitored_conditions:
-    - weather
-    - UV
-    - relative_humidity
-    - wind_dir
+# Current severe weather advisories:
+    - alerts
+# Temperature in Celsius below which water droplets begin to condense and dew can form:
     - dewpoint_c
-    - temp_c
+    - dewpoint_string
+# Feels like (or apparent) temperature in Celsius:
     - feelslike_c
-    - wind_kph
-    - wind_gust_kph
-    - precip_today_metric
-    - visibility_km
-    - solarradiation
+    - feelslike_string
+# Heat index (combined effects of the temperature and humidity of the air) in Celsius:
+    - heat_index_c
+    - heat_index_string
+# Elevation in feet:
     - elevation
+# City and state:
     - location
+# Text summary of observation time:
+    - observation_time
+# Total precipitation in metric units:
+    - precip_today_metric
+    - precip_today_string
+# Atmospheric air pressure in millibars:
+    - pressure_mb
+# Atmospheric air pressure trend signal (+/-):
+    - pressure_trend
+# Relative humidity:
+    - relative_humidity
+# Your personal weather station (PWS) ID:
     - station_id
+# Current levels of solar radiation:
+    - solarradiation
+# Current temperature in Celsius:
+    - temp_c
+# Maximum/minimum temperature measured in Celsius:
+    - temp_high_record_c
+    - temp_low_record_c
+# Average high/low for today in Celsius:
+    - temp_high_avg_c
+    - temp_low_avg_c
+# Current levels of UV radiation. See https://www.wunderground.com/resources/health/uvindex.asp for explanation:
+    - UV
+# Average visibility in km:
+    - visibility_km
+# A human-readable text summary with picture from Wunderground:
+    - weather
+    - wind_degrees
+    - wind_dir
+    - wind_gust_kph
+    - wind_kph
+# Text summary of current wind conditions:
+    - wind_string
+    #Hour:
+    - weather_1h
+    #1 day:
+    - precip_1d_mm
+    - precip_1d
+    - temp_high_1d_c
+    - temp_low_1d_c
     - weather_1d_metric
     - weather_1n_metric
+    - wind_gust_1d_kph
+    - wind_1d_kph
+    #2 day:
     - weather_2d_metric
     - weather_2n_metric
+    - wind_gust_2d_kph
+    - wind_2d_kph
+    #3 day:
     - weather_3d_metric
     - weather_3n_metric
+    - wind_gust_3d_kph
+    - wind_3d_kph
+    #4 day:
     - weather_4d_metric
     - weather_4n_metric
+    - wind_gust_4d_kph
+    - wind_4d_kph
