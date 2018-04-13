@@ -39,11 +39,26 @@ include:
    - sensor.fioek_2_light_intensity
    - sensor.fioek_2_moisture
    - sensor.fioek_2_temperature
+   - sensor.fioek_fioletowy_battery
+   - sensor.fioek_fioletowy_conductivity
+   - sensor.fioek_fioletowy_light_intensity
+   - sensor.fioek_fioletowy_moisture
+   - sensor.fioek_fioletowy_temperature
    - sensor.paprotka_battery
    - sensor.paprotka_conductivity
    - sensor.paprotka_light_intensity
    - sensor.paprotka_moisture
    - sensor.paprotka_temperature
+   - sensor.chamedora_wytworna_battery
+   - sensor.chamedora_wytworna_conductivity	
+   - sensor.chamedora_wytworna_light_intensity	
+   - sensor.chamedora_wytworna_moisture
+   - sensor.chamedora_wytworna_temperature
+   - sensor.monstera_battery	
+   - sensor.monstera_conductivity
+   - sensor.monstera_light_intensity
+   - sensor.monstera_moisture
+   - sensor.monstera_temperature
    - sensor.pihole_ads_blocked_today
    - sensor.mieszkanie_pm_10
    - sensor.mieszkanie_pm_25
