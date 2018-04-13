@@ -13,6 +13,7 @@
   trigger:
   - entity_id: updater.updater
     platform: state
+
 - action:
   - data:
       message: Wilgotność paprotki poniżej 25%
@@ -27,6 +28,7 @@
   - below: '25'
     entity_id: sensor.paprotka_moisture
     platform: numeric_state
+
 - action:
   - data:
       message: Wilgotność fiołka w niebieskiej doniczce poniżej 25%
@@ -44,6 +46,7 @@
   - below: '25'
     entity_id: sensor.fioek_1_moisture
     platform: numeric_state
+
 - action:
   - data:
       message: Wilgotność fiołka w czerwonej doniczce poniżej 15%
@@ -58,6 +61,52 @@
   - below: '15'
     entity_id: sensor.fioek_2_moisture
     platform: numeric_state
+
+- action:
+  - data:
+      message: Wilgotność fioletowego fiołka w ubranej doniczce poniżej 15%
+    service: notify.pushover
+  - data:
+      message: Wilgotność fioletowego fiołka w ubranej doniczce poniżej 15%
+    service: notify.telegram_mysza
+  alias: Nawodnienie fiołka w ubranej doniczce
+  condition: []
+  id: '44'
+  trigger:
+  - below: '15'
+    entity_id: sensor.fioek_fioletowy_moisture
+    platform: numeric_state
+
+- action:
+  - data:
+      message: Wilgotność Chamedory(palmy) poniżej 15%
+    service: notify.pushover
+  - data:
+      message: Wilgotność Chamedory(palmy) poniżej 15%
+    service: notify.telegram_mysza
+  alias: Nawodnienie palmy
+  condition: []
+  id: '45'
+  trigger:
+  - below: '15'
+    entity_id: sensor.chamedora_wytworna_moisture
+    platform: numeric_state
+
+- action:
+  - data:
+      message: Wilgotność Monstery poniżej 15%
+    service: notify.pushover
+  - data:
+      message: Wilgotność Monstery poniżej 15%
+    service: notify.telegram_mysza
+  alias: Nawodnienie Monstery
+  condition: []
+  id: '46'
+  trigger:
+  - below: '15'
+    entity_id: sensor.monstera_moisture
+    platform: numeric_state
+
 - action:
   - data:
       message: Home Assistant Start at {{ states('sensor.time') }}
@@ -68,6 +117,7 @@
   trigger:
   - event: start
     platform: homeassistant
+
 - action:
   - data:
       message: Home Assistant Stop at {{ states('sensor.time') }}
@@ -78,6 +128,7 @@
   trigger:
   - event: shutdown
     platform: homeassistant
+
 - action:
 #  - data:
 #      message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
@@ -105,6 +156,7 @@
   trigger:
   - at: '19:00:00'
     platform: time
+
 - action:
   - data:
       name: screenshots
@@ -116,6 +168,7 @@
   trigger:
   - at: '19:00'
     platform: time
+
 - action:
   - data:
       name: screenshots
@@ -127,6 +180,7 @@
   trigger:
   - at: 08:00
     platform: time
+
 - action:
   - data:
       message: Daria w domu!
@@ -139,6 +193,7 @@
   - entity_id: device_tracker.myszowyiphone
     platform: state
     to: home
+
 - action:
   - data:
       message: Hubert w domu!
@@ -155,6 +210,7 @@
   - entity_id: device_tracker.iphone
     platform: state
     to: home
+
 - action:
   - data:
       message: Daria wyszła z domu.
@@ -167,6 +223,7 @@
   - entity_id: device_tracker.myszowyiphone
     platform: state
     to: not_home
+
 - action:
   - condition: state
     entity_id: vacuum.xiaomi_vacuum
@@ -186,6 +243,7 @@
     to: 'on'
   - at: '10:00'
     platform: time
+
 - action:
   - data:
       message: Hubert w pracy!
