@@ -50,11 +50,11 @@ include:
    - sensor.paprotka_moisture
    - sensor.paprotka_temperature
    - sensor.chamedora_wytworna_battery
-   - sensor.chamedora_wytworna_conductivity	
-   - sensor.chamedora_wytworna_light_intensity	
+   - sensor.chamedora_wytworna_conductivity
+   - sensor.chamedora_wytworna_light_intensity
    - sensor.chamedora_wytworna_moisture
    - sensor.chamedora_wytworna_temperature
-   - sensor.monstera_battery	
+   - sensor.monstera_battery
    - sensor.monstera_conductivity
    - sensor.monstera_light_intensity
    - sensor.monstera_moisture
