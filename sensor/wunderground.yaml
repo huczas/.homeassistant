@@ -2,6 +2,8 @@
   api_key: !secret api_wunderground
   pws_id: IWARSAW104
   lang: "PL"
+  update_interval:
+    minutes: 10
   monitored_conditions:
 # Current severe weather advisories:
     - alerts
