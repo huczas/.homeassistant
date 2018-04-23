@@ -20,6 +20,7 @@
 * Raspberry Pi 3B
   * [Raspbian] - Stretch
   * [Home-assistant] in Python venv
+  * [MQTT] - Mosquitto
   * [InfluxDB]
   * [Grafana]
   * [PiHole] - automated install
@@ -29,6 +30,7 @@
 
 [Raspbian]:https://www.raspberrypi.org/downloads/raspbian/
 [Home-assistant]:../master/info/Help.md
+[MQTT]:../master/info/MQTT.md
 [Grafana]:../master/info/Grafana.md
 [InfluxDB]:../master/info/InfluxDB.md
 [PiHole]:https://github.com/pi-hole/pi-hole#one-step-automated-install
