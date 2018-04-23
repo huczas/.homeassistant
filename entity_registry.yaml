@@ -1,6 +1,32 @@
 sensor.hubert_battery_level:
+  name:
   platform: ios
   unique_id: level_Hubert
 sensor.hubert_battery_state:
+  name:
   platform: ios
   unique_id: state_Hubert
+light.zarowka_salon_1:
+  name:
+  platform: tradfri
+  unique_id: light-7e1c4d52044000ff-65541
+light.zarowka_salon_2:
+  name:
+  platform: tradfri
+  unique_id: light-7e1c4d52044000ff-65542
+light.zarowka_garderoba_1:
+  name:
+  platform: tradfri
+  unique_id: light-7e1c4d52044000ff-65538
+light.zarowka_garderoba_2:
+  name:
+  platform: tradfri
+  unique_id: light-7e1c4d52044000ff-65539
+light.salon:
+  name:
+  platform: tradfri
+  unique_id: group-7e1c4d52044000ff-131075
+light.garderoba:
+  name:
+  platform: tradfri
+  unique_id: group-7e1c4d52044000ff-131074

@@ -13,7 +13,6 @@
   trigger:
   - entity_id: updater.updater
     platform: state
-
 - action:
   - data:
       message: Wilgotność paprotki poniżej 25%
@@ -28,13 +27,12 @@
   - below: '25'
     entity_id: sensor.paprotka_moisture
     platform: numeric_state
-
 - action:
   - data:
-      message: Wilgotność fiołka w niebieskiej doniczce poniżej 25%
       data:
         push:
           badge: 5
+      message: Wilgotność fiołka w niebieskiej doniczce poniżej 25%
     service: notify.ios_hubert
   - data:
       message: Wilgotność fiołka w niebieskiej doniczce poniżej 25%
@@ -46,7 +44,6 @@
   - below: '25'
     entity_id: sensor.fioek_1_moisture
     platform: numeric_state
-
 - action:
   - data:
       message: Wilgotność fiołka w czerwonej doniczce poniżej 15%
@@ -58,10 +55,9 @@
   condition: []
   id: '4'
   trigger:
-  - below: '15'
+  - below: '25'
     entity_id: sensor.fioek_2_moisture
     platform: numeric_state
-
 - action:
   - data:
       message: Wilgotność fioletowego fiołka w ubranej doniczce poniżej 15%
@@ -69,14 +65,13 @@
   - data:
       message: Wilgotność fioletowego fiołka w ubranej doniczce poniżej 15%
     service: notify.telegram_mysza
-  alias: Nawodnienie fiołka w ubranej doniczce
+  alias: Nawodnienie fiołka w sweterku
   condition: []
   id: '44'
   trigger:
-  - below: '15'
+  - below: '25'
     entity_id: sensor.fioek_fioletowy_moisture
     platform: numeric_state
-
 - action:
   - data:
       message: Wilgotność Chamedory(palmy) poniżej 15%
@@ -91,7 +86,6 @@
   - below: '15'
     entity_id: sensor.chamedora_wytworna_moisture
     platform: numeric_state
-
 - action:
   - data:
       message: Wilgotność Monstery poniżej 15%
@@ -103,10 +97,9 @@
   condition: []
   id: '46'
   trigger:
-  - below: '15'
+  - below: '20'
     entity_id: sensor.monstera_moisture
     platform: numeric_state
-
 - action:
   - data:
       message: Home Assistant Start at {{ states('sensor.time') }}
@@ -117,7 +110,6 @@
   trigger:
   - event: start
     platform: homeassistant
-
 - action:
   - data:
       message: Home Assistant Stop at {{ states('sensor.time') }}
@@ -128,11 +120,7 @@
   trigger:
   - event: shutdown
     platform: homeassistant
-
 - action:
-#  - data:
-#      message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
-#    service: notify.ios_hubert
   - data:
       data:
         attachment:
@@ -156,7 +144,6 @@
   trigger:
   - at: '19:00:00'
     platform: time
-
 - action:
   - data:
       name: screenshots
@@ -168,7 +155,6 @@
   trigger:
   - at: '19:00'
     platform: time
-
 - action:
   - data:
       name: screenshots
@@ -180,7 +166,6 @@
   trigger:
   - at: 08:00
     platform: time
-
 - action:
   - data:
       message: Daria w domu!
@@ -193,13 +178,12 @@
   - entity_id: device_tracker.myszowyiphone
     platform: state
     to: home
-
 - action:
   - data:
       message: Hubert w domu!
       data:
         push:
-          sound: "US-EN-Morgan-Freeman-Welcome-Home.wav"
+          sound: US-EN-Morgan-Freeman-Welcome-Home.wav
           badge: 5
     service: notify.telegram_hubert
   alias: Hubert w domu
@@ -210,7 +194,6 @@
   - entity_id: device_tracker.iphone
     platform: state
     to: home
-
 - action:
   - data:
       message: Daria wyszła z domu.
@@ -223,7 +206,6 @@
   - entity_id: device_tracker.myszowyiphone
     platform: state
     to: not_home
-
 - action:
   - condition: state
     entity_id: vacuum.xiaomi_vacuum
@@ -243,7 +225,6 @@
     to: 'on'
   - at: '10:00'
     platform: time
-
 - action:
   - data:
       message: Hubert w pracy!
