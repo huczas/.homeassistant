@@ -152,6 +152,12 @@ UM:
   view: false
   entities:
   - camera.um
+BUS:
+  name: BUS
+  view: false
+  entities:
+  - sensor.busem_do_pracy
+  - sensor.busem_do_domu  
 zarowki:
   name: Żarówki
   view: false
@@ -174,6 +180,7 @@ default_view:
   - group.warunki_sypialnia
   - group.warunki_salon
   - group.appletv
+  - group.bus
   - group.odkurzacz
 oswietlenie:
   name: Oświetlenie
