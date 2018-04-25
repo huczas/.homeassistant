@@ -1,7 +1,7 @@
-- platform: citybikes
-  name: Home Stations
+#- platform: citybikes
+#  name: Home Stations
   #network: "veturilo-warszawa"
   #latitude: !secret latitude
   #longitude: !secret longitude
-  stations:
-    - 2586034
+#  stations:
+#    - 2586034
