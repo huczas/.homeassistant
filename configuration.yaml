@@ -46,15 +46,8 @@ mqtt: !include mqtt.yaml
 zone: !include zone.yaml
 group: !include groups.yaml
 weblink: !include weblink.yaml
-media_player: !include media_player.yaml
 telegram_bot: !include telegram_bot.yaml
 device_tracker: !include device_tracker.yaml
-
-vacuum:
-  - platform: xiaomi_miio
-    name: Xiaomi Vacuum
-    host: 192.168.1.17
-    token: !secret vacuum
 
 #IKEA Trådfri setup preparation
 tradfri:
