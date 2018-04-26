@@ -199,6 +199,7 @@ Ustawienia:
   - sensor.average_load_1m
   - sensor.average_load_5m
   - sensor.average_load_15m
+  - switch.speakers
   - group.bandwidth
   - group.wol
   - group.system
