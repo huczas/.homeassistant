@@ -17,7 +17,7 @@ warunki_salon:
   - sensor.temp_w_kuchni
   - sensor.wilgotnosc_w_kuchni
 wunderground_s:
-  name: Prognoza jutro
+  name: Prognoza dziś
   view: false
   entities:
   - sensor.pws_temp_c
@@ -30,8 +30,8 @@ wunderground_s:
   - sensor.pws_wind_1d_kph
   - sensor.pws_weather_1d_metric
   - sensor.pws_weather_1n_metric
-pojutrze:
-  name: Prognoza pojutrze
+jutro:
+  name: Prognoza jutro
   view: false
   entities:
   - sensor.pws_wind_gust_2d_kph
@@ -190,7 +190,7 @@ pogoda:
   icon: mdi:cloud
   entities:
   - group.wunderground_s
-  - group.pojutrze
+  - group.jutro
   - group.wunderground
   - group.burze
   - group.polska
