@@ -1,5 +1,7 @@
-  entities:
-    - name: Router
-      url: http://192.168.1.1/
-    - name: Home Assistant
-      url: https://home-assistant.io
+entities:
+  - name: Router
+    url: http://192.168.1.1/
+  - name: Home_Assistant
+    url: https://home-assistant.io
+  - name: PiHole
+    url: http://192.168.1.13/admin/index.php
