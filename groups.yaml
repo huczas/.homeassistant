@@ -162,6 +162,13 @@ zarowki:
   - light.zarowka_garderoba_2
   - light.zarowka_salon_1
   - light.zarowka_salon_2
+Linki:
+  name: Linki
+  view: false
+  entities:
+  - weblink.pihole
+  - weblink.router
+  - weblink.home_assistant
 ###############################
 ##  Początek kart z grupami  ##
 ###############################
@@ -205,6 +212,7 @@ Ustawienia:
   - sensor.average_load_1m
   - sensor.average_load_5m
   - sensor.average_load_15m
+  - group.linki
   - group.bandwidth
   - group.wol
   - group.system
