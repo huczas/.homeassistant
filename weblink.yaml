@@ -1,7 +1,9 @@
 entities:
-  - name: Router
-    url: http://192.168.1.1/
   - name: Home_Assistant
     url: https://home-assistant.io
+  - name: Router
+    url: http://192.168.1.1/
   - name: PiHole
-    url: http://192.168.1.13/admin/index.php
+    url: http://192.168.1.14/admin/index.php
+  - name: Grafana
+    url: http://192.168.1.14:3000/

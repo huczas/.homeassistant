@@ -166,6 +166,7 @@ Linki:
   name: Linki
   view: false
   entities:
+  - weblink.grafana
   - weblink.pihole
   - weblink.router
   - weblink.home_assistant
