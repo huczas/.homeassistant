@@ -10,7 +10,7 @@ host: 192.168.1.6
 mac: '78:0F:77:1A:31:79'
 friendly_name: Broadlink
 type: rm_mini
-timeout: 15
+timeout: 1
 switches:
   speakers:
     friendly_name: "Głośniki Genius"
