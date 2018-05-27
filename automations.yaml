@@ -34,16 +34,16 @@
       data:
         push:
           badge: 5
-      message: Wilgotność fiołka w fioletowej doniczce poniżej 25%
+      message: Wilgotność fiołka w fioletowej doniczce poniżej 15%
     service: notify.ios_hubert
   - data:
-      message: Wilgotność fiołka w fioletowej doniczce poniżej 25%
+      message: Wilgotność fiołka w fioletowej doniczce poniżej 15%
     service: notify.telegram_mysza
   alias: Nawodnienie fiołka w fioletowej doniczce
   condition: []
   id: '3'
   trigger:
-  - below: '25'
+  - below: '15'
     entity_id: sensor.fioek_1_moisture
     platform: numeric_state
 ####
