@@ -1,4 +1,4 @@
 broker: 192.168.1.14
-port: 1883
-client_id: home-assistant
-keepalive: 60
+#port: 1883
+#client_id: home-assistant
+#keepalive: 60
