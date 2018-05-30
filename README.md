@@ -1,4 +1,4 @@
-<h1 align="center"> Home-Assistant </h1>
+# Home-Assistant
 
 <p align="center"><img src="https://github.com/home-assistant/home-assistant-assets/raw/master/loading-screen.gif" width="200"></p>
 
@@ -20,9 +20,9 @@
 * Raspberry Pi 3B
   * [Raspbian] - Stretch
   * [Home-assistant] in Python venv
-  * [MQTT] - Mosquitto
-  * [InfluxDB]
-  * [Grafana]
+  * [MQTT] - Built in HBMQTT broker
+  * [InfluxDB] - latest version
+  * [Grafana] - latest version
   * [PiHole] - automated install
   * [SSMTP] - sending emails from RPi
 * Esp8266:
