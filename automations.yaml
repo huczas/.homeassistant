@@ -12,16 +12,16 @@
 ####
 - action:
   - data:
-      message: Wilgotność paprotki poniżej 25%
+      message: Wilgotność paprotki poniżej 30%
     service: notify.ios_hubert
   - data:
-      message: Wilgotność paprotki poniżej 25%
+      message: Wilgotność paprotki poniżej 30%
     service: notify.telegram_mysza
   alias: Nawodnienie paprotki
   condition: []
   id: '2'
   trigger:
-  - below: '25'
+  - below: '30'
     entity_id: sensor.paprotka_moisture
     platform: numeric_state
 ####
@@ -30,46 +30,46 @@
       data:
         push:
           badge: 5
-      message: Wilgotność fiołka w fioletowej doniczce poniżej 15%
+      message: Wilgotność fiołka w fioletowej doniczce poniżej 20%
     service: notify.ios_hubert
   - data:
-      message: Wilgotność fiołka w fioletowej doniczce poniżej 15%
+      message: Wilgotność fiołka w fioletowej doniczce poniżej 20%
     service: notify.telegram_mysza
   alias: Nawodnienie fiołka w fioletowej doniczce
   condition: []
   id: '3'
   trigger:
-  - below: '15'
+  - below: '20'
     entity_id: sensor.fioek_1_moisture
     platform: numeric_state
 ####
 - action:
   - data:
-      message: Wilgotność fiołka w niebieskiej doniczce poniżej 15%
+      message: Wilgotność fiołka w niebieskiej doniczce poniżej 20%
     service: notify.pushover
   - data:
-      message: Wilgotność fiołka w niebieskiej doniczce poniżej 15%
+      message: Wilgotność fiołka w niebieskiej doniczce poniżej 20%
     service: notify.telegram_mysza
   alias: Nawodnienie fiołka w niebieskiej doniczce
   condition: []
   id: '4'
   trigger:
-  - below: '25'
+  - below: '20'
     entity_id: sensor.fioek_2_moisture
     platform: numeric_state
 ####
 - action:
   - data:
-      message: Wilgotność fioletowego fiołka w ubranej doniczce poniżej 15%
+      message: Wilgotność fioletowego fiołka w ubranej doniczce poniżej 20%
     service: notify.pushover
   - data:
-      message: Wilgotność fioletowego fiołka w ubranej doniczce poniżej 15%
+      message: Wilgotność fioletowego fiołka w ubranej doniczce poniżej 20%
     service: notify.telegram_mysza
   alias: Nawodnienie fiołka w sweterku
   condition: []
   id: '44'
   trigger:
-  - below: '25'
+  - below: '20'
     entity_id: sensor.fioek_fioletowy_moisture
     platform: numeric_state
 ####
@@ -90,10 +90,10 @@
 ####
 - action:
   - data:
-      message: Wilgotność Monstery poniżej 15%
+      message: Wilgotność Monstery poniżej 20%
     service: notify.pushover
   - data:
-      message: Wilgotność Monstery poniżej 15%
+      message: Wilgotność Monstery poniżej 20%
     service: notify.telegram_mysza
   alias: Nawodnienie Monstery
   condition: []
