@@ -2,10 +2,6 @@
   - data:
       message: New version {{ states.updater.updater.state }} of Home Assistant is
         available
-    service: notify.pushover
-  - data:
-      message: New version {{ states.updater.updater.state }} of Home Assistant is
-        available
     service: notify.ios_hubert
   alias: Update
   condition: []
@@ -180,19 +176,6 @@
 ####
 - action:
   - data:
-      message: Daria w domu!
-    service: notify.telegram_hubert
-  alias: Daria w domu
-  condition: []
-  id: '10'
-  initial_state: 'off'
-  trigger:
-  - entity_id: device_tracker.myszowyiphone
-    platform: state
-    to: home
-####
-- action:
-  - data:
       message: Hubert w domu!
       data:
         push:
@@ -207,48 +190,3 @@
   - entity_id: device_tracker.iphone
     platform: state
     to: home
-####
-- action:
-  - data:
-      message: Daria wyszła z domu.
-    service: notify.telegram_hubert
-  alias: Daria wyszła
-  condition: []
-  id: '12'
-  initial_state: 'off'
-  trigger:
-  - entity_id: device_tracker.myszowyiphone
-    platform: state
-    to: not_home
-####
-- action:
-  - condition: state
-    entity_id: vacuum.xiaomi_vacuum
-    state: turn_on
-  alias: Odkurzanie
-  condition:
-  - condition: state
-    entity_id: device_tracker.iphone
-    state: not home
-  - condition: state
-    entity_id: device_tracker.myszowyiphone
-    state: not home
-  id: '13'
-  trigger:
-  - entity_id: binary_sensor.workday_sensor
-    platform: state
-    to: 'on'
-  - at: '10:00'
-    platform: time
-####
-- action:
-  - data:
-      message: Hubert w pracy!
-    service: notify.ios_hubert
-  alias: New Automation
-  condition: []
-  id: '1'
-  trigger:
-  - entity_id: device_tracker.iphone
-    platform: state
-    to: Work
