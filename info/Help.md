@@ -15,7 +15,7 @@
 3. Change to virtual enviroment `source /srv/homeassistant/homeassistant_venv/bin/activate`
 4. Update HA `pip3 install --upgrade homeassistant`. To update to a different branch, use the complete git URL, `pip3 install --upgrade git+git://github.com/home-assistant/home-assistant.git@dev`. To install specific version of HA use `pip3 install homeassistant==0.XX.X`.
 5. Type `exit` to logout the hass user and return to the `pi` user.
-6. Restart the Home-Assistant Service `sudo systemctl restart hhome-assistant.service`
+6. Restart the Home-Assistant Service `sudo systemctl restart home-assistant.service`
 
 ## If RPi is not syncing the time
 
