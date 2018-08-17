@@ -29,6 +29,8 @@
 * Esp8266:
   * [EspEasy]
 
+[![HitCount](http://hits.dwyl.io/huczas/.homeassistant.svg)](http://hits.dwyl.io/huczas/.homeassistant)
+
 [Raspbian]:https://www.raspberrypi.org/downloads/raspbian/
 [Home-assistant]:../master/info/Help.md
 [MQTT]:../master/info/MQTT.md
