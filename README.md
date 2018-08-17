@@ -1,5 +1,6 @@
-# Home-Assistant
-[![Build Status](https://travis-ci.org/huczas/.homeassistant.svg?branch=master)](https://travis-ci.org/huczas/.homeassistant)
+# Home-Assistant 
+
+[![Build Status](https://travis-ci.org/huczas/.homeassistant.svg?branch=master)](https://travis-ci.org/huczas/.homeassistant) [![HitCount](http://hits.dwyl.io/huczas/.homeassistant.svg)](http://hits.dwyl.io/huczas/.homeassistant)
 
 <p align="center"><img src="https://github.com/home-assistant/home-assistant-assets/raw/master/loading-screen.gif" width="200"></p>
 
@@ -28,8 +29,6 @@
   * [SSMTP] - sending emails from RPi
 * Esp8266:
   * [EspEasy]
-
-[![HitCount](http://hits.dwyl.io/huczas/.homeassistant.svg)](http://hits.dwyl.io/huczas/.homeassistant)
 
 [Raspbian]:https://www.raspberrypi.org/downloads/raspbian/
 [Home-assistant]:../master/info/Help.md
