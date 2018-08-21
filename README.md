@@ -1,3 +1,8 @@
+- [Home-Assistant](#home-assistant)
+  - [Devices - Hardware](#devices---hardware)
+  - [Devices - Software](#devices---software)
+  - [Screenshots](#screenshots)
+
 # Home-Assistant 
 
 [![Build Status](https://travis-ci.org/huczas/.homeassistant.svg?branch=master)](https://travis-ci.org/huczas/.homeassistant) [![HitCount](http://hits.dwyl.io/huczas/.homeassistant.svg)](http://hits.dwyl.io/huczas/.homeassistant)
