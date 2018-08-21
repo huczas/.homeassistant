@@ -1,3 +1,5 @@
+- [Instalacja InfluxDB](#instalacja-influxdb)
+
 # Instalacja InfluxDB
 
 ![InfluxDB](../info/screenshots/influxdb.png)

@@ -1,3 +1,8 @@
+- [Instalacja Grafany](#instalacja-grafany)
+    - [Dodanie kluczy publicznych repozytorium](#dodanie-kluczy-publicznych-repozytorium)
+    - [Instalacja repozytorium](#instalacja-repozytorium)
+    - [Aktualizowanie pluginów w grafanie](#aktualizowanie-plugin%C3%B3w-w-grafanie)
+
 # Instalacja Grafany
 
 ![Operacje z HA](../info/screenshots/grafana.png)

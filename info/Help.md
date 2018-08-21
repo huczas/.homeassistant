@@ -1,3 +1,13 @@
+- [Home-Assistant help](#home-assistant-help)
+    - [HASS operations](#hass-operations)
+    - [To upgrade HASS manually](#to-upgrade-hass-manually)
+    - [If RPi is not syncing the time](#if-rpi-is-not-syncing-the-time)
+    - [Configuring WinSCP to edit HASS files](#configuring-winscp-to-edit-hass-files)
+    - [Mosquitto operations](#mosquitto-operations)
+    - [Backing up Configurations on Github](#backing-up-configurations-on-github)
+    - [Integrating HASS (AIO) with Smartthings using Mosquitto](#integrating-hass-aio-with-smartthings-using-mosquitto)
+    - [Miscellaneous Tips/Tricks](#miscellaneous-tipstricks)
+
 # Home-Assistant help
 
 ## HASS operations

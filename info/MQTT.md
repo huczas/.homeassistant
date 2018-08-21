@@ -1,3 +1,6 @@
+- [MQTT](#mqtt)
+    - [MQTT debug](#mqtt-debug)
+
 # MQTT
 
 I'm using from now builtin MQTT Broker with Home-Assistant

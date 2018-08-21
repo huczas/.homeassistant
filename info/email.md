@@ -1,3 +1,8 @@
+- [Setup RaspberryPi to send email notifications](#setup-raspberrypi-to-send-email-notifications)
+    - [Installing](#installing)
+    - [Sending an email](#sending-an-email)
+    - [Sending A File](#sending-a-file)
+
 # Setup RaspberryPi to send email notifications
 
 SSMTP is a nice and simple solution for sending emails from the command line etc.
