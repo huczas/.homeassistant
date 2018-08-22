@@ -25,23 +25,24 @@
 ## Devices - Software
 
 * Raspberry Pi 3B
-  * [Raspbian] - Stretch
+  * Raspbian - Stretch
   * [Home-assistant] in Python venv
   * [MQTT] - Built in HBMQTT broker
   * [InfluxDB] - latest version
   * [Grafana] - latest version
   * [PiHole] - automated install
   * [SSMTP] - sending emails from RPi
+  * [Security] - secure ssh
 * Esp8266:
   * [EspEasy]
 
-[Raspbian]:https://www.raspberrypi.org/downloads/raspbian/
 [Home-assistant]:../master/info/Help.md
 [MQTT]:../master/info/MQTT.md
 [Grafana]:../master/info/Grafana.md
 [InfluxDB]:../master/info/InfluxDB.md
 [PiHole]:https://github.com/pi-hole/pi-hole#one-step-automated-install
 [SSMTP]:../master/info/email.md
+[Security]:../master/info/security.md
 [EspEasy]:https://github.com/letscontrolit/ESPEasy
 
 ## Screenshots
