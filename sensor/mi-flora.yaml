@@ -1,7 +1,7 @@
 - platform: miflora
   mac: C4:7C:8D:62:A8:4D
   name: Fiołek_1
-  force_update: true
+  force_update: false
   median: 1
   monitored_conditions:
     - moisture
@@ -12,7 +12,7 @@
 - platform: miflora
   mac: C4:7C:8D:62:E0:EE
   name: Fiołek_2
-  force_update: true
+  force_update: false
   median: 1
   monitored_conditions:
     - moisture
@@ -23,7 +23,7 @@
 - platform: miflora
   mac: C4:7C:8D:62:E0:FD
   name: Paprotka
-  force_update: true
+  force_update: false
   median: 1
   monitored_conditions:
     - moisture
@@ -34,7 +34,7 @@
 - platform: miflora
   mac: C4:7C:8D:66:1C:98
   name: Monstera
-  force_update: true
+  force_update: false
   median: 1
   monitored_conditions:
     - moisture
@@ -45,7 +45,7 @@
 - platform: miflora
   mac: C4:7C:8D:66:21:50
   name: Chamedora wytworna
-  force_update: true
+  force_update: false
   median: 1
   monitored_conditions:
     - moisture
@@ -56,7 +56,7 @@
 - platform: miflora
   mac: C4:7C:8D:66:15:39
   name: Fiołek fioletowy
-  force_update: true
+  force_update: false
   median: 1
   monitored_conditions:
     - moisture
