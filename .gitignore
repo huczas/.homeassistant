@@ -34,7 +34,7 @@ jspm_packages
 .npm
 
 #disabled configurations
-.disabled
+*.disabled
 
 # Optional REPL history
 .node_repl_history
