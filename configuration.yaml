@@ -34,7 +34,6 @@ automation: !include automations.yaml
 script:
 
 panel_iframe: !include panel_iframe.yaml
-panel_custom: !include panel_custom.yaml
 binary_sensor: !include binary_sensors.yaml
 sensor: !include_dir_merge_list sensor/
 switch: !include_dir_list switch/
