@@ -1,6 +1,7 @@
-- [Instalacja InfluxDB](#instalacja-influxdb)
-
 # Instalacja InfluxDB
+
+- [Instalacja InfluxDB](#instalacja-influxdb)
+- [Backup bazy danych](#Backup-bazy-danych)
 
 ![InfluxDB](../info/screenshots/influxdb.png)
 
@@ -43,3 +44,9 @@ Tworzymy konto systemowe:
 
 oraz instalujemy:
 `sudo apt-get install telegraf influxdb`
+
+# Backup bazy danych
+
+[InfluxDB]
+
+[InfluxDB]:https://github.com/huczas/InfluxDB-backup
