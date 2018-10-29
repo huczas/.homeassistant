@@ -56,7 +56,10 @@ tradfri:
 # Enable iOS app
 ios:
 homekit: 
-  pincode: !secret homekit
+  filter:
+    exclude_domains:
+      - automations
+#  pincode: !secret homekit
 
 updater:
   reporting: true
