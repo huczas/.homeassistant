@@ -5,7 +5,7 @@
 
 # Home-Assistant 
 
-[![Build Status](https://travis-ci.org/huczas/.homeassistant.svg?branch=master)](https://travis-ci.org/huczas/.homeassistant) [![HitCount](http://hits.dwyl.io/huczas/.homeassistant.svg)](http://hits.dwyl.io/huczas/.homeassistant)
+[![Build Status](https://travis-ci.org/huczas/.homeassistant.svg?branch=master)](https://travis-ci.org/huczas/.homeassistant) [![HitCount](http://hits.dwyl.io/huczas/.homeassistant.svg)](http://hits.dwyl.io/huczas/.homeassistant) [![Black Duck Security Risk](https://copilot.blackducksoftware.com/github/repos/huczas/.homeassistant/branches/master/badge-risk.svg)](https://copilot.blackducksoftware.com/github/repos/huczas/.homeassistant/branches/master)
 
 <p align="center"><img src="https://github.com/home-assistant/home-assistant-assets/raw/master/loading-screen.gif" width="200"></p>
 
