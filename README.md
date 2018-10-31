@@ -21,6 +21,7 @@
 * Sonoff relay-switch witch ESPEasy software
 * Xiaomi Roborock 2 - vacuum
 * Xiaomi Mi Flora - Flower health
+* Ikae TRÅDFRI - gateway, and some light bulbs
 
 ## Devices - Software
 
