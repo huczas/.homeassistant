@@ -9,7 +9,6 @@
   trigger:
   - entity_id: updater.updater
     platform: state
-####
 - action:
   - data:
       message: Wilgotność paprotki poniżej 30%
@@ -24,7 +23,6 @@
   - below: '30'
     entity_id: sensor.paprotka_moisture
     platform: numeric_state
-####
 - action:
   - data:
       data:
@@ -42,7 +40,6 @@
   - below: '20'
     entity_id: sensor.fioek_1_moisture
     platform: numeric_state
-####
 - action:
   - data:
       message: Wilgotność fiołka w niebieskiej doniczce poniżej 20%
@@ -57,7 +54,6 @@
   - below: '20'
     entity_id: sensor.fioek_2_moisture
     platform: numeric_state
-####
 - action:
   - data:
       message: Wilgotność fioletowego fiołka w ubranej doniczce poniżej 20%
@@ -72,7 +68,6 @@
   - below: '20'
     entity_id: sensor.fioek_fioletowy_moisture
     platform: numeric_state
-####
 - action:
   - data:
       message: Wilgotność Chamedory(palmy) poniżej 15%
@@ -87,7 +82,6 @@
   - below: '15'
     entity_id: sensor.chamedora_wytworna_moisture
     platform: numeric_state
-####
 - action:
   - data:
       message: Wilgotność Monstery poniżej 20%
@@ -102,7 +96,6 @@
   - below: '20'
     entity_id: sensor.monstera_moisture
     platform: numeric_state
-####
 - action:
   - data:
       message: Home Assistant Start at {{ states('sensor.time') }}
@@ -113,7 +106,6 @@
   trigger:
   - event: start
     platform: homeassistant
-####
 - action:
   - data:
       message: Home Assistant Stop at {{ states('sensor.time') }}
@@ -124,7 +116,6 @@
   trigger:
   - event: shutdown
     platform: homeassistant
-####
 - action:
   - data:
       data:
@@ -149,7 +140,6 @@
   trigger:
   - at: '19:00:00'
     platform: time
-####
 - action:
   - data:
       name: screenshots
@@ -161,7 +151,6 @@
   trigger:
   - at: '19:00'
     platform: time
-####
 - action:
   - data:
       name: screenshots
@@ -173,7 +162,6 @@
   trigger:
   - at: 08:00
     platform: time
-####
 - action:
   - data:
       message: Hubert w domu!
@@ -190,3 +178,13 @@
   - entity_id: device_tracker.iphone
     platform: state
     to: home
+- id: '1542017191318'
+  alias: NAS ON
+  trigger:
+  - at: '12:00'
+    platform: time
+  condition: []
+  action:
+  - data:
+      entity_id: switch.nas
+    service: switch.toggle
