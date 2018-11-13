@@ -26,8 +26,8 @@ views:
       - id: peoplehome # Every card needs an ID, if you don't specify one, it is added automatically.
         type: entity-filter
         entities:
-          - device_tracker.paulus
-          - device_tracker.anne_there
+          - device_tracker.myszowyiphone
+          - device_tracker.iphone
         state_filter:
           - 'home'
         card:
