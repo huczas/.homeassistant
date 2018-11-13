@@ -37,7 +37,7 @@ views:
         # The picture entity card will represent an entity with a picture
       - type: picture-entity
         image: https://www.home-assistant.io/images/default-social.png
-        entity: light.bed_light
+        entity: switch.ledy
 
     # Specify a tab icon if you want the view tab to be an icon.
   - icon: mdi:home-assistant
