@@ -42,6 +42,11 @@ views:
           - device_tracker.appletv
           - device_tracker.NAS
           - device_tracker.Vacuum
+        state_filter:
+          - 'home'
+        card:
+          type: glance
+          title: Devices that are on-line
         # The picture entity card will represent an entity with a picture
       - type: picture-entity
         image: https://www.home-assistant.io/images/default-social.png
