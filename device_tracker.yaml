@@ -4,16 +4,16 @@
   password: !secret mikrotik-pass
   new_device_defaults:
     track_new_devices: false
-- platform: nmap_tracker
-  hosts: 
-   - 192.168.0.0/22
-  interval_seconds: 30
-  consider_home: 1200
-  exclude:
-   - 192.168.1.1
-   - 192.168.1.13
-   - 192.168.1.14
-   
+#- platform: nmap_tracker
+#  hosts: 
+#   - 192.168.0.0/22
+#  interval_seconds: 30
+#  consider_home: 1200
+#  exclude:
+#   - 192.168.1.1
+#   - 192.168.1.13
+#   - 192.168.1.14
+
 #- platform: icloud
 #  username: !secret icloud_u
 #  password: !secret icloud_p
