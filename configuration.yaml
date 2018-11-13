@@ -59,6 +59,7 @@ homekit:
   filter:
     exclude_domains:
       - automations
+      - device_tracker
 #  pincode: !secret homekit
 
 updater:
