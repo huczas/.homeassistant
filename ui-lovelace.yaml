@@ -1,8 +1,9 @@
-title: My Awesome Home
+title: Dev-Lovelace
 # Include external resources
 resources:
   - url: /local/my-custom-card.js
     type: js
+  
   - url: /local/my-webfont.css
     type: css
 
@@ -38,10 +39,10 @@ views:
         entities:
           - device_tracker.baza_pogodowa
           - device_tracker.airportexpresshubert
-          - device_tracker.raspberrypi
+          - device_tracker.retropie
           - device_tracker.appletv
-          - device_tracker.NAS
-          - device_tracker.Vacuum
+          - device_tracker.nas
+          - device_tracker.vacuum
         state_filter:
           - 'home'
         card:
