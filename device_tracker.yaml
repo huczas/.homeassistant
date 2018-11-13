@@ -12,7 +12,7 @@
   username: !secret mikrotik-user
   password: !secret mikrotik-pass
   new_device_defaults:
-    track_new_device: false
+    track_new_devices: false
 
 #- platform: icloud
 #  username: !secret icloud_u
