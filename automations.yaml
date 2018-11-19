@@ -188,3 +188,14 @@
   - data:
       entity_id: switch.nas
     service: switch.toggle
+- id: '1542021191318'  
+  alias: "MiFlora Low Battery"
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.chamedora_wytworna_battery
+      below: 20
+  action:
+    service: notify.ios_hubert
+    data:
+      title: "MiFlora Battery is low!"
+      message: "Battery low in Chamedora {{ states('sensor.chamedora_wytworna_battery') }}"
