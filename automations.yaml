@@ -273,7 +273,7 @@
     - sun
   action:
   - data:
-      message: 'Prognoza na najbliższy tydzień: {{ states(''sensor.dark_sky_daily_summary'')
-        }}'
+      message: Prognoza na najbliższy tydzień {{ states('sensor.dark_sky_daily_summary')
+        }}
       tittle: Prognoza na tydzień
     service: notify.pushover
