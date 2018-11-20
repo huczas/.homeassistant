@@ -78,6 +78,20 @@ views:
         title: Lovelace
         content: >
           Welcome to your **Lovelace UI**.
+  # Karta pogodowa
+  - icon: mdi:sun
+    tittle: Pogoda
+    cards:
+      - type: iframe
+        url: http://meteo.org.pl/img/um/warszawa.png
+        aspect_ratio: 75%
+      - type: iframe
+        url: http://150.254.126.252/meteorogram/21.00_52.25.png
+        aspect_ratio: 75%
+      - type: iframe
+        url: http://www.n3kl.org/sun/images/noaa_xrays.gif
+        aspect_ratio: 75%
+
   # Karta Kwiatki
   - icon: mdi:flower-tulip
     title: Kwiatki
