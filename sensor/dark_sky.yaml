@@ -1,0 +1,33 @@
+  - platform: darksky
+    api_key: !secret dark_sky_api
+    language: pl
+    units: si
+    update_interval: 
+      minutes: 3
+    forecast: 1
+    monitored_conditions:
+      - summary
+      - icon
+      - nearest_storm_distance
+      - temperature
+      - precip_type
+      - precip_intensity
+      - precip_probability
+      - precip_accumulation
+      #temp. odczuwalna
+      - apparent_temperature
+      - dew_point
+      - wind_speed
+      - wind_gust
+      - wind_bearing
+      - cloud_cover
+      - humidity
+      - pressure
+      - visibility
+      - ozone
+      - hourly_summary
+      - daily_summary
+      - temperature_high
+      - temperature_low
+      - uv_index
+      - moon_phase
