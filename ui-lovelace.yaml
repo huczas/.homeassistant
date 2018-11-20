@@ -79,9 +79,11 @@ views:
         content: >
           Welcome to your **Lovelace UI**.
   # Karta pogodowa
-  - icon: mdi:sun
+  - icon: mdi:weather-sunny
     tittle: Pogoda
     cards:
+      - type: weather-forecast
+        entity: weather.open_sky
       - type: iframe
         tittle: UM Warszawa
         url: http://meteo.org.pl/img/um/warszawa.png
