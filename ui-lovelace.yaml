@@ -95,3 +95,68 @@ views:
         - temperature:sensor.chamedora_wytworna_temperature
         - conductivity:sensor.chamedora_wytworna_conductivity
         - battery:sensor.chamedora_wytworna_battery
+      - type: custom:plant-card
+        title: 'Paprotka'
+        image: /local/images/chamedora.jpeg
+        min_moisture: 30
+        max_moisture: 60
+        min_conductivity: 200
+        min_temperature: 20
+        entities:
+        - moisture:sensor.paprotka_moisture
+        - intensity:sensor.paprotka_light_intensity
+        - temperature:sensor.paprotka_temperature
+        - conductivity:sensor.paprotka_conductivity
+        - battery:sensor.paprotka_battery
+      - type: custom:plant-card
+        title: 'Fikus'
+        image: /local/images/chamedora.jpeg
+        min_moisture: 30
+        max_moisture: 60
+        min_conductivity: 200
+        min_temperature: 20
+        entities:
+        - moisture:sensor.fioek_1_moisture
+        - intensity:sensor.fioek_1_light_intensity
+        - temperature:sensor.fioek_1_temperature
+        - conductivity:sensor.fioek_1_conductivity
+        - battery:sensor.fioek_1_battery
+      - type: custom:plant-card
+        title: 'Fiołek w niebieskiej doniczce'
+        image: /local/images/chamedora.jpeg
+        min_moisture: 30
+        max_moisture: 60
+        min_conductivity: 200
+        min_temperature: 20
+        entities:
+        - moisture:sensor.fioek_2_moisture
+        - intensity:sensor.fioek_2_light_intensity
+        - temperature:sensor.fioek_2_temperature
+        - conductivity:sensor.fioek_2_conductivity
+        - battery:sensor.fioek_2_battery
+      - type: custom:plant-card
+        title: 'Monstera'
+        image: /local/images/chamedora.jpeg
+        min_moisture: 30
+        max_moisture: 60
+        min_conductivity: 200
+        min_temperature: 20
+        entities:
+        - moisture:sensor.monstera_moisture
+        - intensity:sensor.monstera_light_intensity
+        - temperature:sensor.monstera_temperature
+        - conductivity:sensor.monstera_conductivity
+        - battery:sensor.monstera_battery
+      - type: custom:plant-card
+        title: 'iołek w sweterku'
+        image: /local/images/chamedora.jpeg
+        min_moisture: 30
+        max_moisture: 60
+        min_conductivity: 200
+        min_temperature: 20
+        entities:
+        - moisture:sensor.fioek_fioletowy_moisture
+        - intensity:sensor.fioek_fioletowy_light_intensity
+        - temperature:sensor.fioek_fioletowy_temperature
+        - conductivity:sensor.fioek_fioletowy_conductivity
+        - battery:sensor.fioek_fioletowy_battery
