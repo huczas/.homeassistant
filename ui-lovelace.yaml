@@ -136,7 +136,7 @@ views:
         - battery:sensor.fioek_2_battery
       - type: custom:plant-card
         title: 'Monstera'
-        image: images/monstera.jpeg
+        image: images/monstera.jpg
         min_moisture: 30
         max_moisture: 60
         min_conductivity: 200
@@ -149,7 +149,7 @@ views:
         - battery:sensor.monstera_battery
       - type: custom:plant-card
         title: 'Fiołek w sweterku'
-        image: images/fiolek_nieb.jpg
+        image: images/fiolek_nieb.jpeg
         min_moisture: 30
         max_moisture: 60
         min_conductivity: 200
