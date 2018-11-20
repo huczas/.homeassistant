@@ -3,6 +3,8 @@ title: Dev-Lovelace
 resources:
   - url: /local/my-custom-card.js
     type: js
+  - url: /local/plant-card.js
+    type: js
   
   - url: /local/my-webfont.css
     type: css
@@ -76,3 +78,20 @@ views:
         title: Lovelace
         content: >
           Welcome to your **Lovelace UI**.
+  # Karta Kwiatki
+  - icon: mdi:flower-tulip
+    title: Kwiatki
+    cards:
+      - type: custom:plant-card
+        title: 'Calathea Zebrina'
+        image: images/calathea-zebrina.jpg
+        min_moisture: 15
+        max_moisture: 60
+        min_conductivity: 350
+        min_temperature: 20
+        entities:
+        - moisture:sensor.chamedora_wytworna_moisture
+        - intensity:sensor.chamedora_wytworna_light_intensity
+        - temperature:sensor.chamedora_wytworna_temperature
+        - conductivity:sensor.chamedora_wytworna_conductivity
+        - battery:sensor.chamedora_wytworna_battery
