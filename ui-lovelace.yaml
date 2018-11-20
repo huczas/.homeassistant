@@ -82,13 +82,11 @@ views:
   - icon: mdi:sun
     tittle: Pogoda
     cards:
-      - type: iframe
-        tittle: UM Warszawa
+      - type: picture
         url: http://meteo.org.pl/img/um/warszawa.png
-      - type: iframe
-        tittle: Meteogram ENWO
+      - type: picture
         url: http://150.254.126.252/meteorogram/21.00_52.25.png
-      - type: iframe
+      - type: picture
         tittle: NOAA Sun X-rays
         url: http://www.n3kl.org/sun/images/noaa_xrays.gif
 
