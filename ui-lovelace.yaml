@@ -148,7 +148,7 @@ views:
         - conductivity:sensor.monstera_conductivity
         - battery:sensor.monstera_battery
       - type: custom:plant-card
-        title: 'iołek w sweterku'
+        title: 'Fiołek w sweterku'
         image: /local/images/chamedora.jpeg
         min_moisture: 30
         max_moisture: 60
