@@ -97,7 +97,7 @@ views:
         - battery:sensor.chamedora_wytworna_battery
       - type: custom:plant-card
         title: 'Paprotka'
-        image: local/images/chamedora.jpeg
+        image: images/paprotka.jpg
         min_moisture: 30
         max_moisture: 60
         min_conductivity: 200
@@ -110,7 +110,7 @@ views:
         - battery:sensor.paprotka_battery
       - type: custom:plant-card
         title: 'Fikus'
-        image: /local/images/chamedora.jpeg
+        image: images/fikus.jpeg
         min_moisture: 30
         max_moisture: 60
         min_conductivity: 200
@@ -123,7 +123,7 @@ views:
         - battery:sensor.fioek_1_battery
       - type: custom:plant-card
         title: 'Fiołek w niebieskiej doniczce'
-        image: /local/images/chamedora.jpeg
+        image: images/fiolek_nieb.jpeg
         min_moisture: 30
         max_moisture: 60
         min_conductivity: 200
@@ -136,7 +136,7 @@ views:
         - battery:sensor.fioek_2_battery
       - type: custom:plant-card
         title: 'Monstera'
-        image: /local/images/chamedora.jpeg
+        image: images/monstera.jpeg
         min_moisture: 30
         max_moisture: 60
         min_conductivity: 200
@@ -149,7 +149,7 @@ views:
         - battery:sensor.monstera_battery
       - type: custom:plant-card
         title: 'Fiołek w sweterku'
-        image: /local/images/chamedora.jpg
+        image: images/fiolek_nieb.jpg
         min_moisture: 30
         max_moisture: 60
         min_conductivity: 200
