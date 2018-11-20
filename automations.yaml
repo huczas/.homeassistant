@@ -116,14 +116,20 @@
   trigger:
   - event: shutdown
     platform: homeassistant
-- action:
+- id: '7'
+  alias: Prognoza
+  trigger:
+  - at: '19:00:00'
+    platform: time
+  condition: []
+  action:
   - data:
       data:
         attachment:
-          url: http://meteo.org.pl/img/um/warszawa.png
           content-type: png
           hide-thumbnail: false
-      message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
+          url: http://meteo.org.pl/img/um/warszawa.png
+      message: Prognoza na jutro {{ states(' sensor.dark_sky_hourly_summary') }}
     service: notify.ios_hubert
   - data:
       message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
@@ -134,12 +140,6 @@
           url: http://meteo.org.pl/img/um/warszawa.png
       message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
     service: notify.telegram_myszaa
-  alias: Prognoza
-  condition: []
-  id: '7'
-  trigger:
-  - at: '19:00:00'
-    platform: time
 - action:
   - data:
       name: screenshots
@@ -196,7 +196,8 @@
     platform: numeric_state
   action:
   - data:
-      message: Battery low in Chamedora {{ states('sensor.chamedora_wytworna_battery') }}%
+      message: Battery low in Chamedora {{ states('sensor.chamedora_wytworna_battery')
+        }}%
       title: MiFlora Battery is low!
     service: notify.ios_hubert
 - id: '1542698507632'
@@ -220,7 +221,8 @@
   condition: []
   action:
   - data:
-      message: Battery low in fiolek w niebieskiej doniczce {{ states('sensor.fioek_2_battery') }}%
+      message: Battery low in fiolek w niebieskiej doniczce {{ states('sensor.fioek_2_battery')
+        }}%
       title: MiFlora Battery is low!
     service: notify.ios_hubert
 - id: '1542699033721'
@@ -256,6 +258,22 @@
   condition: []
   action:
   - data:
-      message: Battery low in fiołek w sweterku {{ states('sensor.fioek_fioletowy_battery') }}%
+      message: Battery low in fiołek w sweterku {{ states('sensor.fioek_fioletowy_battery')
+        }}%
       title: MiFlora Battery is low!
     service: notify.ios_hubert
+- id: '1542746506998'
+  alias: Prognoza tygodniowa
+  trigger:
+  - at: '18:00'
+    platform: time
+  condition:
+  - condition: time
+    weekday:
+    - sun
+  action:
+  - data:
+      message: 'Prognoza na najbliższy tydzień: {{ states(''sensor.dark_sky_daily_summary'')
+        }}'
+      tittle: Prognoza na tydzień
+    service: notify.pushover
