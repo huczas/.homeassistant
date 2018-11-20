@@ -196,8 +196,7 @@
     platform: numeric_state
   action:
   - data:
-      message: Battery low in Chamedora {{ states('sensor.chamedora_wytworna_battery')
-        }}%
+      message: Battery low in Chamedora {{ states('sensor.chamedora_wytworna_battery') }}%
       title: MiFlora Battery is low!
     service: notify.ios_hubert
 - id: '1542698507632'
@@ -221,8 +220,7 @@
   condition: []
   action:
   - data:
-      message: Battery low in fiolek w niebieskiej doniczce {{ states('sensor.fioek_2_battery')
-        }}%
+      message: Battery low in fiolek w niebieskiej doniczce {{ states('sensor.fioek_2_battery') }}%
       title: MiFlora Battery is low!
     service: notify.ios_hubert
 - id: '1542699033721'
@@ -258,7 +256,6 @@
   condition: []
   action:
   - data:
-      message: Battery low in fiołek w sweterku {{ states('sensor.fioek_fioletowy_battery')
-        }}%
+      message: Battery low in fiołek w sweterku {{ states('sensor.fioek_fioletowy_battery') }}%
       title: MiFlora Battery is low!
     service: notify.ios_hubert
