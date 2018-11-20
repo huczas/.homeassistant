@@ -112,7 +112,7 @@ views:
         title: 'Fikus'
         image: images/fikus.jpeg
         min_moisture: 30
-        max_moisture: 60
+        max_moisture: 85
         min_conductivity: 200
         min_temperature: 20
         entities:
@@ -160,3 +160,23 @@ views:
         - temperature:sensor.fioek_fioletowy_temperature
         - conductivity:sensor.fioek_fioletowy_conductivity
         - battery:sensor.fioek_fioletowy_battery
+  # Karta testowa
+  - icon: 
+    title: Testy
+    cards:
+      - type: entities
+        title: Entities card sample
+        show_header_toggle: true
+        entities:
+          - type: call-service
+            icon: mdi:power
+            name: Bed light
+            action_name: Toggle light
+            service: switch.toggle
+            service_data:
+              entity_id: switch.ledy
+          - type: divider
+          - type: weblink
+            name: Home Assistant
+            url: https://www.home-assistant.io/
+            icon: mdi:home-assistant

@@ -8,7 +8,7 @@ class PlantCard extends HTMLElement {
         moisture: 'hass:water',
         temperature: 'hass:thermometer',
         intensity: 'hass:white-balance-sunny',
-        conductivity: 'hass:emoticon-poop',
+        conductivity: 'hass:flash',
         battery: 'hass:battery'
       };
   
@@ -17,7 +17,7 @@ class PlantCard extends HTMLElement {
     _computeIcon(sensor, state) {
       const icon = this.sensors[sensor];
       if (sensor === 'battery') {
-        if (state <= 5) {
+        if (state <= 20) {
           return `${icon}-alert`;
         } else if (state < 95) {
           return `${icon}-${Math.round((state / 10) - 0.01) * 10}`;
