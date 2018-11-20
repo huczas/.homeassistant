@@ -83,11 +83,11 @@ views:
     title: Kwiatki
     cards:
       - type: custom:plant-card
-        title: 'Calathea Zebrina'
-        image: images/calathea-zebrina.jpg
+        title: 'Chamedora Wytworna'
+        image: /local/images/chamedora.jpeg
         min_moisture: 15
         max_moisture: 60
-        min_conductivity: 350
+        min_conductivity: 200
         min_temperature: 20
         entities:
         - moisture:sensor.chamedora_wytworna_moisture
