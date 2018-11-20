@@ -1,0 +1,6 @@
+  - platform: darksky
+    api_key: !secret dark_sky_api
+    units: si
+    name: Open Sky
+    #mode can be hourly(default) or daily
+    mode: hourly

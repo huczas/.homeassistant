@@ -47,6 +47,7 @@ group: !include groups.yaml
 weblink: !include weblink.yaml
 telegram_bot: !include telegram_bot.yaml
 device_tracker: !include device_tracker.yaml
+weather: !include weather.yaml
 
 #IKEA Trådfri setup preparation
 tradfri:
