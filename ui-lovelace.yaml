@@ -84,7 +84,7 @@ views:
     cards:
       - type: custom:plant-card
         title: 'Chamedora Wytworna'
-        image: /local/images/chamedora.jpeg
+        image: images/chamedora.jpg
         min_moisture: 15
         max_moisture: 60
         min_conductivity: 200
@@ -97,7 +97,7 @@ views:
         - battery:sensor.chamedora_wytworna_battery
       - type: custom:plant-card
         title: 'Paprotka'
-        image: /local/images/chamedora.jpeg
+        image: local/images/chamedora.jpeg
         min_moisture: 30
         max_moisture: 60
         min_conductivity: 200
@@ -149,7 +149,7 @@ views:
         - battery:sensor.monstera_battery
       - type: custom:plant-card
         title: 'Fiołek w sweterku'
-        image: /local/images/chamedora.jpeg
+        image: /local/images/chamedora.jpg
         min_moisture: 30
         max_moisture: 60
         min_conductivity: 200
