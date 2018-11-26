@@ -21,40 +21,68 @@ include:
    - sensor.pws_wind_gust_kph
    - sensor.pws_visibility_km
    - sensor.pws_solarradiation
+   #Dark Sky - weather
+   - sensor.dark_sky_apparent_temperature
+   - sensor.dark_sky_cloud_coverage
+   - sensor.dark_sky_cloud_coverage_1
+   - sensor.dark_sky_daytime_high_temperature
+   - sensor.dark_sky_daytime_high_temperature_1
+   - sensor.dark_sky_dew_point
+   - sensor.dark_sky_dew_point_1
+   - sensor.dark_sky_humidity
+   - sensor.dark_sky_humidity_1
+   - sensor.dark_sky_moon_phase
+   - sensor.dark_sky_moon_phase_1
+   - sensor.dark_sky_nearest_storm_distance
+   - sensor.dark_sky_overnight_low_temperature
+   - sensor.dark_sky_overnight_low_temperature_1
+   - sensor.dark_sky_ozone
+   - sensor.dark_sky_ozone_1
+   - sensor.dark_sky_precip_accumulation
+   - sensor.dark_sky_precip_accumulation_1
+   - sensor.dark_sky_precip_intensity
+   - sensor.dark_sky_precip_intensity_1
+   - sensor.dark_sky_precip_probability
+   - sensor.dark_sky_precip_probability_1
+   - sensor.dark_sky_pressure
+   - sensor.dark_sky_pressure_1
+   - sensor.dark_sky_temperature
+   - sensor.dark_sky_uv_index
+   - sensor.dark_sky_uv_index_1
+   - sensor.dark_sky_visibility
+   - sensor.dark_sky_visibility_1
+   - sensor.dark_sky_wind_bearing
+   - sensor.dark_sky_wind_bearing_1
+   - sensor.dark_sky_wind_gust
+   - sensor.dark_sky_wind_gust_1
+   - sensor.dark_sky_wind_speed
+   - sensor.dark_sky_wind_speed_1
+   #speed test
    - sensor.speedtest_download
    - sensor.speedtest_upload
    - sensor.speedtest_ping
-   - sensor.plant_moisture_w_solar_2_0
-   - sensor.czujnik_wilgoci_gleby_2_0
    - sensor.cpu_temperature
-   - sensor.wan_rx
-   - sensor.wan_tx
-   - sensor.fioek_1_battery
+   # kwiatki
    - sensor.fioek_1_conductivity
    - sensor.fioek_1_light_intensity
    - sensor.fioek_1_moisture
    - sensor.fioek_1_temperature
-   - sensor.fioek_2_battery
    - sensor.fioek_2_conductivity
    - sensor.fioek_2_light_intensity
    - sensor.fioek_2_moisture
    - sensor.fioek_2_temperature
-   - sensor.fioek_fioletowy_battery
    - sensor.fioek_fioletowy_conductivity
    - sensor.fioek_fioletowy_light_intensity
    - sensor.fioek_fioletowy_moisture
    - sensor.fioek_fioletowy_temperature
-   - sensor.paprotka_battery
    - sensor.paprotka_conductivity
    - sensor.paprotka_light_intensity
    - sensor.paprotka_moisture
    - sensor.paprotka_temperature
-   - sensor.chamedora_wytworna_battery
    - sensor.chamedora_wytworna_conductivity
    - sensor.chamedora_wytworna_light_intensity
    - sensor.chamedora_wytworna_moisture
    - sensor.chamedora_wytworna_temperature
-   - sensor.monstera_battery
    - sensor.monstera_conductivity
    - sensor.monstera_light_intensity
    - sensor.monstera_moisture
@@ -66,6 +94,16 @@ include:
    - sensor.bme680_sensor_air_quality
    - sensor.bme680_sensor_gas_resistance
    - vacuum.xiaomi_vacuum
+   #baterie:
+   - sensor.tradfri_motion_sensor
+   - sensor.tradfri_onoff_switch
+   - sensor.tradfri_remote_control
+   - sensor.fioek_1_battery
+   - sensor.fioek_2_battery
+   - sensor.fioek_fioletowy_battery
+   - sensor.paprotka_battery
+   - sensor.chamedora_wytworna_battery
+   - sensor.monstera_battery
 tags:
   instance: prod
   source: hass
