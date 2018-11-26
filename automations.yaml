@@ -129,17 +129,17 @@
           content-type: png
           hide-thumbnail: false
           url: http://meteo.org.pl/img/um/warszawa.png
-      message: Prognoza na jutro {{ states(' sensor.dark_sky_hourly_summary') }}
+      message: Prognoza na jutro {{ states('  sensor.dark_sky_hourly_summary') }}
     service: notify.ios_hubert
   - data:
       message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
-    service: notify.telegram_myszaa
+    service: notify.telegram_mysza
   - data:
       data:
         photo:
           url: http://meteo.org.pl/img/um/warszawa.png
       message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
-    service: notify.telegram_myszaa
+    service: notify.telegram_mysza
 - action:
   - data:
       name: screenshots
