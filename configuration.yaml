@@ -58,9 +58,33 @@ tradfri:
 ios:
 homekit: 
   filter:
+    include_entities:
+      - sensor.bme680_sensor_pressure
+      - sensor.bme680_sensor_humidity
+      - sensor.bme680_sensor_temperature
+      - sensor.dark_sky_dew_point
+      - sensor.dark_sky_humidity
+      - sensor.dark_sky_pressure
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_wind_speed
+      - switch.ledy
+      - switch.nas
+      - switch.pc
+      - switch.pihole
+      - switch.speakers
     exclude_domains:
       - automations
       - device_tracker
+      - group
+      - switch
+      - weather
+      - weblink
+      - zone
+      - sun
+      - sensor
+    include_domains:
+      - light
+
 #  pincode: !secret homekit
 
 updater:
