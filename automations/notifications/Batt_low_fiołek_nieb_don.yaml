@@ -1,13 +1,12 @@
 id: '1542698707903'
 alias: MiFlora Low Battery - Fiołek nieb. don.
 trigger:
-- below: '20'
+  below: '20'
   entity_id: sensor.fioek_2_battery
   platform: numeric_state
 condition: []
 action:
-- data:
-    message: Battery low in fiolek w niebieskiej doniczce {{ states('sensor.fioek_2_battery')
-      }}%
+  data:
+    message: Battery low in fiolek w niebieskiej doniczce {{ states('sensor.fioek_2_battery') }}%
     title: MiFlora Battery is low!
   service: notify.ios_hubert

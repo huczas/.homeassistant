@@ -1,12 +1,12 @@
 id: '1542698507632'
 alias: MiFlora Low Battery - Fikus
 trigger:
-- below: '20'
+  below: '20'
   entity_id: sensor.fioek_1_battery
   platform: numeric_state
 condition: []
 action:
-- data:
+  data:
     message: Battery low in Fikus {{ states('sensor.fioek_1_battery') }}%
     title: MiFlora Battery is low!
   service: notify.ios_hubert

@@ -1,12 +1,12 @@
 id: '1542699033721'
 alias: MiFlora Low Battery - Paprotka
 trigger:
-- below: '20'
+  below: '20'
   entity_id: sensor.paprotka_battery
   platform: numeric_state
 condition: []
 action:
-- data:
+  data:
     message: Battery low in paprotka {{ states('sensor.paprotka_battery') }}%
     title: MiFlora Battery is low!
   service: notify.ios_hubert
