@@ -13,6 +13,4 @@ action:
       url: "https://www.home-assistant.io/"
       sound: pianobar
       priority: 0
-  service: notify.ios_hubert
-
-
+  service: notify.pushover
