@@ -10,12 +10,12 @@ trigger:
 action:
   data:
     data:
-      file:
+      photo:
         url: http://meteo.org.pl/img/um/warszawa.png
     message: >-
       {{ Aktualnie states('sensor.dark_sky_temperature')|round(0) }}C na zewnątrz oraz {{ states('sensor.dark_sky_daily_summary')|lower }}
     title: "Pogoda"
-  service: notify.pushover
+  service: notify.telegram_hubert
 
 #action:
 #  data:
