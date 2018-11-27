@@ -93,7 +93,6 @@ include:
     - sensor.mieszkanie_pm_10_2
     - sensor.bme680_sensor_air_quality
     - sensor.bme680_sensor_gas_resistance
-    - vacuum.xiaomi_vacuum
 # baterie:
     - sensor.tradfri_motion_sensor
     - sensor.tradfri_onoff_switch
@@ -104,6 +103,10 @@ include:
     - sensor.paprotka_battery
     - sensor.chamedora_wytworna_battery
     - sensor.monstera_battery
+#Xiaomi
+    - fan.xiaomi_miio_device
+    - vacuum.xiaomi_vacuum
+    - vacuum.xiaomi_vacuum_cleaner
 tags:
   instance: prod
   source: hass
