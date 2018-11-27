@@ -16,7 +16,7 @@ action:
 - data:
     message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
   service: notify.telegram_mysza
-  data:
+- data:
     data:
       photo:
         url: http://meteo.org.pl/img/um/warszawa.png
