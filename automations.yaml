@@ -274,6 +274,6 @@
 #    - sun
   action:
   - data:
-      message: {{ states('sensor.dark_sky_temperature') }}
+      message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
 #     message: {{ states('sensor.dark_sky_temperature')|round(0) }}C na zewnątrz oraz {{ states('sensor.dark_sky_daily_summary')|lower
     service: notify.pushover
