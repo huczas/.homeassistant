@@ -1,0 +1,11 @@
+- action:
+  - data:
+      name: screenshots
+    service: frontend.set_theme
+  alias: Set light theme for day
+  condition: []
+  id: '9'
+  initial_state: true
+  trigger:
+  - at: 08:00
+    platform: time

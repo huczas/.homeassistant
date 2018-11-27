@@ -1,0 +1,10 @@
+action:
+- data:
+    message: Home Assistant Start at {{ states('sensor.time') }}
+  service: notify.pushover
+alias: Hass start
+condition: []
+id: '5'
+trigger:
+- event: start
+  platform: homeassistant

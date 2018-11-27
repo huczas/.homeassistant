@@ -1,0 +1,10 @@
+action:
+- data:
+    message: Home Assistant Stop at {{ states('sensor.time') }}
+  service: notify.pushover
+alias: Hass stop
+condition: []
+id: '6'
+trigger:
+- event: shutdown
+  platform: homeassistant

@@ -1,0 +1,11 @@
+action:
+- data:
+    name: screenshots
+  service: frontend.set_theme
+alias: Set dark theme for night
+condition: []
+id: '8'
+initial_state: true
+trigger:
+- at: '19:00'
+  platform: time

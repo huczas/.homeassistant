@@ -1,0 +1,10 @@
+id: '1542017191318'
+alias: NAS ON
+trigger:
+- at: '12:00'
+  platform: time
+condition: []
+action:
+- data:
+    entity_id: switch.nas
+  service: switch.toggle

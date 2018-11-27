@@ -28,8 +28,8 @@ frontend:
   themes: !include themes.yaml
 
 config:
-automation old: !include automations.yaml
-automation: !include_dir_list automation/
+automation: !include automations.yaml
+automation old: !include_dir_list automations/
 #Script is similar to automation
 script:
 
