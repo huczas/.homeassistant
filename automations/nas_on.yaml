@@ -5,6 +5,6 @@ trigger:
   platform: time
 condition: []
 action:
-- data:
+  data:
     entity_id: switch.nas
   service: switch.toggle

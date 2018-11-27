@@ -29,7 +29,7 @@ frontend:
 
 config:
 #automation: !include automations.yaml
-automation old: !include_dir_list automations/
+automation: !include_dir_list automations/
 #Script is similar to automation
 script:
 
