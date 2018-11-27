@@ -1,0 +1,18 @@
+initial_state: 'on'
+alias: Update
+trigger:
+- entity_id: updater.updater
+  platform: state
+condition: []
+id: '1'
+action:
+- data:
+    message: New version {{ states.updater.updater.state }} of Home Assistant is available
+    tittle: Update
+    data:
+      url: "https://www.home-assistant.io/"
+      sound: pianobar
+      priority: 0
+  service: notify.ios_hubert
+
+
