@@ -8,7 +8,7 @@ action:
 - data:
     title: Send an images
     message: >-
-      {{ Aktualnie states('sensor.dark_sky_temperature')|round(0) }}C na zewnątrz oraz {{ states('sensor.dark_sky_daily_summary')|lower }}
+      Aktualnie {{ states('sensor.dark_sky_temperature')|round(0) }}C na zewnątrz oraz {{ states('sensor.dark_sky_daily_summary')|lower }}
 #    data:
 #      photo:
 #        - url: http://meteo.org.pl/img/um/warszawa.png
