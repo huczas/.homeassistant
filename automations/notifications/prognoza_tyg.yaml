@@ -16,31 +16,4 @@ action:
           caption: ICM
     message: >-
       Aktualnie {{ states('sensor.dark_sky_temperature')|round(0) }}C na zewnątrz oraz {{ states('sensor.dark_sky_daily_summary')|lower }}
-  service: notify.telegram_hubert     
-
-
-
-# condition:
-# - condition: time
-#   weekday:
-#   - sun
-#action:
-#  data:
-#    message: >-
-#      {{ Aktualnie states('sensor.dark_sky_temperature')|round(0) }}C na zewnątrz oraz {{ states('sensor.dark_sky_daily_summary')|lower }}
-#    title: "Pogoda"
-#  service: notify.telegram_hubert
-
-#action:
-#- data:
-#    message: >-
-#      {{ Aktualnie states('sensor.dark_sky_temperature')|round(0) }}C na zewnątrz oraz {{ states('sensor.dark_sky_daily_summary')|lower }}
-#  service: notify.telegram_hubert
-#- data:
-#    data:
-#      photo:
-#        url: http://meteo.org.pl/img/um/warszawa.png
-#    message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
-#  service: notify.telegram_hubert
-
-
+  service: notify.telegram_hubert
