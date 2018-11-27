@@ -1,10 +1,10 @@
 action:
-- data:
-  message: Wilgotność fiołka w fioletowej doniczce poniżej 20%
-  service: notify.ios_hubert
-- data:
-  message: Wilgotność fiołka w fioletowej doniczce poniżej 20%
-  service: notify.telegram_mysza
+  - data:
+      message: Wilgotność fiołka w fioletowej doniczce poniżej 20%
+    service: notify.ios_hubert
+  - data:
+      message: Wilgotność fiołka w fioletowej doniczce poniżej 20%
+    service: notify.telegram_mysza
 alias: Nawodnienie fiołka w fioletowej doniczce
 condition: []
 id: '3'

@@ -1,9 +1,9 @@
 action:
   - data:
-    message: Wilgotność Chamedory(palmy) poniżej 15%
+      message: Wilgotność Chamedory(palmy) poniżej 15%
     service: notify.pushover
   - data:
-    message: Wilgotność Chamedory(palmy) poniżej 15%
+      message: Wilgotność Chamedory(palmy) poniżej 15%
     service: notify.telegram_mysza
 alias: Nawodnienie palmy
 condition: []

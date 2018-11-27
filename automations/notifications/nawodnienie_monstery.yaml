@@ -1,10 +1,10 @@
 action:
-- data:
-  message: Wilgotność Monstery poniżej 20%
-  service: notify.pushover
-- data:
-  message: Wilgotność Monstery poniżej 20%
-  service: notify.telegram_mysza
+  - data:
+      message: Wilgotność Monstery poniżej 20%
+    service: notify.pushover
+  - data:
+      message: Wilgotność Monstery poniżej 20%
+    service: notify.telegram_mysza
 alias: Nawodnienie Monstery
 condition: []
 id: '46'
