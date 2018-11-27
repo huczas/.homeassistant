@@ -8,11 +8,22 @@ trigger:
 #   weekday:
 #   - sun
 action:
+  #data:
+  #  data:
+  #    file:
+  #      url: http://meteo.org.pl/img/um/warszawa.png
+  #  message: >-
+  #    {{ Aktualnie states('sensor.dark_sky_temperature')|round(0) }}C na zewnątrz oraz {{ states('sensor.dark_sky_daily_summary')|lower }}
+  #  title: "Pogoda"
+  #service: notify.pushover
+
+  data_template:
+  message: >-
+      {{ Aktualnie states('sensor.dark_sky_temperature')|round(0) }}C na zewnątrz oraz {{ states('sensor.dark_sky_daily_summary')|lower }}
   data:
+    title: “Home Assistant”
     data:
+      priority: 0
+      sound: intermission
       file:
         url: http://meteo.org.pl/img/um/warszawa.png
-    message: >-
-      {{ Aktualnie states('sensor.dark_sky_temperature')|round(0) }}C na zewnątrz oraz {{ states('sensor.dark_sky_daily_summary')|lower }}
-    title: "Pogoda"
-  service: notify.pushover
