@@ -274,6 +274,6 @@
 #    - sun
   action:
   - data:
-      message: "Pogoda: {{ states('sensor.dark_sky_daily_summary') }}"
-      tittle: Prognoza na tydzień
+#      message: "Pogoda: {{ states('sensor.dark_sky_daily_summary') }}"
+      message: {{ states('sensor.dark_sky_temperature')|round(0) }}C na zewnątrz oraz {{ states('sensor.dark_sky_minutely_summary')|lower
     service: notify.pushover
