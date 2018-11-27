@@ -1,75 +1,75 @@
-id: '1542021191318'
-alias: MiFlora Low Battery - Chamedora
-trigger:
-- below: '20'
-  entity_id: sensor.chamedora_wytworna_battery
-  platform: numeric_state
-action:
-- data:
-    message: Battery low in Chamedora {{ states('sensor.chamedora_wytworna_battery')
-      }}%
-    title: MiFlora Battery is low!
-  service: notify.ios_hubert
-id: '1542698507632'
-alias: MiFlora Low Battery - Fikus
-trigger:
-- below: '20'
-  entity_id: sensor.fioek_1_battery
-  platform: numeric_state
-condition: []
-action:
-- data:
-    message: Battery low in Fikus {{ states('sensor.fioek_1_battery') }}%
-    title: MiFlora Battery is low!
-  service: notify.ios_hubert
-id: '1542698707903'
-alias: MiFlora Low Battery - Fiołek nieb. don.
-trigger:
-- below: '20'
-  entity_id: sensor.fioek_2_battery
-  platform: numeric_state
-condition: []
-action:
-- data:
-    message: Battery low in fiolek w niebieskiej doniczce {{ states('sensor.fioek_2_battery')
-      }}%
-    title: MiFlora Battery is low!
-  service: notify.ios_hubert
-id: '1542699033721'
-alias: MiFlora Low Battery - Paprotka
-trigger:
-- below: '20'
-  entity_id: sensor.paprotka_battery
-  platform: numeric_state
-condition: []
-action:
-- data:
-    message: Battery low in paprotka {{ states('sensor.paprotka_battery') }}%
-    title: MiFlora Battery is low!
-  service: notify.ios_hubert
-id: '1542699087454'
-alias: MiFlora Low Battery - Monstera
-trigger:
-- below: '20'
-  entity_id: sensor.monstera_battery
-  platform: numeric_state
-condition: []
-action:
-- data:
-    message: Battery low in monstera {{ states('sensor.monstera_battery') }}%
-    title: MiFlora Battery is low!
-  service: notify.ios_hubert
-id: '1542699194980'
-alias: MiFlora Low Battery - Fiolek w sweterku
-trigger:
-- below: '20'
-  entity_id: sensor.fioek_fioletowy_battery
-  platform: numeric_state
-condition: []
-action:
-- data:
-    message: Battery low in fiołek w sweterku {{ states('sensor.fioek_fioletowy_battery')
-      }}%
-    title: MiFlora Battery is low!
-  service: notify.ios_hubert
+  - id: '1542021191318'
+    alias: MiFlora Low Battery - Chamedora
+    trigger:
+    - below: '20'
+      entity_id: sensor.chamedora_wytworna_battery
+      platform: numeric_state
+    action:
+    - data:
+        message: Battery low in Chamedora {{ states('sensor.chamedora_wytworna_battery')
+          }}%
+        title: MiFlora Battery is low!
+      service: notify.ios_hubert
+  - id: '1542698507632'
+    alias: MiFlora Low Battery - Fikus
+    trigger:
+    - below: '20'
+      entity_id: sensor.fioek_1_battery
+      platform: numeric_state
+    condition: []
+    action:
+    - data:
+        message: Battery low in Fikus {{ states('sensor.fioek_1_battery') }}%
+        title: MiFlora Battery is low!
+      service: notify.ios_hubert
+  - id: '1542698707903'
+    alias: MiFlora Low Battery - Fiołek nieb. don.
+    trigger:
+    - below: '20'
+      entity_id: sensor.fioek_2_battery
+      platform: numeric_state
+    condition: []
+    action:
+    - data:
+        message: Battery low in fiolek w niebieskiej doniczce {{ states('sensor.fioek_2_battery')
+          }}%
+        title: MiFlora Battery is low!
+      service: notify.ios_hubert
+  - id: '1542699033721'
+    alias: MiFlora Low Battery - Paprotka
+    trigger:
+    - below: '20'
+      entity_id: sensor.paprotka_battery
+      platform: numeric_state
+    condition: []
+    action:
+    - data:
+        message: Battery low in paprotka {{ states('sensor.paprotka_battery') }}%
+        title: MiFlora Battery is low!
+      service: notify.ios_hubert
+  - id: '1542699087454'
+    alias: MiFlora Low Battery - Monstera
+    trigger:
+    - below: '20'
+      entity_id: sensor.monstera_battery
+      platform: numeric_state
+    condition: []
+    action:
+    - data:
+        message: Battery low in monstera {{ states('sensor.monstera_battery') }}%
+        title: MiFlora Battery is low!
+      service: notify.ios_hubert
+  - id: '1542699194980'
+    alias: MiFlora Low Battery - Fiolek w sweterku
+    trigger:
+    - below: '20'
+      entity_id: sensor.fioek_fioletowy_battery
+      platform: numeric_state
+    condition: []
+    action:
+    - data:
+        message: Battery low in fiołek w sweterku {{ states('sensor.fioek_fioletowy_battery')
+          }}%
+        title: MiFlora Battery is low!
+      service: notify.ios_hubert
 
