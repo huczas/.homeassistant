@@ -1,0 +1,12 @@
+id: '1542699087454'
+alias: MiFlora Low Battery - Monstera
+trigger:
+- below: '20'
+  entity_id: sensor.monstera_battery
+  platform: numeric_state
+condition: []
+action:
+- data:
+    message: Battery low in monstera {{ states('sensor.monstera_battery') }}%
+    title: MiFlora Battery is low!
+  service: notify.ios_hubert

@@ -1,0 +1,13 @@
+id: '1542699194980'
+alias: MiFlora Low Battery - Fiolek w sweterku
+trigger:
+- below: '20'
+  entity_id: sensor.fioek_fioletowy_battery
+  platform: numeric_state
+condition: []
+action:
+- data:
+    message: Battery low in fiołek w sweterku {{ states('sensor.fioek_fioletowy_battery')
+      }}%
+    title: MiFlora Battery is low!
+  service: notify.ios_hubert

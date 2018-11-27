@@ -1,0 +1,12 @@
+id: '1542021191318'
+alias: MiFlora Low Battery - Chamedora
+trigger:
+- below: '20'
+  entity_id: sensor.chamedora_wytworna_battery
+  platform: numeric_state
+action:
+- data:
+    message: Battery low in Chamedora {{ states('sensor.chamedora_wytworna_battery')
+      }}%
+    title: MiFlora Battery is low!
+  service: notify.ios_hubert
