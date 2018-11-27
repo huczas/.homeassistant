@@ -6,7 +6,6 @@ trigger:
 condition: []
 action:
 - data:
-    title: Prognoza
     message: >-
       Aktualnie {{ states('sensor.dark_sky_temperature')|round(0) }}C na zewnątrz oraz {{ states('sensor.dark_sky_daily_summary')|lower }}
     data:
@@ -14,6 +13,8 @@ action:
         - url: http://meteo.org.pl/img/um/warszawa.png
           caption: ICM
   service: notify.telegram_hubert
+#- data:
+#    tittle: Prognoza
 
 
 
