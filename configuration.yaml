@@ -86,6 +86,16 @@ homekit:
       - light
 
 #  pincode: !secret homekit
+#Xiaomi Air Purifier S2
+fan:
+  - platform: xiaomi_miio
+    host: 192.168.1.34
+    token: !secret airpurifier
+#Xiaomi Roborock 2
+vacuum:
+  - platform: xiaomi_miio
+    host: 192.168.1.17
+    token: YOUR_TOKEN
 
 updater:
   reporting: true
