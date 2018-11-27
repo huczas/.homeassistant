@@ -11,8 +11,8 @@ action:
   data:
     data:
       attachment:
-        content-type: png
-        url: http://meteo.org.pl/img/um/warszawa.png
+        content-type: image/png
+        filename: http://meteo.org.pl/img/um/warszawa.png
     message: >-
       {{ states('sensor.dark_sky_temperature')|round(0) }}C na zewnątrz oraz {{ states('sensor.dark_sky_daily_summary')|lower }}
   service: notify.pushover
