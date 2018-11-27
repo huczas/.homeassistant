@@ -268,10 +268,10 @@
   trigger:
   - at: '18:00'
     platform: time
-  condition:
-  - condition: time
-    weekday:
-    - sun
+#  condition:
+#  - condition: time
+#    weekday:
+#    - sun
   action:
   - data:
       message: "Pogoda: {{ states('sensor.dark_sky_daily_summary') }}"
