@@ -1,9 +1,9 @@
 action:
-  data:
-    message: Wilgotność fiołka w niebieskiej doniczce poniżej 20%
+- data:
+  message: Wilgotność fiołka w niebieskiej doniczce poniżej 20%
   service: notify.pushover
-  data:
-    message: Wilgotność fiołka w niebieskiej doniczce poniżej 20%
+- data:
+  message: Wilgotność fiołka w niebieskiej doniczce poniżej 20%
   service: notify.telegram_mysza
 alias: Nawodnienie fiołka w niebieskiej doniczce
 condition: []

@@ -1,8 +1,8 @@
 action:
-  data:
+- data:
     message: Wilgotność paprotki poniżej 30%
   service: notify.ios_hubert
-  data:
+- data:
     message: Wilgotność paprotki poniżej 30%
   service: notify.telegram_mysza
 alias: Nawodnienie paprotki
