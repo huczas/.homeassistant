@@ -1,12 +1,11 @@
-initial_state: 'on'
 alias: Update
 trigger:
-- entity_id: updater.updater
+  entity_id: updater.updater
   platform: state
 condition: []
 id: '1'
 action:
-- data:
+  data:
     message: New version {{ states.updater.updater.state }} of Home Assistant is available
     tittle: Update
     data:

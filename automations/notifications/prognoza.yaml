@@ -1,0 +1,24 @@
+id: '7'
+alias: Prognoza
+trigger:
+  at: '19:00:00'
+  platform: time
+condition: []
+action:
+  data:
+    data:
+      attachment:
+        content-type: png
+        hide-thumbnail: false
+        url: http://meteo.org.pl/img/um/warszawa.png
+    message: Prognoza na jutro {{ state('sensor.dark_sky_hourly_summary') }}
+  service: notify.ios_hubert
+  data:
+    message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
+  service: notify.telegram_mysza
+  data:
+    data:
+      photo:
+        url: http://meteo.org.pl/img/um/warszawa.png
+    message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
+  service: notify.telegram_mysza

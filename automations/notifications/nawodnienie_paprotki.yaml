@@ -1,14 +1,14 @@
 action:
-- data:
+  data:
     message: Wilgotność paprotki poniżej 30%
   service: notify.ios_hubert
-- data:
+  data:
     message: Wilgotność paprotki poniżej 30%
   service: notify.telegram_mysza
 alias: Nawodnienie paprotki
 condition: []
 id: '2'
 trigger:
-- below: '30'
+  below: '30'
   entity_id: sensor.paprotka_moisture
   platform: numeric_state

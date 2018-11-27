@@ -1,5 +1,5 @@
 action:
-- data:
+  data:
     message: Hubert w domu!
     data:
       push:
@@ -11,6 +11,6 @@ condition: []
 id: '11'
 initial_state: 'off'
 trigger:
-- entity_id: device_tracker.iphone
+  entity_id: device_tracker.iphone
   platform: state
   to: home
