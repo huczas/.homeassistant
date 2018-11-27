@@ -3,6 +3,20 @@ alias: Prognoza tygodniowa
 trigger:
   at: '18:00'
   platform: time
+condition: []
+action:
+- data:
+    title: Send an images
+    message: >-
+      {{ Aktualnie states('sensor.dark_sky_temperature')|round(0) }}C na zewnątrz oraz {{ states('sensor.dark_sky_daily_summary')|lower }}
+    data:
+      photo:
+        - url: http://meteo.org.pl/img/um/warszawa.png
+          caption: ICM
+  service: notify.telegram_hubert
+
+
+
 # condition:
 # - condition: time
 #   weekday:
@@ -27,13 +41,3 @@ trigger:
 #  service: notify.telegram_hubert
 
 
-action:
-  service: notify.telegram_hubert
-  data:
-    title: Send an images
-    message: >-
-      {{ Aktualnie states('sensor.dark_sky_temperature')|round(0) }}C na zewnątrz oraz {{ states('sensor.dark_sky_daily_summary')|lower }}
-    data:
-      photo:
-        - url: http://meteo.org.pl/img/um/warszawa.png
-          caption: ICM
