@@ -2,6 +2,10 @@
   - data:
       message: New version {{ states.updater.updater.state }} of Home Assistant is
         available
+      data:
+        url: "https://www.home-assistant.io/"
+        sound: pianobar
+        priority: 0
     service: notify.ios_hubert
   alias: Update
   condition: []
@@ -277,3 +281,11 @@
       message: Prognoza na jutro {{ states('sensor.pws_weather_2d_metric') }}
 #     message: {{ states('sensor.dark_sky_temperature')|round(0) }}C na zewnątrz oraz {{ states('sensor.dark_sky_daily_summary')|lower
     service: notify.pushover
+
+  - data:
+      message: "This is the message"
+      title: "Title of message"
+      data:
+        url: "https://www.home-assistant.io/"
+        sound: pianobar
+        priority: 0
