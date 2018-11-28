@@ -20,8 +20,9 @@
   * PMS7003 - dust sensor
 * Sonoff relay-switch witch ESPEasy software
 * Xiaomi Roborock 2 - vacuum
+* Xiaomi AirPurifier 2S
 * Xiaomi Mi Flora - Flower health
-* Ikae TRÅDFRI - gateway, and some light bulbs
+* Ikea TRÅDFRI - gateway, and some light bulbs
 
 ## Devices - Software
 
