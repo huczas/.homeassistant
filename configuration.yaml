@@ -82,8 +82,7 @@ homekit:
       - zone
       - sun
       - sensor
-    include_domains:
-      - light
+
 
 #  pincode: !secret homekit
 #Xiaomi Air Purifier S2
