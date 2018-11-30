@@ -72,6 +72,7 @@ homekit:
       - switch.pc
       - switch.pihole
       - switch.speakers
+      - light.klara2
     exclude_domains:
       - automations
       - device_tracker
