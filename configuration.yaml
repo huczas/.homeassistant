@@ -73,6 +73,7 @@ homekit:
       - switch.pihole
       - switch.speakers
       - light.klara2
+      - fan.xiaomi_miio_device
     exclude_domains:
       - automations
       - device_tracker
@@ -84,7 +85,7 @@ homekit:
       - sun
       - sensor
     include_domains:
-      - fun
+      - fan
 
 
 #  pincode: !secret homekit
