@@ -82,6 +82,8 @@ homekit:
       - zone
       - sun
       - sensor
+    include_domains:
+      - fun
 
 
 #  pincode: !secret homekit
