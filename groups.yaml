@@ -181,6 +181,8 @@ default_view:
   - updater.updater
   - device_tracker.iphone
   - device_tracker.myszowyiphone
+  - vacuum.xiaomi_vacuum_cleaner
+  - fan.xiaomi_miio_device
   - group.sonoff
   - group.broadlink
   - group.warunki_sypialnia
@@ -214,8 +216,6 @@ Ustawienia:
   - sensor.average_load_1m
   - sensor.average_load_5m
   - sensor.average_load_15m
-  - vacuum.xiaomi_vacuum_cleaner
-  - fan.xiaomi_miio_device
   - group.linki
   - group.bandwidth
   - group.wol
