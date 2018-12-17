@@ -1,3 +1,5 @@
+lovelace:
+  mode: yaml
 title: Dev-Lovelace
 # Include external resources
 resources:

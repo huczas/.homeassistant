@@ -214,8 +214,8 @@ Ustawienia:
   - sensor.average_load_1m
   - sensor.average_load_5m
   - sensor.average_load_15m
-  - vacuum.xiaomi_vacuum_cleaner
-  - fan.xiaomi_miio_device
+  - group.all_fans
+  - group.all_vacuum_cleaners
   - group.linki
   - group.bandwidth
   - group.wol
