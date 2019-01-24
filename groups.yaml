@@ -63,17 +63,17 @@ WOL:
   entities:
   - switch.nas
   - switch.pc
-system:
-  name: System
-  view: false
-  entities:
-  - sensor.cpu_used
-  - sensor.cpu_temperature
-  - sensor.disk_free_home
-  - sensor.disk_used_
-  - sensor.ram_available
-  - sensor.ram_used
-  - sensor.since_last_boot
+# system:
+#   name: System
+#   view: false
+#   entities:
+#   - sensor.cpu_used
+#   - sensor.cpu_temperature
+#   - sensor.disk_free_home
+#   - sensor.disk_used_
+#   - sensor.ram_available
+#   - sensor.ram_used
+#   - sensor.since_last_boot
 pihole:
   name: Pi-hole
   view: false
