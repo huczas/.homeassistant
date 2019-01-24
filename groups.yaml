@@ -16,28 +16,6 @@ warunki_salon:
   - sensor.lux
   - sensor.temp_w_kuchni
   - sensor.wilgotnosc_w_kuchni
-wunderground_s:
-  name: Prognoza dziś
-  view: false
-  entities:
-  - sensor.pws_temp_c
-  - sensor.pws_feelslike_c
-  - sensor.pws_precip_1d_mm
-  - sensor.pws_precip_1d
-  - sensor.pws_temp_high_1d_c
-  - sensor.pws_temp_low_1d_c
-  - sensor.pws_wind_gust_1d_kph
-  - sensor.pws_wind_1d_kph
-  - sensor.pws_weather_1d_metric
-  - sensor.pws_weather_1n_metric
-jutro:
-  name: Prognoza jutro
-  view: false
-  entities:
-  - sensor.pws_wind_gust_2d_kph
-  - sensor.pws_wind_2d_kph
-  - sensor.pws_weather_2d_metric
-  - sensor.pws_weather_2n_metric
 czas:
   name: Czas
   view: false
@@ -88,36 +66,6 @@ scripts:
   control: hidden
   entities:
     - input_select.log_level
-wunderground:
-  name: Wunderground
-  view: false
-  entities:
-  - sensor.pws_location
-  - sensor.pws_observation_time
-  - sensor.pws_pressure_mb
-  - sensor.pws_temp_c
-  - sensor.pws_temp_high_1d_c
-  - sensor.pws_temp_high_avg_c
-  - sensor.pws_temp_high_record_c
-  - sensor.pws_temp_low_1d_c
-  - sensor.pws_temp_low_avg_c
-  - sensor.pws_temp_low_record_c 
-  - sensor.pws_uv
-  - sensor.pws_solarradiation  
-  - sensor.pws_alerts
-  - sensor.pws_weather
-  - sensor.pws_dewpoint_c
-  - sensor.pws_feelslike_c
-  - sensor.pws_precip_1d
-  - sensor.pws_precip_1d_mm
-  - sensor.pws_precip_today_metric
-  - sensor.pws_pressure_trend
-  - sensor.pws_relative_humidity
-  - sensor.pws_wind_degrees
-  - sensor.pws_wind_dir
-  - sensor.pws_wind_gust_kph
-  - sensor.pws_wind_kph
-  - sensor.pws_weather_1d_metric
 Xrays:
   name: "Promieniowanie S\u0142oneczne"
   view: false
@@ -200,9 +148,7 @@ pogoda:
   view: true
   icon: mdi:cloud
   entities:
-  - group.wunderground_s
   - group.jutro
-  - group.wunderground
   - group.burze
   - group.polska
   - group.um
