@@ -16,23 +16,6 @@ warunki_salon:
   - sensor.lux
   - sensor.temp_w_kuchni
   - sensor.wilgotnosc_w_kuchni
-czas:
-  name: Czas
-  view: false
-  entities:
-  - sun.sun
-  - sensor.moon
-  - sensor.time
-  - sensor.time_utc
-  - sensor.internet_time
-  - sensor.date
-bandwidth:
-  name: Bandwidth
-  view: false
-  entities:
-  - sensor.speedtest_ping
-  - sensor.speedtest_upload
-  - sensor.speedtest_download
 WOL:
   name: Wake On Lan
   view: false
@@ -41,17 +24,6 @@ WOL:
   entities:
   - switch.nas
   - switch.pc
-# system:
-#   name: System
-#   view: false
-#   entities:
-#   - sensor.cpu_used
-#   - sensor.cpu_temperature
-#   - sensor.disk_free_home
-#   - sensor.disk_used_
-#   - sensor.ram_available
-#   - sensor.ram_used
-#   - sensor.since_last_boot
 pihole:
   name: Pi-hole
   view: false
@@ -92,20 +64,6 @@ Broadlink:
   view: false
   entities:
   - switch.speakers
-BUS:
-  name: BUS
-  view: false
-  entities:
-  - sensor.busem_do_pracy
-  - sensor.busem_do_domu  
-zarowki:
-  name: Żarówki
-  view: false
-  entities:
-  - light.zarowka_garderoba_1
-  - light.zarowka_garderoba_2
-  - light.zarowka_salon_1
-  - light.zarowka_salon_2
 Linki:
   name: Linki
   view: false
@@ -131,20 +89,11 @@ default_view:
   - group.broadlink
   - group.warunki_sypialnia
   - group.warunki_salon
-  - group.bus
-oswietlenie:
-  name: Oświetlenie
-  view: true
-  icon: mdi:lightbulb-on-outline
-  entities:
-  - light.garderoba
-  - light.salon
 pogoda:
   name: Pogoda
   view: true
   icon: mdi:cloud
   entities:
-  - group.jutro
   - group.burze
   - group.polska
   - group.um
@@ -155,15 +104,9 @@ Ustawienia:
   view: true
   icon: mdi:settings
   entities:
-  - sensor.average_load_1m
-  - sensor.average_load_5m
-  - sensor.average_load_15m
   - group.linki
   - group.bandwidth
   - group.wol
-  - group.system
   - group.pihole
-  - group.czas
   - group.scripts
   - group.all_automations
-  - group.all_lights
