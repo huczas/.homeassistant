@@ -2,7 +2,7 @@
     api_key: !secret dark_sky_api
     language: pl
     units: si
-    update_interval: 
+    scan_interval: 
       minutes: 3
     forecast: 1
     monitored_conditions:
