@@ -12,6 +12,8 @@ logger: !include logger.yaml
 system_log:
   max_entries: 20
 
+system_health:
+
 http:
   trusted_networks:
     - 127.0.0.1
