@@ -15,11 +15,6 @@ system_log:
 system_health:
 
 http:
-  trusted_networks:
-    - 127.0.0.1
-    - 192.168.1.0/24
-    - 192.168.2.0/24
-    - 192.168.4.0/24
   server_port: 8123
   ip_ban_enabled: True
 # Uncomment this to add a password (recommended!)
