@@ -110,3 +110,11 @@ sun:
 
 # This offers a map on the frontend
 map:
+
+speedtestdotnet:
+  scan_interval:
+    minutes: 15
+  monitored_conditions:
+    - ping
+    - download
+    - upload
